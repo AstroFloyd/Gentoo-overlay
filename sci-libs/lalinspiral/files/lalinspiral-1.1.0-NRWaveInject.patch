@@ -1,0 +1,20 @@
+--- src/NRWaveInject.c.orig	2010-12-03 23:33:04.000000000 +0100
++++ src/NRWaveInject.c	2011-10-24 19:41:48.224393124 +0200
+@@ -1182,7 +1182,7 @@
+   ENDFAIL( status );
+ 
+   /* set channel name */
+-  snprintf( injData->name, LIGOMETA_CHANNEL_MAX * sizeof( CHAR ),
++  snprintf( injData->name, (LIGOMETA_CHANNEL_MAX-1) * sizeof( CHAR ),
+       "%s:STRAIN", ifo );
+ 
+   XLALDestroyREAL4Vector ( htData->data);
+@@ -1249,7 +1249,7 @@
+   XLALSimAddInjectionREAL8TimeSeries( injData, htData, NULL);
+ 
+   /* set channel name */
+-  snprintf( injData->name, LIGOMETA_CHANNEL_MAX * sizeof( CHAR ),
++  snprintf( injData->name, (LIGOMETA_CHANNEL_MAX-1) * sizeof( CHAR ),
+       "%s:STRAIN", ifo );
+ 
+   XLALDestroyREAL8TimeSeries ( htData);
