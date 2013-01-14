@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/intel-common-13.0.1.117.ebuild,v 1.2 2012/12/10 21:15:31 jlec Exp $
+# $Header: $
 
 EAPI=4
 
@@ -54,4 +54,7 @@ src_install() {
 	EOF
 	insinto /etc/revdep-rebuild/
 	doins "${T}"/40-${PN}
+
+	# AF: circumvent bug https://bugs.gentoo.org/show_bug.cgi?id=437512
+	keepdir /opt/intel/ism/rm
 }
