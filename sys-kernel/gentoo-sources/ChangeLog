@@ -1,0 +1,13 @@
+# ChangeLog for sys-kernel/gentoo-sources
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  26 Jan 2013; AstroFloyd <AstroFloyd@gmail.com>
+  -gentoo-sources-2.6.22-r10.ebuild, -gentoo-sources-2.6.23-r8.ebuild,
+  -gentoo-sources-2.6.30-r5.ebuild, -gentoo-sources-2.6.31-r6.ebuild,
+  -gentoo-sources-2.6.31-r10.ebuild, -gentoo-sources-2.6.32-r7.ebuild,
+  -gentoo-sources-2.6.33-r2.ebuild, -gentoo-sources-2.6.34-r1.ebuild,
+  -gentoo-sources-2.6.36-r5.ebuild, -gentoo-sources-2.6.37-r4.ebuild,
+  +metadata.xml:
+  Removed ancient versions (<2.6.38)
+
