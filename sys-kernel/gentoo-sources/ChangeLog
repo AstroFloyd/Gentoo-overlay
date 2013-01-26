@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*gentoo-sources-3.6.11 (26 Jan 2013)
+
+  26 Jan 2013; AstroFloyd <AstroFloyd@gmail.com> +gentoo-sources-3.6.11.ebuild:
+  Added gentoo-sources-3.6.11.ebuild
+
   26 Jan 2013; AstroFloyd <AstroFloyd@gmail.com>
   -gentoo-sources-2.6.22-r10.ebuild, -gentoo-sources-2.6.23-r8.ebuild,
   -gentoo-sources-2.6.30-r5.ebuild, -gentoo-sources-2.6.31-r6.ebuild,
