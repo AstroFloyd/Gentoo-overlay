@@ -13,4 +13,6 @@ DESCRIPTION="A Perl module to compute satellite passages for a given observing l
 SLOT="0"
 LICENSE="Artistic-2"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="json"
+
+RDEPEND="json? ( dev-perl/JSON )"
