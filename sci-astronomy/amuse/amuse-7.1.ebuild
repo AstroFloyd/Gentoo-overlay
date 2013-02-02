@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit distutils fortran-2
+inherit fortran-2
 
 DESCRIPTION="AMUSE is an Astrophysical Multipurpose Software Environment"
 HOMEPAGE="http://amusecode.org"
