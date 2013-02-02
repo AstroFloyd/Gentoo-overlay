@@ -4,6 +4,8 @@
 
 EAPI=4
 
+inherit distutils fortran-2
+
 DESCRIPTION="AMUSE is an Astrophysical Multipurpose Software Environment"
 HOMEPAGE="http://amusecode.org"
 SRC_URI="http://www.amusecode.org/releases/${P}.tar.gz"
@@ -12,9 +14,9 @@ SRC_URI="http://www.amusecode.org/releases/${P}.tar.gz"
 LICENSE="other"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="mesa mocassin mpiamrvac pynbody"
 
-DEPEND=">=dev-lang/python-2.6
+RDEPEND=">=dev-lang/python-2.6
 		>=dev-python/mpi4py-1.0
 		>=dev-python/numpy-1.3.0
 		>=sci-libs/hdf5-1.6.5
@@ -24,16 +26,27 @@ DEPEND=">=dev-lang/python-2.6
 		dev-python/docutils
 		>=sci-libs/fftw-3.0
 		sci-libs/gsl
-		>=dev-util/cmake-2.4
 		>=dev-libs/gmp-4.2.1
 		>=dev-libs/mpfr-2.3.1
 		virtual/fortran"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+		>=dev-util/cmake-2.4
+	   "
 
 #src_configure() {
 #   econf
 #}
-#
+
+src_compile() {
+	emake
+
+	# USE-flag dependent make:
+	use mesa       && emake mesa.code DOWNLOAD_CODES=1
+	use mocassin   && emake mocassin.code DOWNLOAD_CODES=1
+	use mpiamrvac  && emake mpiamrvac.code DOWNLOAD_CODES=1
+	use pynbody    && emake pynbody.code DOWNLOAD_CODES=1
+}
+
 #src_install() {
 #   return
 #   #emake DESTDIR="${D}" install
