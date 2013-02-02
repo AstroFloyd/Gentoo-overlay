@@ -28,6 +28,7 @@ RDEPEND=">=dev-lang/python-2.6
 		sci-libs/gsl
 		>=dev-libs/gmp-4.2.1
 		>=dev-libs/mpfr-2.3.1
+		sys-devel/gcc[cxx]
 		virtual/fortran"
 DEPEND="${RDEPEND}
 		>=dev-util/cmake-2.4
