@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*amuse-7.1 (02 Feb 2013)
+
+  02 Feb 2013; AstroFloyd <AstroFloyd@gmail.com> +amuse-7.1.ebuild:
+  Version bump: amuse-7.1
+
   01 Nov 2011; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml:
   New ebuild: amuse 5.0
 
