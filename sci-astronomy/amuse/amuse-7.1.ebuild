@@ -9,7 +9,7 @@ inherit fortran-2
 DESCRIPTION="AMUSE is an Astrophysical Multipurpose Software Environment"
 HOMEPAGE="http://amusecode.org"
 SRC_URI="http://www.amusecode.org/releases/${P}.tar.gz"
-#MERGE_TYPE="buildonly"
+MERGE_TYPE="buildonly"
 
 LICENSE="other"
 SLOT="0"
@@ -33,18 +33,14 @@ DEPEND="${RDEPEND}
 		>=dev-util/cmake-2.4
 	   "
 
-#src_configure() {
-#   econf
-#}
-
 src_compile() {
 	emake
 
 	# USE-flag dependent make:
-	use mesa       && emake mesa.code DOWNLOAD_CODES=1
-	use mocassin   && emake mocassin.code DOWNLOAD_CODES=1
-	use mpiamrvac  && emake mpiamrvac.code DOWNLOAD_CODES=1
-	use pynbody    && emake pynbody.code DOWNLOAD_CODES=1
+	use mesa       && emake mesa.code       DOWNLOAD_CODES=1
+	use mocassin   && emake mocassin.code   DOWNLOAD_CODES=1
+	use mpiamrvac  && emake mpiamrvac.code  DOWNLOAD_CODES=1
+	use pynbody    && emake pynbody.code    DOWNLOAD_CODES=1
 }
 
 #src_install() {
