@@ -3,7 +3,8 @@
 # $Header: $
 
 EAPI=4
-inherit cmake-utils
+
+inherit cmake-utils fortran-2
 
 DESCRIPTION="AMUSE is an Astrophysical Multipurpose Software Environment"
 HOMEPAGE="http://www.amusecode.org/"
@@ -24,30 +25,6 @@ DEPEND=">=dev-lang/python-2.6.0
 	>=dev-python/nose-0.11
 	sci-libs/fftw
 	sci-libs/gsl
+	virtual/fortran
 	"
-RDEPEND=${DEPEND}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-}
-
-src_configure() {
-	einfo "\n\n\n  Configuring code:\n"
-	econf ${CONFIG_OPTS}
-}
-
-src_compile() {
-	einfo "\n\n\n  Compiling code:\n"
-	emake || die "emake failed"
-}
-
-src_install() {
-	einfo "\n\n\n  Installing package:\n"
-	emake DESTDIR="${D}${DESTDIR}" install || die "install failed"
-}
-
-pkg_config()
-{
-	eerror "This ebuild does not have a config function."
-}
+RDEPEND="${DEPEND}"
