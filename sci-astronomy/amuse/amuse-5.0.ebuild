@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit cmake-utils fortran-2
+inherit fortran-2
 
 DESCRIPTION="AMUSE is an Astrophysical Multipurpose Software Environment"
 HOMEPAGE="http://www.amusecode.org/"
