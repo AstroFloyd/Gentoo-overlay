@@ -13,10 +13,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND="app-portage/portage-utils
+		 app-portage/gentoolkit
+		 app-portage/layman
+		 app-portage/eix
+		 app-arch/bzip2
+		 sys-apps/less
+		 sys-process/time"
 
 src_install() {
 	dodoc README CHANGELOG VERSION
 	dosbin gentmaint-*
-	keepdir /var/log/gentmaint/auto /var/log/gentmaint/manual
+	keepdir /var/log/gentmaint /var/log/gentmaint/auto /var/log/gentmaint/manual
 }
