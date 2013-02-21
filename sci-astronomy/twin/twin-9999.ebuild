@@ -19,3 +19,9 @@ RDEPEND=""
 DEPEND="${RDEPEND}
 		>=dev-util/cmake-2.4
 	   "
+
+ESVN_OPTIONS="--non-interactive --trust-server-cert"
+
+src_unpack() {
+	subversion_src_unpack
+}
