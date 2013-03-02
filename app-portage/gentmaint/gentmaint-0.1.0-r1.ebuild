@@ -23,6 +23,6 @@ RDEPEND="app-portage/portage-utils
 
 src_install() {
 	dodoc README CHANGELOG VERSION
-	dosbin gentmaint-*
+	dobin gentmaint-*
 	keepdir /var/log/gentmaint /var/log/gentmaint/auto /var/log/gentmaint/manual
 }
