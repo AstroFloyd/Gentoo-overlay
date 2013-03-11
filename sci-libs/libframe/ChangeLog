@@ -1,0 +1,8 @@
+# ChangeLog for sci-libs/libframe
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> -libframe-8.04.ebuild,
+  +metadata.xml:
+  Removed old ebuilds
+
