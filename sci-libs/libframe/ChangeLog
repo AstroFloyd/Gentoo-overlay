@@ -4,5 +4,14 @@
 
   11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> -libframe-8.04.ebuild,
   +metadata.xml:
-  Removed old ebuilds
+  Removed old ebuild, pass remaining through repoman, added metadata.xml
+
+  24 Jan 2012; AstroFloyd <AstroFloyd@gmail.com> +libframe-8.15.ebuild:
+  Version bump
+
+  7 Jul 2009; AstroFloyd <AstroFloyd@gmail.com> +libframe-8.08.ebuild:
+  Version bump
+
+  26 Jun 2009; AstroFloyd <AstroFloyd@gmail.com> +libframe-8.04.ebuild:
+  New ebuild
 

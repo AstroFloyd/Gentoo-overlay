@@ -4,5 +4,11 @@
 
   11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> -lalmetaio-1.0.1.ebuild,
   +metadata.xml:
-  Removing old ebuilds
+  Removing old ebuilds, make the remaining pass repoman, added metadata.xml
+
+  23 Jan 2012; AstroFloyd <AstroFloyd@gmail.com> +lalmetaio-1.0.3.ebuild:
+  Version bump
+
+  23 Jan 2012; AstroFloyd <AstroFloyd@gmail.com> +lalmetaio-1.0.1.ebuild:
+  Initial ebuild
 

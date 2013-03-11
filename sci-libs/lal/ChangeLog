@@ -4,5 +4,13 @@
 
   11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> -lal-5.2.ebuild,
   -lal-6.0.2.ebuild, -lal-6.1.ebuild, +metadata.xml:
-  Removing old ebuilds
+  Removing old ebuilds, added metadata.xml
+
+  23 Jan 2012; AstroFloyd <AstroFloyd@gmail.com> +lal-6.5.0.ebuild
+  +lal-6.6.1.ebuild:
+  Added new ebuilds
+
+  7 Jul 2009; AstroFloyd <AstroFloyd@gmail.com> +lal-5.2.ebuild,
+  +lal-6.0.2.ebuild, +lal-6.1.ebuild:
+  Adding exisitng ebuilds
 

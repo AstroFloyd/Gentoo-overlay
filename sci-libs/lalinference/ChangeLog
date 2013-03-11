@@ -3,5 +3,8 @@
 # $Header: $
 
   11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml:
-  Added existing ebuilds
+  Make existing ebuild pass repoman
+
+  24 Jan 2012; AstroFloyd <AstroFloyd@gmail.com> +lalinference-0.1.1.ebuild:
+  Make existing ebuild pass repoman, added metadata.xml
 

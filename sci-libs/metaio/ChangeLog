@@ -3,5 +3,11 @@
 # $Header: $
 
   11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml:
-  Added existing ebuilds
+  Updated existing ebuilds, added metadata.xml
+
+  28 Jun 2009; AstroFloyd <AstroFloyd@gmail.com> +metaio-8.2.ebuild:
+  Version bump
+
+  26 Jun 2009; AstroFloyd <AstroFloyd@gmail.com> +metaio-7.2.ebuild:
+  Added existing ebuild
 
