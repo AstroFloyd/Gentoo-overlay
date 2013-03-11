@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*lalinspiral-1.2.2 (11 Mar 2013)
+
+  11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> +lalinspiral-1.2.2.ebuild:
+  Added existing ebuild for lalinspiral-1.2.2
+
   11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml:
   Added existing ebuilds
 
