@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -20,31 +20,27 @@ RDEPEND=${DEPEND}
 
 DESTDIR=/
 
-
-
-
 src_unpack() {
-    unpack ${A}
-    cd "${S}"
+	unpack ${A}
+	cd "${S}"
 }
 
 src_configure() {
-    einfo "\n\n\n  Configuring code:\n"
-    econf ${CONFIG_OPTS}
+	einfo "\n\n\n  Configuring code:\n"
+	econf ${CONFIG_OPTS}
 }
 
 src_compile() {
-    einfo "\n\n\n  Compiling code:\n"
-    emake || die "emake failed"
+	einfo "\n\n\n  Compiling code:\n"
+	emake || die "emake failed"
 }
 
 src_install() {
-    einfo "\n\n\n  Installing package:\n"
-    emake DESTDIR="${D}${DESTDIR}" install || die "install failed"
+	einfo "\n\n\n  Installing package:\n"
+	emake DESTDIR="${D}${DESTDIR}" install || die "install failed"
 }
 
 pkg_config()
 {
-    eerror "This ebuild does not have a config function."
+	eerror "This ebuild does not have a config function."
 }
-
