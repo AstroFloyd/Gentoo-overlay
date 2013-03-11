@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/lalapps
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*lalapps-6.6.2 (11 Mar 2013)
+*lalapps-6.6.1 (11 Mar 2013)
+
+  11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> +lalapps-6.6.1.ebuild,
+  +lalapps-6.6.2.ebuild, +metadata.xml:
+  Adding existing ebuilds
+
