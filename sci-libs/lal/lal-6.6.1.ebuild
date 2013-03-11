@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -11,7 +11,7 @@ SRC_URI="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/lalsu
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc libframe metaio no-shared-libs no-static-libs xml"
+IUSE="doc libframe metaio +shared-libs static-libs xml"
 
 DEPEND="sci-libs/gsl
 		sci-libs/fftw
@@ -25,14 +25,14 @@ DEPEND="sci-libs/gsl
 "
 RDEPEND=${DEPEND}
 
-use libframe          || CONFIG_OPTS="${CONFIG_OPTS} --enable-frame=no"     # Remove support for libFrame if not selected
-use libframe          && CONFIG_OPTS="${CONFIG_OPTS} --enable-frame=yes"    # Build support for libFrame if selected (default)
-use metaio            || CONFIG_OPTS="${CONFIG_OPTS} --enable-metaio=no"    # Remove support for libMetaIo if not selected
-use metaio            && CONFIG_OPTS="${CONFIG_OPTS} --enable-metaio=yes"   # Build support for libMetaIo if selected (default)
-use no-shared-libs    && CONFIG_OPTS="${CONFIG_OPTS} --enable-shared=no"    # Don't build shared (dynamic) libraries (default is: do build)
-use no-static-libs    && CONFIG_OPTS="${CONFIG_OPTS} --enable-static=no"    # Don't build static libraries (default is: do build)
-use xml               && CONFIG_OPTS="${CONFIG_OPTS} --enable-xml=yes"      # Build support for XML files
-use xml               || CONFIG_OPTS="${CONFIG_OPTS} --enable-xml=no"       # Don't build support for XML files (default)
+use libframe        || CONFIG_OPTS="${CONFIG_OPTS} --enable-frame=no"     # Remove support for libFrame if not selected
+use libframe        && CONFIG_OPTS="${CONFIG_OPTS} --enable-frame=yes"    # Build support for libFrame if selected (default)
+use metaio          || CONFIG_OPTS="${CONFIG_OPTS} --enable-metaio=no"    # Remove support for libMetaIo if not selected
+use metaio          && CONFIG_OPTS="${CONFIG_OPTS} --enable-metaio=yes"   # Build support for libMetaIo if selected (default)
+use shared-libs     || CONFIG_OPTS="${CONFIG_OPTS} --enable-shared=no"    # Don't build shared (dynamic) libraries (default is: do build)
+use static-libs     || CONFIG_OPTS="${CONFIG_OPTS} --enable-static=no"    # Don't build static libraries (default is: do build)
+use xml             && CONFIG_OPTS="${CONFIG_OPTS} --enable-xml=yes"      # Build support for XML files
+use xml             || CONFIG_OPTS="${CONFIG_OPTS} --enable-xml=no"       # Don't build support for XML files (default)
 
 src_compile() {
 	emake || die "emake failed"
