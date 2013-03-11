@@ -1,9 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-
-#P="metaio-8.0-pre1"
-#S=${P}
 
 DESCRIPTION="The metiao library can read XML files compressed with the gzip compression algorithm."
 HOMEPAGE="https://www.lsc-group.phys.uwm.edu/daswg/projects/metaio.html"
@@ -20,27 +17,22 @@ RDEPEND=${DEPEND}
 #Use --prefix=/usr below to install this package in /usr
 DESTDIR=/
 
-
-
 src_unpack() {
-    unpack ${A}
-    cd "${S}"
+	unpack ${A}
+	cd "${S}"
 }
 
-
 src_compile() {
-    cd ${S}
-    econf --prefix=/usr
-    emake || die "emake failed"
+	econf --prefix=/usr
+	emake || die "emake failed"
 }
 
 src_install() {
-    emake DESTDIR="${D}${DESTDIR}" install || die "install failed"
-    dodoc README || die
+	emake DESTDIR="${D}${DESTDIR}" install || die "install failed"
+	dodoc README || die
 }
 
 pkg_config()
 {
-    eerror "This ebuild does not have a config function."
+	eerror "This ebuild does not have a config function."
 }
-
