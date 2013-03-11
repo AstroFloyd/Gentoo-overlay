@@ -16,7 +16,7 @@ RDEPEND="
 	=sci-libs/lalapps-6.6.2
 	=sci-libs/lalburst-1.1.1
 	=sci-libs/lalinference-0.1.1
-	=sci-libs/lalinspiral-1.2.0
+	=sci-libs/lalinspiral-1.2.2
 	=sci-libs/lalpulsar-1.2.1
 	=sci-libs/lalstochastic-1.1.3
 "
