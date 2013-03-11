@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -17,33 +17,3 @@ DEPEND="sci-libs/lal
 	>=sci-libs/metaio-8.0
 	"
 RDEPEND=${DEPEND}
-
-#DESTDIR=/
-
-
-
-#src_unpack() {
-#    unpack ${A}
-#    cd "${S}"
-#}
-#
-#src_configure() {
-#    einfo "\n\n\n  Configuring code:\n"
-#    econf ${CONFIG_OPTS}
-#}
-#
-#src_compile() {
-#    einfo "\n\n\n  Building code:\n"
-#    emake || die "emake failed"
-#}
-#
-#src_install() {
-#    einfo "\n\n\n  Installing code:\n"
-#    emake DESTDIR="${D}${DESTDIR}" install || die "install failed"
-#}
-#
-#pkg_config()
-#{
-#    eerror "This ebuild does not have a config function."
-#}
-
