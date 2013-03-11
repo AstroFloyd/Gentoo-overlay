@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/lalpulsar
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*lalpulsar-1.2.1 (11 Mar 2013)
+
+  11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> +lalpulsar-1.2.1.ebuild,
+  +metadata.xml:
+  Added existing ebuild for lalpulsar-1.2.1
+
