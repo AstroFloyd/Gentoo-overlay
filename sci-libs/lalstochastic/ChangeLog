@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/lalstochastic
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*lalstochastic-1.1.3 (11 Mar 2013)
+
+  11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> +lalstochastic-1.1.3.ebuild,
+  +metadata.xml:
+  Added existing ebuild for lalstochastic-1.1.3
+
