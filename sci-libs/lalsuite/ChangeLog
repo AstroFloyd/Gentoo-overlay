@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/lalsuite
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*lalsuite-6.15 (12 Mar 2013)
+
+  12 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> +lalsuite-6.15.ebuild,
+  +metadata.xml:
+  New ebuild
+
