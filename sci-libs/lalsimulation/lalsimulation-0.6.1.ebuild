@@ -4,7 +4,7 @@
 
 EAPI=4
 
-DESCRIPTION="Simulation package of the LIGO/Virgo libraries."
+DESCRIPTION="Simulation package of the LIGO/Virgo libraries"
 HOMEPAGE="https://www.lsc-group.phys.uwm.edu/daswg/projects/lalsuite.html"
 SRC_URI="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/lalsuite/${P}.tar.gz"
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="=sci-libs/lal-6.6.1
-		 sci-libs/lalmetaio
+DEPEND="sci-libs/lal
+		sci-libs/lalmetaio
 	"
 RDEPEND=${DEPEND}
