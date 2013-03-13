@@ -9,5 +9,6 @@
   <use>
     <flag name='metaio'>Adds support for <pkg>sci-libs/lalmetaio</pkg></flag>
     <flag name='frame'>Adds support for <pkg>sci-libs/lalframe</pkg></flag>
+    <flag name='pulsar'>Adds support for <pkg>sci-libs/lalpulsar</pkg></flag>
   </use>
 </pkgmetadata>
