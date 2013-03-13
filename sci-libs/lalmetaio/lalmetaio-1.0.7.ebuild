@@ -24,5 +24,5 @@ pkg_postinst() {
 		elog "\n        . /etc/lalmetaio-user-env.sh"
 		elog "\n    C-shell [tcsh] users: please add the following lines to your .login file:"
 		elog "\n        source /etc/lalmetaio-user-env.csh"
-		elog "\n"
+		elog ""
 }
