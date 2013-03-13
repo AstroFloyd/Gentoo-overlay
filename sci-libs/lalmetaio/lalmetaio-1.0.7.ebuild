@@ -17,3 +17,12 @@ DEPEND="sci-libs/lal
 	>=sci-libs/metaio-8.0
 	"
 RDEPEND=${DEPEND}
+
+pkg_postinst() {
+		elog "\n    Now you may want to setup your environment:"
+		elog "\n    Bourne shell [bash] users: please add the following lines to your .profile file:"
+		elog "\n        . /etc/lalmetaio-user-env.sh"
+		elog "\n    C-shell [tcsh] users: please add the following lines to your .login file:"
+		elog "\n        source /etc/lalmetaio-user-env.csh"
+		elog "\n"
+}
