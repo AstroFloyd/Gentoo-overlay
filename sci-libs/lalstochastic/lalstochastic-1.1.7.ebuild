@@ -4,7 +4,7 @@
 
 EAPI=4
 
-DESCRIPTION="Stochastic-background package of the LIGO/Virgo libraries."
+DESCRIPTION="Stochastic-background package of the LIGO/Virgo libraries"
 HOMEPAGE="https://www.lsc-group.phys.uwm.edu/daswg/projects/lalsuite.html"
 SRC_URI="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/lalsuite/${P}.tar.gz"
 
@@ -13,7 +13,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="=sci-libs/lal-6.6.1
-		=sci-libs/lalmetaio-1.0.3
+DEPEND="sci-libs/lal
+		sci-libs/lalmetaio
 	"
 RDEPEND=${DEPEND}
+
+pkg_postinst() {
+	elog "\n    Now you may want to setup your environment:"
+	elog "\n    Bourne shell [bash] users: please add the following line to your .profile file:"
+	elog "\n        . /etc/lalstochastic-user-env.sh"
+	elog "\n    C-shell [tcsh] users: please add the following line to your .login file:"
+	elog "\n        source /etc/lalstochastic-user-env.csh"
+	elog ""
+}
