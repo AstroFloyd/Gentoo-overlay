@@ -14,7 +14,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sci-libs/lal
-	>=sci-libs/metaio-8.0
+	  >=sci-libs/metaio-8.0
+		sci-libs/fftw
+		sci-libs/gsl
+		sys-libs/zlib
 	"
 RDEPEND=${DEPEND}
 
