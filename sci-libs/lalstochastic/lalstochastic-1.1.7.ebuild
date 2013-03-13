@@ -13,8 +13,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="sci-libs/lal
+DEPEND="
+		sci-libs/metaio
 		sci-libs/lalmetaio
+		sci-libs/lal
+		sci-libs/fftw
+		sci-libs/gsl
+		sys-libs/zlib
 	"
 RDEPEND=${DEPEND}
 
