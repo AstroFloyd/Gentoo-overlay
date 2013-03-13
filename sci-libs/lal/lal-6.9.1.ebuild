@@ -11,7 +11,7 @@ SRC_URI="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/lalsu
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc libframe metaio +shared-libs static-libs xml"
+IUSE="doc +libframe +metaio +shared-libs static-libs +xml"
 
 DEPEND="sci-libs/gsl
 		sci-libs/fftw
