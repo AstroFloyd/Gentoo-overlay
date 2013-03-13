@@ -11,14 +11,14 @@ SRC_URI="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/lalsu
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +mpi +metaio +frame pulsar xml"
+IUSE="doc +mpi +metaio +frame xml"
 
 DEPEND="sci-libs/lal
+		sci-libs/lalinference[xml]
 		frame? ( sci-libs/libframe
 				 sci-libs/lalframe )
 		metaio? ( sci-libs/metaio
 				  sci-libs/lalmetaio )
-		pulsar? ( sci-libs/lalpulsar[xml] )
 		xml? ( sci-libs/lalxml )
 		mpi? ( virtual/mpi )
 	   "

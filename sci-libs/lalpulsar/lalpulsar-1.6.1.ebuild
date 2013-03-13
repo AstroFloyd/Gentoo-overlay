@@ -17,14 +17,8 @@ DEPEND="sci-libs/lal
 		sci-libs/fftw
 		sci-libs/gsl
 		sys-libs/zlib
-		xml? ( sci-libs/lalxml )
 	"
 RDEPEND=${DEPEND}
-
-src_configure() {
-	econf \
-		$(use_enable xml lalxml)
-}
 
 pkg_postinst() {
 	elog "\n    Now you may want to setup your environment:"
