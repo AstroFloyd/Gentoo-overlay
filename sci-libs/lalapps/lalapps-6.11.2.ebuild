@@ -14,12 +14,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc +mpi +metaio +frame xml"
 
 DEPEND="sci-libs/lal
-		sci-libs/lalinference[xml]
+
 		frame? ( sci-libs/libframe
 				 sci-libs/lalframe )
 		metaio? ( sci-libs/metaio
 				  sci-libs/lalmetaio )
-		xml? ( sci-libs/lalxml )
+		xml? ( sci-libs/lalxml
+			   sci-libs/lalinference[xml] )
 		mpi? ( virtual/mpi )
 	   "
 RDEPEND=${DEPEND}
