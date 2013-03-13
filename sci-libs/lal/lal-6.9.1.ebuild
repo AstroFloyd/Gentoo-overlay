@@ -40,13 +40,12 @@ src_compile() {
 }
 
 pkg_postinst() {
-	elog "\n\n    Now you may want to setup your environment:"
-	elog "\n    Bourne shell [bash] users: please add the"
-	elog "    following lines to your .profile file:"
+	elog "\n    Now you may want to setup your environment:"
+	elog "\n    Bourne shell [bash] users: please add the following line to your .profile file:"
 	elog "\n        . /etc/lal-user-env.sh"
-	elog "\n    C-shell [tcsh] users: please add the following"
-	elog "    lines to your .login file:"
-	elog "\n        source /etc/lal-user-env.csh\n\n"
+	elog "\n    C-shell [tcsh] users: please add the following line to your .login file:"
+	elog "\n        source /etc/lal-user-env.csh"
+	elog ""
 
-	use doc && elog "    The LAL documentation can be found in /usr/share/doc/${P}\n\n"
+	use doc && elog "    The LAL documentation can be found in /usr/share/doc/${P}\n"
 }

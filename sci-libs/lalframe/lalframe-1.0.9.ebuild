@@ -17,3 +17,12 @@ DEPEND=">=sci-libs/lal-6.9.1
 		  sci-libs/libframe
 	   "
 RDEPEND=${DEPEND}
+
+pkg_postinst() {
+	elog "\n    Now you may want to setup your environment:"
+	elog "\n    Bourne shell [bash] users: please add the following line to your .profile file:"
+	elog "\n        . /etc/lalframe-user-env.sh"
+	elog "\n    C-shell [tcsh] users: please add the following line to your .login file:"
+	elog "\n        source /etc/lalframe-user-env.csh"
+	elog ""
+}
