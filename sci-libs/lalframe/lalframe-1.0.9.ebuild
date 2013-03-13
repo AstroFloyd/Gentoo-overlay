@@ -13,8 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=sci-libs/lal-6.9.1
-		  sci-libs/libframe
+DEPEND="sci-libs/lal
+		sci-libs/libframe
+		sci-libs/fftw
+		sci-libs/gsl
+		sys-libs/zlib
 	   "
 RDEPEND=${DEPEND}
 
