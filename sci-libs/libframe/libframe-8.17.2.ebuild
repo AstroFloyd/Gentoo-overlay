@@ -11,15 +11,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND=${DEPEND}
+#DEPEND=""
+#RDEPEND=${DEPEND}
 
-DESTDIR=/usr
+#DESTDIR=/usr
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-}
+#src_unpack() {
+#	unpack ${A}
+#	cd "${S}"
+#}
 
 src_compile() {
 	cd "${S}/mgr"
@@ -31,16 +31,19 @@ src_install() {
 	MYUNAME=`uname`-`uname -m`  # e.g: "Linux-i686"
 	cd "${S}/${MYUNAME}"
 
-	mkdir -p "${D}${DESTDIR}/bin"
-	cp FrCheck FrCopy FrDump "${D}${DESTDIR}/bin/"
-	#dobin FrCheck FrCopy FrDump
+	#mkdir -p "${D}${DESTDIR}/bin"
+	#cp FrCheck FrCopy FrDump "${D}${DESTDIR}/bin/"
+	dobin FrCheck FrCopy FrDump
 
-	mkdir -p "${D}${DESTDIR}/lib"
-	cp *.a *.so "${D}${DESTDIR}/lib/"
+	#mkdir -p "${D}${DESTDIR}/lib"
+	#cp *.a *.so "${D}${DESTDIR}/lib/"
+	dolib *.a *.so
 
 	cd ../src
-	mkdir -p "${D}${DESTDIR}/include"
-	cp *.h "${D}${DESTDIR}/include/"
+	#mkdir -p "${D}${DESTDIR}/include"
+	#cp *.h "${D}${DESTDIR}/include/"
+	insinto /usr/include
+	doins *.h
 }
 
 pkg_config()
