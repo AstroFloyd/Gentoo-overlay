@@ -4,7 +4,7 @@
 
 EAPI=4
 
-DESCRIPTION="Core routines for gravitational-wave data analysis for LIGO and Virgo"
+DESCRIPTION="Core routines for gravitational-wave data analysis with LIGO and Virgo"
 HOMEPAGE="https://www.lsc-group.phys.uwm.edu/daswg/projects/lalsuite.html"
 SRC_URI="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/lalsuite/${P}.tar.gz"
 
@@ -35,9 +35,8 @@ use xml             && CONFIG_OPTS="${CONFIG_OPTS} --enable-xml=yes"      # Buil
 use xml             || CONFIG_OPTS="${CONFIG_OPTS} --enable-xml=no"       # Don't build support for XML files (default)
 
 src_compile() {
-	emake || die "emake failed"
-	use doc && (
-		emake dvi || die "emake dvi failed" )
+	emake
+	use doc  &&  emake dvi
 }
 
 pkg_postinst() {
