@@ -4,7 +4,7 @@
 
 EAPI=4
 
-DESCRIPTION="LALMetaio provides a LAL wrapper for the metaio package."
+DESCRIPTION="A LAL wrapper for the metaio package"
 HOMEPAGE="https://www.lsc-group.phys.uwm.edu/daswg/projects/lalsuite.html"
 SRC_URI="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/lalsuite/${P}.tar.gz"
 
