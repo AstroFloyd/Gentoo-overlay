@@ -26,11 +26,11 @@ IUSE=""
 #	econf --prefix=/usr
 #	emake || die "emake failed"
 #}
-#
-#src_install() {
-#	emake DESTDIR="${D}${DESTDIR}" install || die "install failed"
-#	dodoc README || die
-#}
+
+src_install() {
+	emake DESTDIR="${D}${DESTDIR}" install || die "install failed"
+	dodoc README || die
+}
 #
 #pkg_config()
 #{
