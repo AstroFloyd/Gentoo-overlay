@@ -11,7 +11,6 @@ SRC_URI="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/lalsu
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="xml"
 
 DEPEND="sci-libs/lal
 		sci-libs/fftw

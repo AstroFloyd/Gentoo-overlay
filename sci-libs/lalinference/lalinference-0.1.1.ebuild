@@ -7,49 +7,40 @@ EAPI=4
 # include functions from eutils
 #inherit eutils
 
-DESCRIPTION="Handle the Frame data format for the gravitational-wave detectors Virgo and LIGO."
+DESCRIPTION="Bayesian inference data-analysis package for LIGO and Virgo"
 HOMEPAGE="https://www.lsc-group.phys.uwm.edu/daswg/projects/lalsuite.html"
 SRC_URI="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/lalsuite/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="-xml"
 
-DEPEND="sci-libs/lalmetaio
+DEPEND="
+		sci-libs/libframe
+		sci-libs/lalframe
+		sci-libs/metaio
+		sci-libs/lalmetaio
+		sci-libs/lal
+		sci-libs/lalinspiral
+		sci-libs/lalpulsar
+		sci-libs/lalsimulation
+		sci-libs/fftw
+		sci-libs/gsl
+		sys-libs/zlib
+		xml? ( sci-libs/lalxml )
 	"
 RDEPEND=${DEPEND}
 
-DESTDIR=/
-
-src_unpack() {
-	einfo "\n\n\n  Unpacking source:\n"
-	unpack ${A}
-	cd "${S}"
-}
-
-src_prepare() {
-	einfo "\n\n\n  Preparing source:\n"
-	# Fix call to __builtin___snprintf_chk will always overflow destination buffer errors:
-	#epatch "${FILESDIR}/${P}-NRWaveInject.patch"
-}
-
 src_configure() {
-	einfo "\n\n\n  Configuring code:\n"
-	econf ${CONFIG_OPTS}
+	econf $(use_enable xml lalxml)
 }
 
-src_compile() {
-	einfo "\n\n\n  Compiling code:\n"
-	emake || die "emake failed"
-}
-
-src_install() {
-	einfo "\n\n\n  Installing package:\n"
-	emake DESTDIR="${D}${DESTDIR}" install || die "install failed"
-}
-
-pkg_config()
-{
-	eerror "This ebuild does not have a config function."
+pkg_postinst() {
+	elog "\n    Now you may want to setup your environment:"
+	elog "\n    Bourne shell [bash] users: please add the following line to your .profile file:"
+	elog "\n        . /etc/lalinference-user-env.sh"
+	elog "\n    C-shell [tcsh] users: please add the following line to your .login file:"
+	elog "\n        source /etc/lalinference-user-env.csh"
+	elog ""
 }

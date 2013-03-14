@@ -16,7 +16,6 @@ RDEPEND="
 	=sci-libs/lal-6.9.1
 	=sci-libs/lalframe-1.0.9
 	=sci-libs/lalmetaio-1.0.7
-	=sci-libs/lalxml-1.1.7
 	=sci-libs/lalsimulation-0.6.1
 	=sci-libs/lalburst-1.1.6
 	=sci-libs/lalinspiral-1.4.2
@@ -25,3 +24,4 @@ RDEPEND="
 	=sci-libs/lalstochastic-1.1.7
 	=sci-libs/lalapps-6.11.2
 "
+#	=sci-libs/lalxml-1.1.7  # compatible, but unused

@@ -12,8 +12,7 @@ http://www.astro.ru.nl/~sluys/Stuff/${PN}_missing-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-#IUSE="mpi metaio lalframe lalmetaio lalxml"   # Repoman complains about these -> make dependencies non-optional...
-IUSE="doc mpi"
+IUSE="doc +mpi +metaio +frame -xml"
 
 DEPEND="=sci-libs/lal-6.6.1
 		sci-libs/libframe
@@ -27,9 +26,12 @@ RDEPEND=${DEPEND}
 
 src_configure() {
 	econf \
-		$(use_enable mpi) \
-		--enable-frame --enable-lalframe --enable-metaio --enable-lalmetaio --enable-lalxml
-	# Can't use use_enable for the rest, since these aren't valid USE flags
+		$(use_enable frame) \
+		$(use_enable frame lalframe) \
+		$(use_enable metaio) \
+		$(use_enable metaio lalmetaio) \
+		$(use_enable xml lalxml) \
+		$(use_enable mpi)
 }
 
 src_compile() {

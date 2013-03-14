@@ -7,7 +7,7 @@
     <name>AstroFloyd</name>
   </maintainer>
   <use>
-    <flag name='libframe'>Adds support for <pkg>sci-libs/libframe</pkg></flag>
+    <flag name='frame'>Adds support for <pkg>sci-libs/libframe</pkg></flag>
     <flag name='metaio'>Adds support for <pkg>sci-libs/metaio</pkg></flag>
     <flag name='shared-libs'>Build shared libraries</flag>
   </use>
