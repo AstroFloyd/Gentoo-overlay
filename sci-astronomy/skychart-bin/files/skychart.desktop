@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Skychart
+Type=Application
+Comment=Skychart / Cartes du Ciel
+Exec=skychart
+TryExec=skychart
+Icon=/usr/share/pixmaps/skychart.png
+Categories=Education;Science;Astronomy;
