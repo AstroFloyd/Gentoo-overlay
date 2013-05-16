@@ -4,7 +4,7 @@
 
 *libsufr-0.3.1 (14 Nov 2011)
 
-  14 Nov 2011; Marc van der Sluys <gentoo@vandersluys.nl> +libsufr-0.3.1.ebuild,
+  14 Nov 2011; AstroFloyd <AstroFloyd@gmail.com> +libsufr-0.3.1.ebuild,
   edited metadata.xml:
   Added ebuild for version 0.3.1; files/libsufr-0.3.0-multilib.patch no longer
   needed
@@ -13,6 +13,6 @@
 
   09 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> +libsufr-0.3.0.ebuild,
   +files/libsufr-0.3.0-multilib.patch, +metadata.xml:
-  Initial import, ebuild written by Marc van der Sluys <gentoo@vandersluys.nl>,
+  Initial import, ebuild written by AstroFloyd <AstroFloyd@gmail.com>,
   edited by me
 
