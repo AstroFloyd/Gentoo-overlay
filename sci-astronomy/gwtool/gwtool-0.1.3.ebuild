@@ -20,4 +20,3 @@ DEPEND="virtual/fortran
 	sci-libs/libsufr
 	"
 RDEPEND=${DEPEND}
-
