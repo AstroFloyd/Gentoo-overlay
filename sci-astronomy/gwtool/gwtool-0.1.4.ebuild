@@ -17,6 +17,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="virtual/fortran
-	sci-libs/libsufr
+	>=sci-libs/libsufr-0.5.1
 	"
 RDEPEND=${DEPEND}
