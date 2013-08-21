@@ -26,3 +26,7 @@ src_install() {
 	dosbin gentmaint-*
 	keepdir /var/log/gentmaint /var/log/gentmaint/auto /var/log/gentmaint/manual
 }
+
+pkg_postinst() {
+	einfo "The GentMaint scripts have moved from /usr/bin/ to /usr/sbin/.  Please update your scripts and cron jobs."
+}
