@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci-astronomy</herd>
-	<maintainer>
-		<email>AstroFloyd@gmail.com</email>
-		<name>AstroFloyd</name>
-	</maintainer>
+  <herd>sci-astronomy</herd>
+  <maintainer>
+    <email>AstroFloyd@gmail.com</email>
+    <name>AstroFloyd</name>
+  </maintainer>
+  <use>
+    <flag name='asteroids'>Support for asteroids</flag>
+  </use>
 </pkgmetadata>
