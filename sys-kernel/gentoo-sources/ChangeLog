@@ -2,6 +2,15 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*gentoo-sources-3.10.7 (18 Sep 2013)
+
+  18 Sep 2013; AstroFloyd <AstroFloyd@gmail.com>
+  -gentoo-sources-2.6.38-r6.ebuild, -gentoo-sources-3.0.6.ebuild,
+  -gentoo-sources-3.2.1-r2.ebuild, -gentoo-sources-3.3.8.ebuild,
+  -gentoo-sources-3.4.9.ebuild, -gentoo-sources-3.6.11.ebuild,
+  +gentoo-sources-3.10.7.ebuild:
+  Version bump local copy of gentoo-sources
+
 *gentoo-sources-3.6.11 (26 Jan 2013)
 
   26 Jan 2013; AstroFloyd <AstroFloyd@gmail.com> +gentoo-sources-3.6.11.ebuild:
