@@ -29,7 +29,7 @@ src_configure() {
 }
 
 src_install() {
-	insinto /usr/share/"${PN}"
+	insinto /usr/share/libTheSky
 	doins "${WORKDIR}"/data/*
 	cmake-utils_src_install
 }
