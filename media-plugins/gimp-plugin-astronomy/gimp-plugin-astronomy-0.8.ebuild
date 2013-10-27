@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="fftw"
 
-DEPEND="media-gfx/gimp
+DEPEND=">=media-gfx/gimp-2.8
 sci-libs/gsl
 x11-libs/gtk+
 fftw? ( sci-libs/fftw )"
