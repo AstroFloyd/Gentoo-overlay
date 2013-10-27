@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Gimp plugins for astronomical image processing"
 HOMEPAGE="http://registry.gimp.org/node/2352"
@@ -16,4 +16,7 @@ IUSE="doc fftw"
 DEPEND="fftw? ( sci-libs/fftw )"
 RDEPEND="${DEPEND}"
 
-DOCS="doc? ( doc/documentation.pdf TODO )"
+src_install() {
+	emake DESTDIR="${D}" install || die "Install failed"
+	use doc && dodoc "doc/documentation.pdf TODO"
+}
