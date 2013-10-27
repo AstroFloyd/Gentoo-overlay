@@ -11,12 +11,7 @@ SRC_URI="http://www.hennigbuam.de/georg/downloads/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc fftw"
+IUSE="fftw"
 
 DEPEND="fftw? ( sci-libs/fftw )"
 RDEPEND="${DEPEND}"
-
-src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
-	use doc && dodoc "doc/documentation.pdf TODO"
-}
