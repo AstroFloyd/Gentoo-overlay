@@ -28,12 +28,15 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
-# CMake cannot build Fortran codes in parallel:
+# CMake cannot build both the shared and static libraries in parallel,
+#   but can build each one of them separately in parallel:
 src_compile() {
 	cd "${CMAKE_BUILD_DIR}"
-	emake -j1 || die
+	emake VERBOSE=1 libTheSky_shared || die
+	use static-libs && (emake VERBOSE=1 libTheSky_static || die)
 }
 
+# Install the data files as well as the libraries:
 src_install() {
 	insinto /usr/share/libTheSky
 	doins "${WORKDIR}"/data/*
