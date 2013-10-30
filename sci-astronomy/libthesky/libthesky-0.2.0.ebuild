@@ -17,8 +17,7 @@ IUSE="static-libs"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 mirror://sourceforge/${PN}/libthesky-data-20131020.tar.bz2"
 
-DEPEND="virtual/fortran
->=sci-libs/libsufr-0.5.4"
+DEPEND=">=sci-libs/libsufr-0.5.4"
 RDEPEND="${DEPEND}"
 
 src_configure() {
@@ -28,7 +27,7 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
-# CMake cannot build both the shared and static libraries in parallel,
+# CMake cannot build both the shared and static libraries simultaneously,
 #   but can build each one of them separately in parallel:
 src_compile() {
 	cd "${CMAKE_BUILD_DIR}"
