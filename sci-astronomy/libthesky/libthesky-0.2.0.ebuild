@@ -28,6 +28,11 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
+# CMake cannot build Fortran codes in parallel:
+src_compile() {
+	emake -j1 || die
+}
+
 src_install() {
 	insinto /usr/share/libTheSky
 	doins "${WORKDIR}"/data/*
