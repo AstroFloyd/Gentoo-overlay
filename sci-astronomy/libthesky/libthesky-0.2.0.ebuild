@@ -30,6 +30,7 @@ src_configure() {
 
 # CMake cannot build Fortran codes in parallel:
 src_compile() {
+	cd "${CMAKE_BUILD_DIR}"
 	emake -j1 || die
 }
 
