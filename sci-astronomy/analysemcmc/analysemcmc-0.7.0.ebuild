@@ -24,4 +24,4 @@ RDEPEND="${DEPEND}
 	app-text/a2ps
 	"
 
-DOCS="CHANGELOG README VERSION analysemcmc.dat"
+DOCS="CHANGELOG README VERSION analysemcmc.dat compPDFs.dat"
