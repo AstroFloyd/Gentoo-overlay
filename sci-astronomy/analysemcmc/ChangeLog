@@ -1,0 +1,20 @@
+# ChangeLog for sci-astronomy/analysemcmc
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  02 Nov 2013; AstroFloyd <AstroFloyd@gmail.com> -analysemcmc-0.5.1.ebuild,
+  +analysemcmc-0.6.0.ebuild, +analysemcmc-0.7.0.ebuild, +metadata.xml:
+  Version bump
+
+*analysemcmc-0.7.0 (02 Nov 2013)
+
+  02 Nov 2013; AstroFloyd <AstroFloyd@gmail.com> +analysemcmc-0.6.0.ebuild,
+  +analysemcmc-0.7.0.ebuild, +metadata.xml:
+  Version bump
+
+*analysemcmc-0.6.0 (02 Nov 2013)
+
+  02 Nov 2013; AstroFloyd <AstroFloyd@gmail.com> +analysemcmc-0.6.0.ebuild,
+  +metadata.xml:
+  Version bump
+
