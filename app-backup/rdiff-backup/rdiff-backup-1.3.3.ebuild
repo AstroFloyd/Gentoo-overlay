@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
-DESCRIPTION="Remote incremental file backup utility; uses rdiff utility to create concise, versioned backups."
+DESCRIPTION="Remote incremental file backup utility - not maintained since 2009!"
 HOMEPAGE="http://www.nongnu.org/rdiff-backup/"
 SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
 
