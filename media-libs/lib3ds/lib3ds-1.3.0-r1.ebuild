@@ -5,8 +5,8 @@
 EAPI="5"
 
 DESCRIPTION="library for managing 3D-Studio Release 3 and 4 .3DS files"
-HOMEPAGE="http://lib3ds.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
+HOMEPAGE="https://code.google.com/p/lib3ds/"
+SRC_URI="https://${PN}.googlecode.com/files/${P}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
