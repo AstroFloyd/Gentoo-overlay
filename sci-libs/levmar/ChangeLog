@@ -1,0 +1,18 @@
+# ChangeLog for sci-libs/levmar
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*levmar-2.6-r2 (20 May 2014)
+
+  20 May 2014; AstroFloyd <AstroFloyd@gmail.com> +levmar-2.6-r2.ebuild,
+  +files/levmar-2.6-shared.patch, +metadata.xml:
+  Revision bump to levmar-2.6-r2
+
+  12 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> levmar-2.6.ebuild:
+  sci-libs/levmar: Use virtual/pkgconfig and prefix keywords
+
+*levmar-2.6 (13 Apr 2012)
+
+  13 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/levmar-2.6-shared.patch, +levmar-2.6.ebuild, +metadata.xml:
+  sci-libs/levmar: Initial import
