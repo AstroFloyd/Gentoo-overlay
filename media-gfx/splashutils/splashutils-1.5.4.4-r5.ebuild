@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r4.ebuild,v 1.1 2013/10/14 13:50:25 pinkbyte Exp $
 
@@ -95,6 +95,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${P}-bzip2.patch"
 	epatch "${FILESDIR}/${P}-multi-keyboard.patch"
+	epatch "${FILESDIR}/${P}-llcms2.patch"
 
 	if ! tc-is-cross-compiler && \
 	   has_version "sys-devel/gcc:$(gcc-version)[vanilla]" ; then

@@ -2,6 +2,13 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.222 2014/08/10 21:16:18 slyfox Exp $
 
+*splashutils-1.5.4.4-r5 (23 Aug 2014)
+
+  23 Aug 2014; AstroFloyd <AstroFloyd@gmail.com>
+  -splashutils-1.5.4.4-r4.ebuild, +splashutils-1.5.4.4-r5.ebuild,
+  +files/splashutils-1.5.4.4-llcms2.patch:
+  Added patch to link against lcms2
+
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   splashutils-1.5.4.4-r1.ebuild, splashutils-1.5.4.4-r2.ebuild:
   QA: drop trailing '.' from DESCRIPTION
