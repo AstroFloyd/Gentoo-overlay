@@ -16,9 +16,12 @@ DEPEND=""
 RDEPEND=""
 
 src_install() {
-	dodoc README CHANGELOG VERSION
+	#dodoc README CHANGELOG VERSION
 	dobin usr/bin/*
-	dolib usr/lib/*
+	dolib usr/lib/hptc-usb-mgr/plugins/libUsbVMwareView.so usr/lib/*.so
+	dodoc usr/share/doc/VMware-view-client/doc/open_source_licenses.txt usr/share/doc/VMware-view-client/doc/View_Client_Admin_Guide-en.pdf usr/share/doc/VMware-view-client/doc/VMware-view-client-EULA-en.txt
+	docinto VMware-view-client/doc/help/
+	dodoc usr/share/doc/VMware-view-client/doc/help/integrated_help-*
 	keepdir /etc/vmware/
 }
 
