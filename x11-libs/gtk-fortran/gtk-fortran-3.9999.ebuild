@@ -19,10 +19,7 @@ EGIT_BRANCH="gtk3"
 DEPEND=">=x11-libs/gtk+-3 x11-libs/cairo x11-libs/gdk-pixbuf"
 RDEPEND="${DEPEND}"
 
-# Non-standard source directory:
-S="${WORKDIR}/gtk-fortran-master"
-
-# Cannot build in parallel:
+# Cannot do a parallel build:
 src_compile() {
 	cd "${CMAKE_BUILD_DIR}"
 	emake -j1 VERBOSE=1 || die
