@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit cmake-utils fortran-2
+inherit cmake-utils fortran-2 git-2
 
 DESCRIPTION="Cross-platform library to build GUIs for Fortran programs"
 HOMEPAGE="https://github.com/jerryd/gtk-fortran/wiki"
@@ -13,17 +13,13 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-SRC_URI="https://github.com/jerryd/gtk-fortran/archive/master.zip"
+EGIT_REPO_URI="https://github.com/jerryd/gtk-fortran.git"
 
 DEPEND=">=x11-libs/gtk+-2.24 x11-libs/cairo x11-libs/gdk-pixbuf"
 RDEPEND="${DEPEND}"
 
 # Non-standard source directory:
 S="${WORKDIR}/gtk-fortran-master"
-
-#src_configure() {
-#	cmake-utils_src_configure
-#}
 
 # Cannot build in parallel:
 src_compile() {

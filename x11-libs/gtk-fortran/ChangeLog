@@ -2,6 +2,18 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*gtk-fortran-3.9999 (22 Oct 2014)
+
+  22 Oct 2014; AstroFloyd <AstroFloyd@gmail.com> +gtk-fortran-2.9999.ebuild,
+  +gtk-fortran-3.9999.ebuild, gtk-fortran-9999.ebuild:
+  Added git version for GTK+3
+
+*gtk-fortran-2.9999 (22 Oct 2014)
+
+  22 Oct 2014; AstroFloyd <AstroFloyd@gmail.com> +gtk-fortran-2.9999.ebuild,
+  gtk-fortran-9999.ebuild:
+  Added git version
+
 *gtk-fortran-9999 (22 Oct 2014)
 
   22 Oct 2014; AstroFloyd <AstroFloyd@gmail.com> +gtk-fortran-9999.ebuild,
