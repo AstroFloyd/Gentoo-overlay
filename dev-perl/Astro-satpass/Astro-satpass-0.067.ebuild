@@ -5,7 +5,7 @@
 EAPI=5
 
 MODULE_AUTHOR=WYANT
-MODULE_VERSION=0.056
+MODULE_VERSION=0.067
 inherit perl-module
 
 DESCRIPTION="A Perl module to compute satellite passages for a given observing location"
