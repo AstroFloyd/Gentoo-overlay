@@ -1,48 +1,49 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.0.4.2.ebuild,v 1.6 2013/09/16 11:32:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/Attic/libreoffice-bin-4.2.6.3-r1.ebuild,v 1.3 2014/11/12 20:08:27 dilfridge dead $
 
 EAPI=5
 
 KDE_REQUIRED="optional"
 CMAKE_REQUIRED="never"
 
-BASE_AMD64_URI="mirror://gentoo/amd64-bin-"
-BASE_X86_URI="mirror://gentoo/x86-bin-"
+BASE_PACKAGENAME="bin"
+BASE_AMD64_URI="http://packages.gentooexperimental.org/packages/amd64-libreoffice/amd64-${BASE_PACKAGENAME}-"
+BASE_X86_URI="http://packages.gentooexperimental.org/packages/x86-libreoffice/x86-${BASE_PACKAGENAME}-"
 
-PYTHON_COMPAT=( python2_7 python3_3 )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
 PYTHON_REQ_USE="threads,xml"
 
 inherit kde4-base java-pkg-opt-2 python-single-r1 pax-utils prefix versionator
 
-DESCRIPTION="LibreOffice, a full office productivity suite. Binary package."
+DESCRIPTION="LibreOffice, a full office productivity suite. Binary package"
 HOMEPAGE="http://www.libreoffice.org"
 SRC_URI_AMD64="
+	${BASE_AMD64_URI}libreoffice-${PVR}.tar.xz
 	kde? (
-		!java? ( ${BASE_AMD64_URI}${PN/-bin}-kde-${PV}.tar.xz )
-		java? ( ${BASE_AMD64_URI}${PN/-bin}-kde-java-${PV}.tar.xz )
+		!java? ( ${BASE_AMD64_URI}libreoffice-kde-${PVR}.xd3 )
+		java? ( ${BASE_AMD64_URI}libreoffice-kde-java-${PVR}.xd3 )
 	)
 	gnome? (
-		!java? ( ${BASE_AMD64_URI}${PN/-bin}-gnome-${PV}.tar.xz )
-		java? ( ${BASE_AMD64_URI}${PN/-bin}-gnome-java-${PV}.tar.xz )
+		!java? ( ${BASE_AMD64_URI}libreoffice-gnome-${PVR}.xd3 )
+		java? ( ${BASE_AMD64_URI}libreoffice-gnome-java-${PVR}.xd3 )
 	)
 	!kde? ( !gnome? (
-		!java? ( ${BASE_AMD64_URI}${PN/-bin}-base-${PV}.tar.xz )
-		java? ( ${BASE_AMD64_URI}${PN/-bin}-base-java-${PV}.tar.xz )
+		java? ( ${BASE_AMD64_URI}libreoffice-java-${PVR}.xd3 )
 	) )
 "
 SRC_URI_X86="
+	${BASE_X86_URI}libreoffice-${PVR}.tar.xz
 	kde? (
-		!java? ( ${BASE_X86_URI}${PN/-bin}-kde-${PV}.tar.xz )
-		java? ( ${BASE_X86_URI}${PN/-bin}-kde-java-${PV}.tar.xz )
+		!java? ( ${BASE_X86_URI}libreoffice-kde-${PVR}.xd3 )
+		java? ( ${BASE_X86_URI}libreoffice-kde-java-${PVR}.xd3 )
 	)
 	gnome? (
-		!java? ( ${BASE_X86_URI}${PN/-bin}-gnome-${PV}.tar.xz )
-		java? ( ${BASE_X86_URI}${PN/-bin}-gnome-java-${PV}.tar.xz )
+		!java? ( ${BASE_X86_URI}libreoffice-gnome-${PVR}.xd3 )
+		java? ( ${BASE_X86_URI}libreoffice-gnome-java-${PVR}.xd3 )
 	)
 	!kde? ( !gnome? (
-		!java? ( ${BASE_X86_URI}${PN/-bin}-base-${PV}.tar.xz )
-		java? ( ${BASE_X86_URI}${PN/-bin}-base-java-${PV}.tar.xz )
+		java? ( ${BASE_X86_URI}libreoffice-java-${PVR}.xd3 )
 	) )
 "
 
@@ -51,21 +52,23 @@ SRC_URI="
 	x86? ( ${SRC_URI_X86} )
 "
 
-IUSE="debug gnome java kde"
+IUSE="gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 
 BIN_COMMON_DEPEND="
 	=app-text/libexttextcat-3.4*
-	app-text/poppler:0/37
-	=dev-libs/boost-1.52*
-	dev-libs/icu:0/51.1
+	=app-text/libmwaw-0.2*
+	app-text/poppler:0/46
+	dev-libs/boost:0/1.52
+	dev-libs/icu:0/53
 	=media-gfx/graphite2-1.2*
-	=media-libs/libpng-1.5*
-	>=sys-libs/glibc-2.15-r3
-	kde? ( >=kde-base/kdelibs-4.10.4:4 >=dev-qt/qtcore-4.8.4-r5:4 )
-	|| ( <media-libs/libjpeg-turbo-1.3.0-r2 =media-libs/jpeg-8* )
+	media-libs/harfbuzz:0/0.9.18[icu]
+	media-libs/libpng:0/16
+	>=sys-libs/glibc-2.19-r1
+	virtual/jpeg:62
+	kde? ( >=kde-base/kdelibs-4.12.5-r2:4 >=dev-qt/qtcore-4.8.5-r2:4 >=dev-qt/qtgui-4.8.5-r3:4 )
 "
 
 # PLEASE place any restrictions that are specific to the binary builds
@@ -80,36 +83,45 @@ COMMON_DEPEND="
 	app-arch/unzip
 	>=app-text/hunspell-1.3.2-r3
 	app-text/mythes
+	=app-text/libabw-0.0*
 	>=app-text/libexttextcat-3.2
+	=app-text/libebook-0.0*
+	=app-text/libetonyek-0.0*
 	app-text/liblangtag
-	app-text/libmspub
+	=app-text/libmspub-0.0*
+	=app-text/libmwaw-0.2*
+	=app-text/libodfgen-0.0*
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
-	>=app-text/libwps-0.2.2
+	=app-text/libwps-0.2*
 	>=app-text/poppler-0.16:=[xpdf-headers(+),cxx]
 	>=dev-cpp/clucene-2.3.3.4-r2
-	>=dev-cpp/libcmis-0.3.1:0.3
+	dev-cpp/libcmis:0.4
 	dev-db/unixODBC
+	>=dev-libs/boost-1.46:=
 	dev-libs/expat
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1:=
-	=dev-libs/liborcus-0.3*
+	>=dev-libs/libatomic_ops-7.2d
+	=dev-libs/liborcus-0.5*
 	>=dev-libs/nspr-4.8.8
 	>=dev-libs/nss-3.12.9
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-1.0.0d
-	>=dev-libs/redland-1.0.14[ssl]
+	>=dev-libs/redland-1.0.16
 	media-gfx/graphite2
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2
+	>=media-libs/harfbuzz-0.9.18:=[icu(+)]
 	media-libs/lcms:2
 	>=media-libs/libpng-1.4
-	>=media-libs/libcdr-0.0.5
-	media-libs/libvisio
+	=media-libs/libcdr-0.0*
+	=media-libs/libfreehand-0.0*
+	=media-libs/libvisio-0.0*
 	>=net-misc/curl-7.21.4
 	net-nds/openldap
 	sci-mathematics/lpsolve
-	virtual/jpeg
+	virtual/jpeg:0
 	>=x11-libs/cairo-1.10.0[X]
 	x11-libs/libXinerama
 	x11-libs/libXrandr
@@ -138,10 +150,10 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 PDEPEND="
-	=app-office/libreoffice-l10n-4.0*
+	=app-office/libreoffice-l10n-${PV}*
 "
 
-DEPEND=""
+DEPEND="dev-util/xdelta:3"
 
 # only one flavor at a time
 REQUIRED_USE="kde? ( !gnome ) gnome? ( !kde )"
@@ -163,7 +175,22 @@ pkg_setup() {
 }
 
 src_unpack() {
-	default
+	einfo "Uncompressing distfile ${ARCH}-${BASE_PACKAGENAME}-libreoffice-${PVR}.tar.xz"
+	xz -cd "${DISTDIR}/${ARCH}-${BASE_PACKAGENAME}-libreoffice-${PVR}.tar.xz" > "${WORKDIR}/${ARCH}-${BASE_PACKAGENAME}-libreoffice-${PVR}.tar" || die
+
+	local patchname
+	use kde && patchname="-kde"
+	use gnome && patchname="-gnome"
+	use java && patchname="${patchname}-java"
+
+	if [ -n "${patchname}" ]; then
+		einfo "Patching distfile ${ARCH}-${BASE_PACKAGENAME}-libreoffice-${PVR}.tar using ${ARCH}-${BASE_PACKAGENAME}-libreoffice${patchname}-${PVR}.xd3"
+		xdelta3 -d -s "${WORKDIR}/${ARCH}-${BASE_PACKAGENAME}-libreoffice-${PVR}.tar" "${DISTDIR}/${ARCH}-${BASE_PACKAGENAME}-libreoffice${patchname}-${PVR}.xd3" "${WORKDIR}/tmpdist.tar" || die
+		mv "${WORKDIR}/tmpdist.tar" "${WORKDIR}/${ARCH}-${BASE_PACKAGENAME}-libreoffice-${PVR}.tar" || die
+	fi
+
+	einfo "Unpacking new ${ARCH}-${BASE_PACKAGENAME}-libreoffice-${PVR}.tar"
+	unpack "./${ARCH}-${BASE_PACKAGENAME}-libreoffice-${PVR}.tar"
 }
 
 src_prepare() {
