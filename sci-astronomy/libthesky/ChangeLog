@@ -1,6 +1,14 @@
 # ChangeLog for sci-astronomy/libthesky
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*libthesky-0.3.1 (04 Apr 2015)
+*libthesky-0.3.0 (04 Apr 2015)
+
+  04 Apr 2015; AstroFloyd <AstroFloyd@gmail.com> -libthesky-0.0.1.ebuild,
+  -libthesky-0.0.2.ebuild, -libthesky-0.0.2-r1.ebuild, -libthesky-0.0.3.ebuild,
+  -libthesky-0.1.0.ebuild, +libthesky-0.3.0.ebuild, +libthesky-0.3.1.ebuild:
+  Version bump
 
 *libthesky-0.2.0 (20 Oct 2013)
 

@@ -6,7 +6,4 @@
     <email>AstroFloyd@gmail.com</email>
     <name>AstroFloyd</name>
   </maintainer>
-  <use>
-    <flag name='asteroids'>Support for asteroids</flag>
-  </use>
 </pkgmetadata>
