@@ -2,6 +2,5 @@
 
 An overlay for Gentoo, geared towards scientific packages and Fortran.
 
-Homepage: [AstroFloyd.org](http://astrofloyd.org)
-
+Homepage: [gentoo.AstroFloyd.org](http://gentoo.astrofloyd.org)
 
