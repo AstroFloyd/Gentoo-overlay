@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
-DEPEND="virtual/fortran
->=sci-libs/libsufr-0.5.4"
+DEPEND=">=sci-libs/libsufr-0.5.4"
 RDEPEND="${DEPEND}"
 
 src_configure() {
