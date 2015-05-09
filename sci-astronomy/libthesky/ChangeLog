@@ -2,6 +2,9 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 May 2015; AstroFloyd <AstroFloyd@gmail.com> libthesky-0.3.2.ebuild:
+  Cleaned up ebuild
+
 *libthesky-0.3.1 (04 Apr 2015)
 *libthesky-0.3.0 (04 Apr 2015)
 
