@@ -25,4 +25,8 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
-DOCS="CHANGELOG README VERSION"
+src_install() {
+	cmake-utils_src_install
+	doman man/*
+	dodoc CHANGELOG README VERSION
+}
