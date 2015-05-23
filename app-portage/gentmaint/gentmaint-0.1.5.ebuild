@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="A collection of scripts to aid Gentoo maintenance"
 HOMEPAGE="http://gentmaint.sourceforge.net/"
@@ -24,9 +24,6 @@ RDEPEND="app-portage/portage-utils
 src_install() {
 	dodoc README CHANGELOG VERSION
 	dobin gentmaint-*
+	doman gentmaint.1
 	keepdir /var/log/gentmaint /var/log/gentmaint/auto /var/log/gentmaint/manual
-}
-
-pkg_postinst() {
-	einfo "The GentMaint scripts are now in /usr/bin/.  Please check your scripts and cron jobs."
 }
