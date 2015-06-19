@@ -8,8 +8,8 @@
   19 Jun 2015; AstroFloyd <AstroFloyd@gmail.com> -gtk-fortran-2.9999.ebuild,
   +gtk-fortran-2.9999-r1.ebuild, -gtk-fortran-3.9999.ebuild,
   +gtk-fortran-3.9999-r1.ebuild, +files/Doxyfile.patch:
-  Revision bump: added slotting, allow parallel build, added 'doc' and 'static'
-	USEflags, install gtkf-sketcher (3.x)
+  Revision bump: added slotting; allow parallel build; added 'doc', 'plplot'
+	and 'static' USE flags; install gtkf-sketcher (3.x)
 
 *gtk-fortran-3.9999 (22 Oct 2014)
 

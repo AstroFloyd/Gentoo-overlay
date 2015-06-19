@@ -34,11 +34,9 @@ src_compile() {
 	cd "${CMAKE_BUILD_DIR}"
 	emake VERBOSE=1 gtk-fortran_shared || die "Building shared library failed"  # Cannot be built at the same time as the static library/gtkf-sketcher
 	emake VERBOSE=1 gtk-fortran_static || die "Building static library failed"  # The static library is built when gtkf-sketcher is built, so do this explicitly for clarity
-	emake VERBOSE=1 gtkf-sketcher usemodules plplot_extra_module manpage pkgconfig || die
-	if use doc
-	then
-		emake VERBOSE=1 doc || die "Generating documentation failed"  # Doxygen documentation: ~135Mb!
-	fi
+	emake VERBOSE=1 gtkf-sketcher usemodules manpage pkgconfig || die
+	use plplot && $(emake VERBOSE=1 plplot_extra_module || die "Creating plplot_extra_module failed")
+	use doc && $(emake VERBOSE=1 doc || die "Generating documentation failed")  # Doxygen documentation: ~135Mb!
 	#emake -j1 VERBOSE=1 all || die
 }
 
@@ -51,7 +49,8 @@ src_install() {
 	dobin src/gtk-3-fortran-modscan sketcher/gtkf-sketcher
 
 	insinto usr/include/gtk-3-fortran/
-	doins src/*.mod plplot/plplot_extra.mod
+	doins src/*.mod
+	use plplot && doins plplot/plplot_extra.mod
 
 	insinto usr/share/gtk-fortran/
 	doins src/gtk-3-fortran-index.csv src/gtk-3-enumerators.lis

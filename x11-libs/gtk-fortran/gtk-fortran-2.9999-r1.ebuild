@@ -33,7 +33,8 @@ src_compile() {
 	cd "${CMAKE_BUILD_DIR}"
 	emake VERBOSE=1 gtk-fortran_shared || die "Building shared library failed"  # Cannot be built at the same time as the static library
 	use static && $(emake VERBOSE=1 gtk-fortran_static || die "Building static library failed")
-	emake VERBOSE=1 usemodules plplot_extra_module manpage pkgconfig || die
+	emake VERBOSE=1 usemodules manpage pkgconfig || die
+	use plplot && $(emake VERBOSE=1 plplot_extra_module || die "Creating plplot_extra_module failed")
 	use doc && $(emake VERBOSE=1 doc || die "Generating documentation failed")  # Doxygen documentation: ~135Mb!
 	#emake -j1 VERBOSE=1 all || die
 }
@@ -47,7 +48,8 @@ src_install() {
 	dobin src/gtk-2-fortran-modscan
 
 	insinto usr/include/gtk-2-fortran/
-	doins src/*.mod plplot/plplot_extra.mod
+	doins src/*.mod
+	use plplot && doins plplot/plplot_extra.mod
 
 	insinto usr/share/gtk-fortran/
 	doins src/gtk-2-fortran-index.csv src/gtk-2-enumerators.lis
