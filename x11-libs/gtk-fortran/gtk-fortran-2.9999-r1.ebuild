@@ -15,10 +15,12 @@ KEYWORDS="~amd64 ~x86"
 
 EGIT_REPO_URI="https://github.com/jerryd/gtk-fortran.git"
 
-IUSE="doc static"
+IUSE="doc plplot static"
 DEPEND="doc? ( app-doc/doxygen )
+		plplot? ( sci-libs/plplot )
 		>=x11-libs/gtk+-2.24:2 x11-libs/cairo x11-libs/gdk-pixbuf"
-RDEPEND=">=x11-libs/gtk+-2.24:2 x11-libs/cairo x11-libs/gdk-pixbuf"
+RDEPEND="plplot? ( sci-libs/plplot )
+		 >=x11-libs/gtk+-2.24:2 x11-libs/cairo x11-libs/gdk-pixbuf"
 
 src_prepare() {
 	epatch "${FILESDIR}"/Doxyfile.patch  # Quiet, no graphs
