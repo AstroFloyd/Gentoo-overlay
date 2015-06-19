@@ -16,9 +16,10 @@ KEYWORDS="~amd64 ~x86"
 EGIT_REPO_URI="https://github.com/jerryd/gtk-fortran.git"
 EGIT_BRANCH="gtk3"
 
-DEPEND="x11-libs/gtk+:3 x11-libs/cairo x11-libs/gdk-pixbuf"
-RDEPEND="${DEPEND}"
 IUSE="doc static"
+DEPEND="doc? ( app-doc/doxygen )
+		x11-libs/gtk+:3 x11-libs/cairo x11-libs/gdk-pixbuf"
+RDEPEND="x11-libs/gtk+:3 x11-libs/cairo x11-libs/gdk-pixbuf"
 
 src_prepare() {
 	epatch "${FILESDIR}"/Doxyfile.patch  # Quiet, no graphs
