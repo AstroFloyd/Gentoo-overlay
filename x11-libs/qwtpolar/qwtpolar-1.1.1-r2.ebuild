@@ -103,8 +103,7 @@ src_configure() {
 				eqmake5
 				# qmake 5 doesn't seem to find Qwt - not sure why, but fix it by hand...
 				make sub-src-qmake_all
-				cd src/
-				sed -i '/LIBS /s/$(SUBLIBS)/$(SUBLIBS) -lqwt6-qt5/' Makefile
+				sed -i '/LIBS /s/$(SUBLIBS)/$(SUBLIBS) -lqwt6-qt5/' src/Makefile
 				;;
 		esac
 	}
