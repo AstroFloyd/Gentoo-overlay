@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtpolar/ChangeLog,v 1.9 2014/09/19 12:56:13 jlec Exp $
 
+*qwtpolar-1.1.1-r2 (02 Aug 2015)
+
+  02 Aug 2015; AstroFloyd <AstroFloyd@gmail.com> +qwtpolar-1.1.1-r2.ebuild:
+  Revision bump: manually link qwt-qt5
+
 *qwtpolar-1.1.1-r1 (30 Jul 2015)
 
   31 Jul 2015; AstroFloyd <AstroFloyd@gmail.com> +qwtpolar-1.1.1-r1.ebuild,
