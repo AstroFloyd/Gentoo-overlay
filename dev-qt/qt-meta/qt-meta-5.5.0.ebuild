@@ -8,7 +8,7 @@ DESCRIPTION="Cross-platform application development framework (metapackage)"
 HOMEPAGE="https://www.qt.io/"
 
 LICENSE="metapackage"
-SLOT="4"
+SLOT="5"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="+dbus kde +webkit"
 
