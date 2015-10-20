@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="qwt"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="designer doc qt4 qt5"
+IUSE="designer doc examples qt4 qt5"
 REQUIRED_USE="|| ( qt4 qt5 )"
 
 RDEPEND="x11-libs/qwt:6[svg]
@@ -117,4 +117,31 @@ src_compile() {
 src_install () {
 	multibuild_foreach_variant run_in_build_dir emake INSTALL_ROOT="${D}" install
 	mv "${D}/usr/share/doc/${PN}-${PVR}/man" "${D}"/usr/share
+
+	if use examples; then
+		# don't build examples - fix the Qt files to allow build once installed
+		cat > examples/examples.pri <<-EOF
+TEMPLATE     = app
+
+unix:  include( "${EPREFIX}/usr/share/qt4/mkspecs/features/qwt.prf" )
+unix:  include( "${EPREFIX}/usr/share/qt4/mkspecs/features/qwtpolar.prf" )
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += printsupport concurrent
+
+contains(QWT_POLAR_CONFIG, QwtPolarSvg) {
+   QT += svg
+} else {
+   DEFINES += QWT_POLAR_NO_SVG
+}
+		EOF
+		if use qt4; then
+			insinto /usr/share/${PN}-qt4
+			doins -r examples
+		fi
+		if use qt5; then
+			sed -i -e 's/qt4/qt5/g' examples/examples.pri || die
+			insinto /usr/share/${PN}-qt5
+			doins -r examples
+		fi
+	fi
 }
