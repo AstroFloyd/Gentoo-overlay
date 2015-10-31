@@ -10,7 +10,7 @@ SRC_URI="https://progit2.s3.amazonaws.com/en/2015-10-27-6c452/progit-en.904.zip"
 
 LICENSE="CC-BY-NC-SA-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~*"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
