@@ -1,0 +1,9 @@
+# ChangeLog for sci-libs/nidaqmxbase
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Id$
+
+*nidaqmxbase-14.0.0 (20 Nov 2015)
+
+  20 Nov 2015; AstroFloyd <AstroFloyd@gmail.com> +nidaqmxbase-14.0.0.ebuild:
+  Initial ebuild
+
