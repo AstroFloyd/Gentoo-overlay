@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 
@@ -24,9 +24,6 @@ RDEPEND="app-portage/portage-utils
 src_install() {
 	dodoc README CHANGELOG VERSION
 	dobin gentmaint-*
+	doman gentmaint.1
 	keepdir /var/log/gentmaint /var/log/gentmaint/auto /var/log/gentmaint/manual
-}
-
-pkg_postinst() {
-	einfo "The GentMaint scripts are now in /usr/bin/.  Please check your scripts and cron jobs."
 }
