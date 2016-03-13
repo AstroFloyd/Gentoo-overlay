@@ -2,10 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-#EAPI=6
-EAPI=6
-
-#PYTHON_COMPAT=( python{2_7,3_4} )
+EAPI=5
+inherit distutils
 
 DESCRIPTION="Python SCSI generic library"
 HOMEPAGE="https://pypi.python.org/pypi/py_sg/"
@@ -15,5 +13,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.4:*"
+#DEPEND=">=dev-lang/python-2.4:*"
+DEPEND=">=dev-lang/python-2.4"
 RDEPEND="${DEPEND}"
