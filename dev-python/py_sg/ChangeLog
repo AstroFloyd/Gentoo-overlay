@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/py_sg
+# Copyright 1999-2016 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*py_sg-0.11 (13 Mar 2016)
+
+  13 Mar 2016; AstroFloyd <AstroFloyd@gmail.com> +py_sg-0.11.ebuild:
+  First version (0.11) of py_sg in Gentoo
+
