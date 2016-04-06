@@ -23,9 +23,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo  "The command  `man fortran`  gives and overview of the available man pages."
-	einfo  "Issue  `man 3f <command>`  to read a detailed man page."
-	einfo  "In order to add the Fortran man pages (section 3f) to be found automatically,"
-	einfo  "add  `3f`  to the MANSECT line in /etc/man.conf or set the MANSECT"
-	einfo  "environment variable."
+	elog  "The command  `man fortran`  gives and overview of the available man pages."
+	elog  "Issue  `man 3f <command>`  to read a detailed man page."
+	elog  "In order to add the Fortran man pages (section 3f) to be found automatically,"
+	elog  "add  `3f`  to the MANSECT line in /etc/man.conf or set the MANSECT"
+	elog  "environment variable."
 }
