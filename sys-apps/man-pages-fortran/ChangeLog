@@ -2,6 +2,12 @@
 # Copyright 1999-2016 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*man-pages-fortran-0.1.0-r1 (06 Apr 2016)
+
+  06 Apr 2016; AstroFloyd <AstroFloyd@gmail.com>
+  -man-pages-fortran-0.1.0.ebuild, +man-pages-fortran-0.1.0-r1.ebuild:
+  Revision bump
+
 *man-pages-fortran-0.1.0 (28 Mar 2016)
 
   28 Mar 2016; AstroFloyd <AstroFloyd@gmail.com> +man-pages-fortran-0.1.0.ebuild,
