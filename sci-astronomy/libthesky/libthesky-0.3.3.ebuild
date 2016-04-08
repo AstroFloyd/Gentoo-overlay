@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
-DEPEND=">=sci-libs/libsufr-0.5.4"
+DEPEND=">=sci-libs/libsufr-0.7.2"
 RDEPEND="${DEPEND}"
 
 src_configure() {
