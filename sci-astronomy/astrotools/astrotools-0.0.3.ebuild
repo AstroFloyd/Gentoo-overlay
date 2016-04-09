@@ -15,8 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="virtual/fortran
-	>=sci-libs/libsufr-0.6.2
-	>=sci-astronomy/libthesky-0.3.1
+	>=sci-libs/libsufr-0.7.2
+	>=sci-astronomy/libthesky-0.3.3
 	"
-
 RDEPEND="${DEPEND}"
