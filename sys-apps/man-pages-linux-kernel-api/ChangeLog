@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/man-pages-linux-kernel-api
+# Copyright 1999-2016 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*man-pages-linux-kernel-api-4.5.2 (30 Apr 2016)
+
+  30 Apr 2016; AstroFloyd <AstroFloyd@gmail.com>
+  +man-pages-linux-kernel-api-4.5.2.ebuild, +metadata.xml:
+  Initial ebuild
+
