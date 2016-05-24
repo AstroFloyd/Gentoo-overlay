@@ -15,5 +15,4 @@ LICENSE="CeCILL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="~sci-misc/simso-0.8.5"
-RDEPEND="${DEPEND}"
+RDEPEND="~sci-misc/simso-0.8.5"
