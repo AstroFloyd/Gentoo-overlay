@@ -1,0 +1,12 @@
+04 Jan 2011  insecure
+
+	* initial ebuild
+
+*gcruft-0.1.1 (09 Aug 2016)
+*gcruft-0.1-r1 (09 Aug 2016)
+
+  09 Aug 2016; AstroFloyd <AstroFloyd@gmail.com> +gcruft-0.1-r1.ebuild,
+  +gcruft-0.1.1.ebuild, +metadata.xml:
+  Added to repo AstroFloyd, from
+  https://svn.keksbude.net/repos/keks-overlay/app-portage/gcruft/
+
