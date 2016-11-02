@@ -17,24 +17,61 @@ RDEPEND=""
 
 src_unpack() {
 	mkdir ${S}  # No unpacking to be done, but dir must exists for src_prepare()
+	cp ${DISTDIR}/${A} ${S}  # Copy the distfile to the source dir
+	chmod +x ${S}/${A}       # Make the distdir executable
+	cd ${S}
+	./${A} -x extract/
 }
 
 src_prepare() {
-	cp ${DISTDIR}/${A} ${S}  # Copy the distfile to the source dir
-	chmod +x ${S}/${A}       # Make the distdir executable
-}
+	# Arch PKGBUILD build() function:
 
-src_compile() {
-	#TERM=dumb VMWARE_EULAS_AGREED=yes \
-	#	./${A} --console \
-	#	--set-setting vmware-horizon-usb usbEnable yes \
-	#	--set-setting vmware-horizon-virtual-printing tpEnable yes \
-	#	--set-setting vmware-horizon-smartcard smartcardEnable no\
-	#	--set-setting vmware-horizon-rtav rtavEnable no \
-	#	--set-setting vmware-horizon-tsdr tsdrEnable yes \
-	#	--set-setting vmware-horizon-mmr mmrEnable no  ||  die  'Compilation (unpacking) failed'
+	# This is a dirty hack, but it works.
+	# Change dynamic section in ELF files to fix dynamic linking.
+	# Make sure the length is not changed!
+	#	libudev.so.0 -> libudev.so.1
+	#
+	# for system openssl:
+	#	libssl.so.1.0.[12] -> libssl.so.1.0.0
+	#	libcrypto.so.1.0.[12] -> libcrypto.so.1.0.0
+	#
+	# for bundled openssl - we use uncommon name to make sure no other application will care:
+	#	libssl.so.1.0.[12] -> libssl-vmw.so.0
+	#	libcrypto.so.1.0.[12] -> libcrypto-vmw.so.0
 
-	./${A} -x extract/
+	cd extract
+	for bundle in vmware-horizon-*; do
+		echo "Patching ${bundle}..."
+		for FILE in $(find "${bundle}" -type f); do
+			# executables and libraries only
+			file --mime "${FILE}" | egrep -q "(application/x-(executable|sharedlib)|text/x-shellscript)" || continue
+
+			# make executable
+			chmod +x "${FILE}"
+
+			# ELF executables and libraries only
+			file --mime "${FILE}" | egrep -q "application/x-(executable|sharedlib)" || continue
+
+			# link against libudev.so.1
+			sed -i -e 's/libudev.so.0/libudev.so.1/' "${FILE}"
+
+			# even openssl 1.0.[12].x has library file names ending in .so.1.0.0
+			if [ ${_USE_BUNDLED_OPENSSL:=0} -eq 0 -o "${bundle}" = 'vmware-horizon-client' ]; then
+				sed -i -e 's/libssl.so.1.0.[12]/libssl.so.1.0.0/' \
+					-e 's/libcrypto.so.1.0.[12]/libcrypto.so.1.0.0/' \
+					"${FILE}"
+			else
+				# Some files link against openssl...
+				# Use the bundled version there.
+				sed -i -e 's/libssl.so.1.0.[012]/libssl-vmw.so.0/' \
+					-e 's/libcrypto.so.1.0.[012]/libcrypto-vmw.so.0/' \
+					"${FILE}"
+			fi
+		done
+	done
+
+	# now that we fixed dynamic linking, remove the libraries provided by the package...
+	rm -f vmware-horizon-pcoip/pcoip/lib/vmware/lib{crypto,ssl}.so.1.0.2
 }
 
 src_install() {
