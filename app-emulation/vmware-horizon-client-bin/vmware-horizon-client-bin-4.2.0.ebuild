@@ -16,8 +16,8 @@ DEPEND=""
 RDEPEND=""
 
 src_unpack() {
-	mkdir ${S}  # No unpacking to be done, but dir must exists for src_prepare()
-	cp ${DISTDIR}/${A} ${S}  # Copy the distfile to the source dir
+	mkdir ${S}               # Create source dir
+	cp ${DISTDIR}/${A} ${S}  # Copy the distfile to the source dir - symlink won't execute
 	chmod +x ${S}/${A}       # Make the distdir executable
 	cd ${S}
 	./${A} -x extract/
