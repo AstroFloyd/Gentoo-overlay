@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>perl</herd>
-  <maintainer>
-    <email>AstroFloyd@gmail.com</email>
+  <maintainer type="person">
     <name>AstroFloyd</name>
+    <email>AstroFloyd@gmail.com</email>
   </maintainer>
   <use>
     <flag name='json'>Uses <pkg>dev-perl/JSON</pkg> to pass JSON orbital data from Space Track to the Astro::Coord::ECI::TLE parse() method</flag>
