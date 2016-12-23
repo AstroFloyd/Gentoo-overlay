@@ -18,7 +18,7 @@ RDEPEND=""
 src_unpack() {
 	mkdir ${S}               # Create source dir
 	cp ${DISTDIR}/${A} ${S}  # Copy the distfile to the source dir - symlink won't execute
-	chmod +x ${S}/${A}       # Make the distdir executable
+	chmod +x ${S}/${A}       # Make the distfile executable
 	cd ${S}
 	./${A} -x extract/
 }
@@ -107,6 +107,8 @@ src_install() {
 	cd ${S}/extract/vmware-horizon-usb/
 	exeinto usr/lib/vmware/view/usb/
 	doexe bin/*
+	dosym /usr/lib/vmware/view/usb/vmware-view-usbd usr/bin/
+	dosym /usr/lib/vmware/view/usb/vmware-usbarbitrator usr/bin/
 	# Note: no init scripts
 
 	# Virtual printing:
