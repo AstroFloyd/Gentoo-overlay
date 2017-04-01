@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>wired@gentoo.org</email>
-		<name>Alex Alexander</name>
-	</maintainer>
-	<upstream>
-		<remote-id type="google-code">googlecl</remote-id>
-	</upstream>
+  <maintainer type="person">
+    <email>wired@gentoo.org</email>
+    <name>Alex Alexander</name>
+  </maintainer>
+  <maintainer type="person">
+    <email>AstroFloyd@gmail.com</email>
+    <name>AstroFloyd</name>
+  </maintainer>
+  <upstream>
+    <remote-id type="google-code">googlecl</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,11 +1,12 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=3
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 PYTHON_DEPEND="2:2.7"
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="Command line tools for the Google Data APIs"
 HOMEPAGE="https://github.com/vinitkumar/googlecl"
