@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -23,10 +23,4 @@ src_configure() {
 		$(cmake-utils_use static-libs CREATE_STATICLIB)
 	)
 	cmake-utils_src_configure
-}
-
-src_install() {
-	cmake-utils_src_install
-	doman man/*
-	dodoc CHANGELOG README VERSION
 }
