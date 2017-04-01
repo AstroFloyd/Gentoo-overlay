@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vmware</herd>
-	<maintainer>
+	<maintainer type="person">
 		<email>tgurr@gentoo.org</email>
 	</maintainer>
 	<longdescription>VMware View Open Client lets you connect from a Linux desktop to remote

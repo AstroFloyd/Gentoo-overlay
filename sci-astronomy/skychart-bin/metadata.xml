@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci-astronomy</herd>
-  <maintainer>
+  <maintainer type="person">
     <email>bruno@yporti.com</email>
   </maintainer>
   <longdescription>Free software to draw skycharts</longdescription>
