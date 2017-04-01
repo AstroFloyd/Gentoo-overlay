@@ -1,13 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
-PYTHON_DEPEND="*:2.6"
+EAPI=5
+PYTHON_DEPEND="*:2.7"
+PYTHON_COMPAT=( python2_7 )
 PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="Fast matching of large sets of points in 3D space, in O(N log N) time"
 HOMEPAGE="http://pschella.github.com/k3match/"
