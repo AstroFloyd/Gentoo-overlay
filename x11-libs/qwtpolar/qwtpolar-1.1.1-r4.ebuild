@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="qwt"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="designer doc qt4 qt5"
+IUSE="designer doc examples qt4 qt5"
 REQUIRED_USE="|| ( qt4 qt5 )"
 
 RDEPEND="x11-libs/qwt:6[svg]
@@ -21,6 +21,7 @@ RDEPEND="x11-libs/qwt:6[svg]
 DEPEND="${RDEPEND}"
 
 src_prepare() {
+	rm -f "${S}/doc/man/man3/qwtlicense.3"  # Already provided by dependency x11-libs/qwt
 	sed \
 		-e "/QWT_POLAR_INSTALL_PREFIX /s:=.*$:= ${EPREFIX}/usr:g" \
 		-e "/QWT_POLAR_INSTALL_LIBS/s:lib:$(get_libdir):g" \
@@ -36,8 +37,8 @@ src_prepare() {
 		-i src/src.pro || die
 	echo "INCLUDEPATH += ${EPREFIX}/usr/include/qwt6" >> src/src.pro
 	cat >> designer/designer.pro <<- EOF
-	INCLUDEPATH += "${EPREFIX}"/usr/include/qwt6
-	LIBS += -L"${S}"/$(get_libdir)
+	INCLUDEPATH += "${EPREFIX}/usr/include/qwt6"
+	LIBS += -L"${S}/$(get_libdir)"
 	EOF
 
 	MULTIBUILD_VARIANTS=( )
@@ -116,5 +117,32 @@ src_compile() {
 
 src_install () {
 	multibuild_foreach_variant run_in_build_dir emake INSTALL_ROOT="${D}" install
-	mv "${D}/usr/share/doc/${PN}-${PVR}/man" "${D}"/usr/share
+	mv "${D}/usr/share/doc/${PN}-${PVR}/man" "${D}/usr/share"
+
+	if use examples; then
+		# don't build examples - fix the Qt files to allow build once installed
+		cat > examples/examples.pri <<-EOF
+TEMPLATE     = app
+
+unix:  include( "${EPREFIX}/usr/share/qt4/mkspecs/features/qwt.prf" )
+unix:  include( "${EPREFIX}/usr/share/qt4/mkspecs/features/qwtpolar.prf" )
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += printsupport concurrent
+
+contains(QWT_POLAR_CONFIG, QwtPolarSvg) {
+   QT += svg
+} else {
+   DEFINES += QWT_POLAR_NO_SVG
+}
+		EOF
+		if use qt4; then
+			insinto /usr/share/${PN}-qt4
+			doins -r examples
+		fi
+		if use qt5; then
+			sed -i -e 's/qt4/qt5/g' examples/examples.pri || die
+			insinto /usr/share/${PN}-qt5
+			doins -r examples
+		fi
+	fi
 }
