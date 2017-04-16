@@ -1,0 +1,25 @@
+--- a/cmake/modules/cairo.cmake	2013-09-07 10:29:45.000000000 +0200
++++ b/cmake/modules/cairo.cmake	2017-04-16 12:03:48.722484754 +0200
+@@ -97,15 +97,13 @@
+     OR PLD_extcairo
+     OR PLD_wincairo
+     )
+-  pkg_check_pkgconfig(
+-    pangocairo
+-    includedir
+-    linkdir
+-    linkflags
+-    cflags
+-    version
+-    _CAIRO
+-    )
++  pkg_search_module(cairo pangocairo)
++  set(includedir ${cairo_INCLUDE_DIRS})
++  set(linkdir ${cairo_LIBRARY_DIRS})
++  set(linkflags ${cairo_LDFLAGS})
++  set(cflags ${cairo_CFLAGS})
++  set(version ${cairo_VERSION})
++  
+   if(linkflags)
+     # Check that the pangocairo library version is recent
+     # enough to efficiently handle text clipping.

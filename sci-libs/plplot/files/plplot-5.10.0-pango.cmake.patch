@@ -1,0 +1,28 @@
+--- a/cmake/modules/pango.cmake	2009-04-04 23:23:44.000000000 +0200
++++ b/cmake/modules/pango.cmake	2017-04-16 12:10:00.102280094 +0200
+@@ -20,20 +20,16 @@
+ # Module for determining all configuration variables for libpango.
+ 
+ if(PKG_CONFIG_EXECUTABLE)
+-  pkg_check_pkgconfig(
+-  pango
+-  PANGO_INCLUDE_DIR PANGO_LINK_DIR PANGO_LINK_FLAGS PANGO_CFLAGS PANGO_VERSION _PANGO1
+-  )
++  pkg_search_module(PANGO pango)
++  set(PANGO_LINK_FLAGS ${PANGO_LDFLAGS})
+   if(NOT PANGO_LINK_FLAGS)
+     message(STATUS
+     "WARNING: pkg-config does not find pango."
+     )
+   endif(NOT PANGO_LINK_FLAGS)
+-
+-  pkg_check_pkgconfig(
+-  pangoft2
+-  PANGOFT2_INCLUDE_DIR PANGOFT2_LINK_DIR PANGOFT2_LINK_FLAGS PANGOFT2_CFLAGS PANGOFT2_VERSION _PANGO2
+-  )
++  
++  pkg_search_module(PANGOFT2 pangoft2)
++  set(PANGOFT2_LINK_FLAGS ${PANGOFT2_LDFLAGS})
+   if(NOT PANGOFT2_LINK_FLAGS)
+     message(STATUS
+     "WARNING: pkg-config does not find pangoft2."

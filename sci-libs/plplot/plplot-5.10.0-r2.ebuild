@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.10.0-r1.ebuild,v 1.6 2015/05/07 09:14:47 jlec Exp $
 
@@ -100,6 +100,8 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-5.9.11-multiarch.patch
 	"${FILESDIR}"/${PN}-5.10.0-have-config-h.patch
 	"${FILESDIR}"/${PN}-5.10.0-cmake.patch
+	"${FILESDIR}"/${PN}-5.10.0-pango.cmake.patch
+	"${FILESDIR}"/${PN}-5.10.0-cairo.cmake.patch
 )
 
 pkg_setup() {
