@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION="Binary version of VMware horizon client"
 HOMEPAGE="https://my.vmware.com/web/vmware/info/slug/desktop_end_user_computing/vmware_horizon_clients/4_0"
-SRC_URI="https://download3.vmware.com/software/view/viewclients/CART16Q3/VMware-Horizon-Client-4.2.0-4329640.x64.bundle"
+SRC_URI="https://download3.vmware.com/software/view/viewclients/CART16Q4/VMware-Horizon-Client-4.3.0-4710754.x64.bundle"
 
 LICENSE="vmware"
 SLOT="0"
@@ -16,10 +16,10 @@ DEPEND=""
 RDEPEND=""
 
 src_unpack() {
-	mkdir ${S}               # Create source dir
-	cp ${DISTDIR}/${A} ${S}  # Copy the distfile to the source dir - symlink won't execute
-	chmod +x ${S}/${A}       # Make the distfile executable
-	cd ${S}
+	mkdir "${S}"               # Create source dir
+	cp "${DISTDIR}/${A} ${S}"  # Copy the distfile to the source dir - symlink won't execute
+	chmod +x "${S}/${A}"       # Make the distfile executable
+	cd "${S}"
 	./${A} -x extract/
 }
 
@@ -78,7 +78,7 @@ src_install() {
 	# Following the Arch Linux package build for v4.1.0
 
 	# Client:
-	cd ${S}/extract/vmware-horizon-client/
+	cd "${S}/extract/vmware-horizon-client/"
 	dobin bin/*
 	exeinto usr/lib/vmware/view/bin/
 	doexe lib/vmware/view/bin/vmware-view
@@ -88,23 +88,23 @@ src_install() {
 	dodoc debug/*
 
 	# PCOIP:
-	cd ${S}/extract/vmware-horizon-pcoip/pcoip/
+	cd "${S}/extract/vmware-horizon-pcoip/pcoip/"
 	dobin bin/*
 	insinto usr/lib/
 	doins -r lib/*
 
 	# Real-time audio/video:
-	cd ${S}/extract/vmware-horizon-rtav/
+	cd "${S}/extract/vmware-horizon-rtav/"
 	insinto usr/lib/
 	doins -r lib/*
 
 	# Smartcard:
-	cd ${S}/extract/vmware-horizon-smartcard/
+	cd "${S}/extract/vmware-horizon-smartcard/"
 	insinto usr/lib/
 	doins -r lib/*
 
 	# USB redirection:
-	cd ${S}/extract/vmware-horizon-usb/
+	cd "${S}/extract/vmware-horizon-usb/"
 	exeinto usr/lib/vmware/view/usb/
 	doexe bin/*
 	dosym /usr/lib/vmware/view/usb/vmware-view-usbd usr/bin/
@@ -112,7 +112,7 @@ src_install() {
 	# Note: no init scripts
 
 	# Virtual printing:
-	cd ${S}/extract/vmware-horizon-virtual-printing/
+	cd "${S}/extract/vmware-horizon-virtual-printing/"
 	exeinto usr/lib/vmware/view/usb/
 	doexe bin/*
 	dobin bin/x86_64-linux-NOSSL/thnu*  # Specific for amd64
