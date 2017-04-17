@@ -2,9 +2,9 @@
 # Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*soltrack-2.1 (15 Apr 2017)
+*soltrack-2.1 (17 Apr 2017)
 
-  15 Apr 2017; AstroFloyd <AstroFloyd@gmail.com> +soltrack-2.1.ebuild,
+  17 Apr 2017; AstroFloyd <AstroFloyd@gmail.com> +soltrack-2.1.ebuild,
   +metadata.xml:
   Initial ebuild
 

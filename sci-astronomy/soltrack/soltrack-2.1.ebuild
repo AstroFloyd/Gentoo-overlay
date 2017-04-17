@@ -23,7 +23,4 @@ src_configure() {
 		$(cmake-utils_use static-libs CREATE_STATICLIB)
 	)
 	cmake-utils_src_configure
-
-	mkdir doc/
-	cp CHANGELOG LICENCE README VERSION doc/
 }
