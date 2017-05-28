@@ -1,11 +1,11 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=6
 inherit cmake-utils fortran-2
 
-DESCRIPTION="Tools to manipulate and display output from the binary stellar-evolution code ev/TWIN"
+DESCRIPTION="Manipulate and display output from the binary stellar-evolution code ev/TWIN"
 HOMEPAGE="http://${PN}.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
