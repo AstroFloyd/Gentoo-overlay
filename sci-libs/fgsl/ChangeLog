@@ -2,6 +2,16 @@
 # Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*fgsl-1.0.0 (28 Oct 2017)
+*fgsl-1.1.0 (28 Oct 2017)
+*fgsl-1.2.0 (28 Oct 2017)
+
+  28 Oct 2017; AstroFloyd <AstroFloyd@gmail.com> +fgsl-1.0.0.ebuild,
+  +fgsl-1.1.0.ebuild, +fgsl-1.2.0.ebuild, -fgsl-0.9.4-r1.ebuild,
+  -files/fgsl-0.9.3-sharedlibs.patch, metadata.xml:
+  sci-libs/fgsl: Version bump to fgsl v1.0, v1.1 and v1.2 needed for latest
+  versions of sci-libs/gsl
+
 *fgsl-0.9.4-r1 (02 Jun 2017)
 
   02 Jun 2017; AstroFloyd <AstroFloyd@gmail.com> -fgsl-0.9.ebuild,
@@ -15,4 +25,3 @@
   05 Nov 2016; AstroFloyd <AstroFloyd@gmail.com> fgsl-0.9.ebuild,
   fgsl-0.9.1.ebuild:
   Fix ebuilds: remove use() statement from global scope
-

@@ -5,4 +5,7 @@
     <email>AstroFloyd@gmail.com</email>
     <name>AstroFloyd</name>
   </maintainer>
+  <use>
+    <flag name='html-doc'>Installs (~13Mb) of HTML-documentation</flag>
+  </use>
 </pkgmetadata>
