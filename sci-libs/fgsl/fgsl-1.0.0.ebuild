@@ -12,7 +12,7 @@ SRC_URI="http://www.lrz.de/services/software/mathematik/gsl/fortran/download/${P
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~amd64-linux"
-IUSE="doc examples html-doc static-libs"
+IUSE="doc-html doc-pdf examples static-libs"
 
 RDEPEND=">=sci-libs/gsl-1.13
 		 <sci-libs/gsl-2"
@@ -36,7 +36,7 @@ src_install() {
 	doins fgsl.mod
 
 	dodoc NEWS README
-	use doc && dodoc doc/latex/refman.pdf   # ~4.6Mb
-	use html-doc && dodoc -r doc/html/      # ~11Mb
-	use examples && dodoc -r doc/examples/  # ~300kb (zipped)
+	use doc-html && dodoc -r doc/html/          # ~11Mb
+	use doc-pdf  && dodoc doc/latex/refman.pdf  # ~4.6Mb
+	use examples && dodoc -r doc/examples/      # ~300kb (zipped)
 }

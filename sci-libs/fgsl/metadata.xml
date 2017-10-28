@@ -6,6 +6,7 @@
     <name>AstroFloyd</name>
   </maintainer>
   <use>
-    <flag name='html-doc'>Installs (~13Mb) of HTML-documentation</flag>
+    <flag name='doc-html'>Installs (~13Mb) of documentation as HTML</flag>
+    <flag name='doc-pdf'>Installs (~4.6Mb) of documentation as PDF</flag>
   </use>
 </pkgmetadata>

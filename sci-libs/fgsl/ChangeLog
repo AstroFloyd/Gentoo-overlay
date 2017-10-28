@@ -2,6 +2,11 @@
 # Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Oct 2017; AstroFloyd <AstroFloyd@gmail.com> fgsl-1.0.0.ebuild,
+  fgsl-1.1.0.ebuild, fgsl-1.2.0.ebuild, metadata.xml:
+  sci-libs/fgsl: Minor updates after previous version bump - USE flag doc ->
+  doc-pdf, html-doc -> doc-html
+
 *fgsl-1.0.0 (28 Oct 2017)
 *fgsl-1.1.0 (28 Oct 2017)
 *fgsl-1.2.0 (28 Oct 2017)
