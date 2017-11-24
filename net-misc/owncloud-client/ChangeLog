@@ -1,0 +1,5 @@
+*owncloud-client-2.3.1 (24 Nov 2017)
+
+  24 Nov 2017; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml,
+  +owncloud-client-2.3.1.ebuild:
+  net-misc/owncloud-client: Keep v2.3.1 for use with SURFdrive
