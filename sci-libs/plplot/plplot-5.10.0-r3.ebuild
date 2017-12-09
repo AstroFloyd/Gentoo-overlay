@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.10.0-r1.ebuild,v 1.6 2015/05/07 09:14:47 jlec Exp $
 
 EAPI=5
 
@@ -19,12 +18,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0/12"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="ada cairo cxx doc +dynamic examples fortran gd java jpeg latex lua
+IUSE="cairo cxx doc +dynamic examples fortran gd java jpeg latex lua
 	ocaml octave pdf pdl png python qhull qt4 shapefile svg tcl test
 	threads tk truetype wxwidgets X"
 
 RDEPEND="
-	ada? ( virtual/gnat:* )
 	cairo? ( x11-libs/cairo:0=[svg?,X?] )
 	gd? ( media-libs/gd:2=[jpeg?,png?] )
 	java? ( >=virtual/jre-1.5:* )
@@ -146,7 +144,6 @@ src_configure() {
 		$(cmake-utils_use_has python NUMPY)
 		$(cmake-utils_use_has shapefile SHAPELIB)
 		$(cmake-utils_use_with truetype FREETYPE)
-		$(cmake-utils_use_enable ada)
 		$(cmake-utils_use_enable cxx)
 		$(cmake-utils_use_enable dynamic DYNDRIVERS)
 		$(cmake-utils_use_enable fortran f77)

@@ -2,6 +2,18 @@
 # Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.65 2015/07/23 20:20:57 pacho Exp $
 
+*plplot-5.10.0-r3 (09 Dec 2017)
+*plplot-5.13.0 (09 Dec 2017)
+
+  09 Dec 2017; AstroFloyd <AstroFloyd@gmail.com>
+  +files/plplot-5.11.0-multiarch.patch, +files/plplot-5.11.0-ocaml.patch,
+  +files/plplot-5.11.0-octave.patch,
+  +files/plplot-5.12.0-java-install-path.patch,
+  +files/plplot-5.12.0-multiarch.patch,
+  +files/plplot-5.12.0-ocaml-remove-rpath.patch, +plplot-5.10.0-r3.ebuild,
+  +plplot-5.13.0.ebuild, -plplot-5.10.0-r2.ebuild, metadata.xml:
+  sci-libs/plplot: version bump to v5.13.0
+
   16 Apr 2017; AstroFloyd <AstroFloyd@gmail.com> -plplot-5.10.0-r1.ebuild,
   +plplot-5.10.0-r2.ebuild, +files/plplot-5.10.0-cairo.cmake.patch,
   +files/plplot-5.10.0-pango.cmake.patch:
