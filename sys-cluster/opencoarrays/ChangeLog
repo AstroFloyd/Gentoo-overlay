@@ -1,0 +1,5 @@
+*opencoarrays-1.9.3 (30 Dec 2017)
+
+  30 Dec 2017; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml,
+  +opencoarrays-1.9.3.ebuild:
+  sys-cluster/opencoarrays: initial ebuild, for v1.9.3
