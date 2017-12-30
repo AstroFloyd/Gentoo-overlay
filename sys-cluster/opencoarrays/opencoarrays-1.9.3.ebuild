@@ -12,7 +12,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="virtual/fortran"
+DEPEND="virtual/fortran virtual/mpi"
 RDEPEND="${DEPEND}"
 
 # Source dir has capitals:
