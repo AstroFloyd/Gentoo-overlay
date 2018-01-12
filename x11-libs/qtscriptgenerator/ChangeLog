@@ -1,0 +1,7 @@
+*qtscriptgenerator-0.2.0-r1 (12 Jan 2018)
+
+  12 Jan 2018; AstroFloyd <AstroFloyd@gmail.com>
+  +files/qtscriptgenerator-0.2.0-arm.patch, +metadata.xml,
+  +qtscriptgenerator-0.2.0-r1.ebuild:
+  x11-libs/qtscriptgenerator: copy from portage to keep until Plasma-5 version
+  of Amarok is released
