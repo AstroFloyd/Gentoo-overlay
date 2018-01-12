@@ -1,6 +1,3 @@
-  30 Dec 2017; AstroFloyd <AstroFloyd@gmail.com> opencoarrays-1.9.3.ebuild:
-  sys-cluster/opencoarrays: add dependency virtual/mpi
-
 *opencoarrays-1.9.3 (30 Dec 2017)
 
   30 Dec 2017; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml,
