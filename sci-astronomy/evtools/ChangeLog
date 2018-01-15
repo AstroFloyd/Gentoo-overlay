@@ -1,6 +1,12 @@
 # ChangeLog for sci-astronomy/evtools
-# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2018 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*evtools-0.4.2 (15 Jan 2018)
+
+  15 Jan 2018; AstroFloyd <AstroFloyd@gmail.com> +evtools-0.4.2.ebuild,
+  -evtools-0.4.1.ebuild:
+  sci-astronomy/evtools: version bump to v0.4.2
 
 *evtools-0.4.1 (24 Apr 2015)
 
@@ -11,4 +17,3 @@
 
   04 Apr 2015; AstroFloyd <AstroFloyd@gmail.com> +evtools-0.3.0.ebuild:
   Version bump
-
