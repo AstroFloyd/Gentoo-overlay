@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
-# Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2018 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*gentoo-sources-4.9.76-r1 (17 Jan 2018)
+
+  17 Jan 2018; AstroFloyd <AstroFloyd@gmail.com>
+  +gentoo-sources-4.9.76-r1.ebuild, gentoo-sources-4.1.12.ebuild,
+  gentoo-sources-4.4.6.ebuild:
+  sys-kernel/gentoo-sources: version bump of local copy
 
   17 Sep 2017; AstroFloyd <AstroFloyd@gmail.com> -gentoo-sources-4.12.5.ebuild,
   +gentoo-sources-4.12.12.ebuild, metadata.xml:
@@ -110,4 +117,3 @@
   -gentoo-sources-2.6.36-r5.ebuild, -gentoo-sources-2.6.37-r4.ebuild,
   +metadata.xml:
   Removed ancient versions (<2.6.38)
-
