@@ -19,7 +19,3 @@ src_prepare() {
 	printf 'v%s\n' "${PV}" > version
 	sed -i -e '/^onedrive:/ s/version //' -e 's:PREFIX = /usr/local:PREFIX = /usr:' Makefile
 }
-
-src_compile() {
-	PREFIX=/usr make  # -C ${P}
-}
