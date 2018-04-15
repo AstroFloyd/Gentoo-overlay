@@ -26,9 +26,9 @@ src_prepare() {
 }
 
 src_install() {
-	doheader src/nidaqmx-dummy.h
-	dolib libnidaqmx-dummy.so
-	use static-libs && dolib libnidaqmx-dummy.a
+	doheader src/NIDAQmx.h
+	dolib libNIDAQmx.so
+	use static-libs && dolib libNIDAQmx.a
 }
 
 pkg_info() {
