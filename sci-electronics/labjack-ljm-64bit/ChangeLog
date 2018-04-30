@@ -1,5 +1,9 @@
   30 Apr 2018; AstroFloyd <AstroFloyd@gmail.com>
   labjack-ljm-64bit-20171221.ebuild:
+  sci-electronics/labjack-ljm-64bit: Remove lingering symlink and directory
+
+  30 Apr 2018; AstroFloyd <AstroFloyd@gmail.com>
+  labjack-ljm-64bit-20171221.ebuild:
   sci-electronics/labjack-ljm-64bit: Install in /usr/local/...; make symlinks to
   /usr/...
 

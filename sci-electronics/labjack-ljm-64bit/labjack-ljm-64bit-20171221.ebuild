@@ -95,7 +95,20 @@ pkg_postinst() {
 	elog "  'udevadm control --reload'  or restart your computer."
 	elog
 	elog "If you have any LabJack devices connected, please disconnect and"
-	elog "  reconnect them afterwards for device rule changes to take effect"
-	elog " (or use 'udevadm trigger')."
+	elog "   reconnect them afterwards for device rule changes to take effect"
+	elog "  (or use 'udevadm trigger')."
 	elog
+	elog "Note that (user) settings will be saved in the world writable"
+	elog "  directory /usr/local/share/LabJack/"
+	elog
+}
+
+pkg_prerm() {
+	elog "Removing /usr/share/LabJack symlink to avoid searching all installed packages for files installed via above symlink(s)..."
+	rm -f /usr/share/LabJack
+}
+
+pkg_postrm() {
+	elog "Removing /usr/local/share/LabJack/ so that no settings remain"
+	rm -rf /usr/local/share/LabJack
 }
