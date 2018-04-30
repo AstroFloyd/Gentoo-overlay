@@ -1,3 +1,8 @@
+  30 Apr 2018; AstroFloyd <AstroFloyd@gmail.com>
+  labjack-ljm-64bit-20171221.ebuild:
+  sci-electronics/labjack-ljm-64bit: Install in /usr/local/...; make symlinks to
+  /usr/...
+
 *labjack-ljm-64bit-20171221 (30 Apr 2018)
 
   30 Apr 2018; AstroFloyd <AstroFloyd@gmail.com>

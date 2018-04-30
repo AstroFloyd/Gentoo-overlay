@@ -23,8 +23,8 @@ src_prepare() {
 
 	# Fix destination directories:
 	sed -i \
-		-e "s:_DESTINATION=/usr/local/lib:_DESTINATION=${D}usr/lib64:" \
-		-e "s:_DESTINATION=/usr/local/:_DESTINATION=${D}usr/:" \
+		-e "s:_DESTINATION=/usr/local/lib:_DESTINATION=${D}usr/local/lib64:" \
+		-e "s:_DESTINATION=/usr/local/:_DESTINATION=${D}usr/local/:" \
 		-e "s:_DESTINATION=/opt:_DESTINATION=${D}opt:" \
 		-e "s:/lib/udev/rules.d:${D}lib/udev/rules.d:" \
 		setup.sh
@@ -46,27 +46,52 @@ src_prepare() {
 }
 
 src_install() {
-	mkdir -p "${D}/usr/bin" "${D}/usr/include" "${D}/usr/lib64" "${D}/usr/share" "${D}/opt" "${D}/lib/udev/rules.d"
+	# Note: installing in /usr/bin, /usr/lib, /usr/include and /usr/share doesn't work, since the /usr/local/... is hardcoded in some of the binaries...
+	mkdir -p "${D}/usr/local/bin" "${D}/usr/local/include" "${D}/usr/local/lib64" "${D}/usr/local/share" "${D}/opt" "${D}/lib/udev/rules.d"
 
 	VERSION=`head -n 100 labjack_ljm_installer.run | grep scriptargs= | sed -e 's/scriptargs=//' -e 's/"//g'`  # v2017_12_21_x86_64 has LJM library v1.17.0
 	elog "${P} contains LJM library ${VERSION}"
-	./setup.sh ${VERSION}
+	elog "Running LabJack setup script..."
+	./setup.sh ${VERSION} || die
+	elog "Exiting LabJack setup script..."
+
+	# Remove symlink to non-existing target:
+	rm -f "${D}/opt/labjack_kipling/node_modules/.bin/ncp"
+
+	# Install header files for examples to /usr/local/include, so that they can be used elsewhere:
+	insinto usr/local/include
+	doins labjack_ljm_examples/LabJackMModbusMap.h labjack_ljm_examples/examples/LJM_Utilities.h labjack_ljm_examples/examples/stream/LJM_StreamUtilities.h
+	chmod a-x "${D}usr/local/include/LabJackM.h"  # Fix permissions
 
 	# Install examples if desired:
 	if use examples; then
-		insinto usr/share/LabJack
+		insinto usr/local/share/LabJack
 		doins -r labjack_ljm_examples
 	fi
 
 	# Do NOT install kipling if explicitly indicated:
-	if ! use kipling; then
-		rm -rf "${D}/opt/" "${D}/usr/bin/"
-	fi
+	use kipling || rm -rf "${D}/opt/" "${D}/usr/local/bin/"
+
+	# Create symlinks from /usr/local/... to /usr/... so that the user can find stuff:
+	mkdir -p "${D}/usr/bin" "${D}/usr/include" "${D}/usr/lib64" "${D}/usr/share"
+	MAJOR_VERSION=`echo ${VERSION} | sed 's:^\(.*\)\..*\..*$:\1:'`
+	use kipling && dosym ../local/bin/labjack_kipling usr/bin/labjack_kipling
+
+	dosym ../local/lib64/libLabJackM.so usr/lib64/libLabJackM.so
+	dosym ../local/lib64/libLabJackM.so.${MAJOR_VERSION} usr/lib64/libLabJackM.so.${MAJOR_VERSION}
+	dosym ../local/lib64/libLabJackM.so.${VERSION} usr/lib64/libLabJackM.so.${VERSION}
+
+	dosym ../local/include/LabJackM.h usr/include/LabJackM.h
+	dosym ../local/include/LabJackMModbusMap.h usr/include/LabJackMModbusMap.h
+	dosym ../local/include/LJM_StreamUtilities.h usr/include/LJM_StreamUtilities.h
+	dosym ../local/include/LJM_Utilities.h usr/include/LJM_Utilities.h
+
+	dosym ../local/share/LabJack usr/share/LabJack
 }
 
 pkg_postinst() {
 	elog
-	elog "Please manually restart the device rules, e.g. using "
+	elog "You may have to manually restart the device rules, e.g. using "
 	elog "  'udevadm control --reload'  or restart your computer."
 	elog
 	elog "If you have any LabJack devices connected, please disconnect and"
