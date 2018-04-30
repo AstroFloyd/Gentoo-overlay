@@ -3,7 +3,7 @@
 
 EAPI=5
 
-DESCRIPTION="LabJack exodriver/LJM (+ C interface) and Kipling for T4, T7, and Digit (64-bit)"
+DESCRIPTION="LabJackM driver + C library and Kipling for LabJack T4, T7, and Digit (64-bit)"
 HOMEPAGE="https://labjack.com/support/software/installers/ljm"
 SRC_URI="https://labjack.com/sites/default/files/software/labjack_ljm_software_2017_12_21_x86_64.tar.gz"
 
