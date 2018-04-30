@@ -1,12 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=4
+EAPI=5
 
 INTEL_DPN=parallel_studio_xe
-INTEL_DID=2872
-INTEL_DPV=2013_update1
+INTEL_DID=3266
+INTEL_DPV=2013_update4
 INTEL_SUBDIR=composerxe
 
 inherit intel-sdp
@@ -15,8 +14,9 @@ DESCRIPTION="Common libraries and utilities needed for Intel compilers and libra
 HOMEPAGE="http://software.intel.com/en-us/articles/intel-compilers/"
 
 IUSE="+compiler"
+KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
 
-CHECKREQS_DISK_BUILD=325M
+CHECKREQS_DISK_BUILD=375M
 
 pkg_setup() {
 	einfo ${INTEL_SDP_EDIR}
@@ -54,7 +54,4 @@ src_install() {
 	EOF
 	insinto /etc/revdep-rebuild/
 	doins "${T}"/40-${PN}
-
-	# AF: circumvent bug https://bugs.gentoo.org/show_bug.cgi?id=437512
-	keepdir /opt/intel/ism/rm
 }
