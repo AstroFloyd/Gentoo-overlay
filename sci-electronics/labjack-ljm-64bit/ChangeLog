@@ -1,0 +1,5 @@
+*labjack-ljm-64bit-20171221 (30 Apr 2018)
+
+  30 Apr 2018; AstroFloyd <AstroFloyd@gmail.com>
+  +labjack-ljm-64bit-20171221.ebuild, +metadata.xml:
+  sci-electronics/labjack-ljm-64bit: Initial ebuild for v20171221
