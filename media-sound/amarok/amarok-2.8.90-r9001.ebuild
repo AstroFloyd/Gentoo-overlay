@@ -19,7 +19,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="4"
-IUSE="debug +embedded ipod lastfm mp3tunes mtp ofa test +utils"
+IUSE="debug +embedded ipod mp3tunes mtp ofa test +utils"
 
 if [[ ${KDE_BUILD_TYPE} == live ]]; then
 	RESTRICT+=" test"
@@ -28,18 +28,16 @@ fi
 # ipod requires gdk enabled and also gtk compiled in libgpod
 COMMONDEPEND="
 	$(add_kdeapps_dep kdebase-kioslaves)
-	app-crypt/qca:2[qt4]
+	app-crypt/qca:2
 	>=dev-qt/qtcore-4.8:4
 	>=dev-qt/qtdbus-4.8:4
 	>=dev-qt/qtscript-4.8:4
-	>=kde-frameworks/kdelibs-4.14.37:4[plasma]
 	>=media-libs/taglib-1.7[asf(+),mp4(+)]
 	>=media-libs/taglib-extras-1.0.1
 	sys-libs/zlib
-	>=virtual/mysql-5.1[embedded?]
+	>=virtual/mysql-5.1
 	>=x11-libs/qtscriptgenerator-0.1.0
 	ipod? ( >=media-libs/libgpod-0.7.0[gtk] )
-	lastfm? ( >=media-libs/liblastfm-1.0.3[qt4] )
 	mp3tunes? (
 		dev-libs/glib:2
 		dev-libs/libxml2
@@ -52,9 +50,7 @@ COMMONDEPEND="
 	ofa? ( >=media-libs/libofa-0.9.0 )
 "
 DEPEND="${COMMONDEPEND}
-	dev-util/automoc
 	virtual/pkgconfig
-	test? ( dev-cpp/gmock )
 "
 RDEPEND="${COMMONDEPEND}
 	!media-sound/amarok-utils
@@ -96,7 +92,6 @@ src_configure() {
 		-DWITH_Soprano=OFF
 		-DWITH_MYSQL_EMBEDDED=$(usex embedded)
 		-DWITH_IPOD=$(usex ipod)
-		-DWITH_LibLastFm=$(usex lastfm)
 		-DWITH_MP3Tunes=$(usex mp3tunes)
 		-DWITH_Mtp=$(usex mtp)
 		-DWITH_LibOFA=$(usex ofa)
