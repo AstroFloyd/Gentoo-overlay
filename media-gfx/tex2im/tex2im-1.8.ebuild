@@ -1,7 +1,5 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
-
 
 DESCRIPTION="Tex2im converts LaTeX formulae into high-resolution bitmap graphics."
 HOMEPAGE="http://www.nought.de/tex2im.html"
@@ -25,12 +23,12 @@ src_unpack() {
 
 src_install() {
 	einfo "  Installing Tex2im:\n"
-	mkdir -pv ${D}${DESTDIR}/bin/
-	cp -v tex2im ${D}${DESTDIR}/bin/ || die "install failed"
+	mkdir -pv "${D}${DESTDIR}/bin/"
+	cp -v tex2im "${D}${DESTDIR}/bin/" || die "install failed"
 	use doc && (
 		 einfo "  Installing documentation:\n"
-		 mkdir -pv ${D}${DESTDIR}/share/doc/${P} || die "Could not create doc directory"
-		 cp -prv CHANGELOG LICENSE README examples ${D}${DESTDIR}/share/doc/${P} || die "Could not copy documentation"
+		 mkdir -pv "${D}${DESTDIR}/share/doc/${P}" || die "Could not create doc directory"
+		 cp -prv CHANGELOG LICENSE README examples "${D}${DESTDIR}/share/doc/${P}" || die "Could not copy documentation"
 	)
 }
 
@@ -43,4 +41,3 @@ pkg_config()
 {
 	eerror "This ebuild does not have a config function."
 }
-
