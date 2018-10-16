@@ -1,6 +1,0 @@
-*phonon-kde-16.04.3 (12 Jan 2018)
-
-  12 Jan 2018; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml,
-  +phonon-kde-16.04.3.ebuild:
-  kde-apps/phonon-kde: copy from portage to keep until Plasma-5 version of
-  Amarok is released
