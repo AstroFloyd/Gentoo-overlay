@@ -1,3 +1,40 @@
+  19 Nov 2018; AstroFloyd <AstroFloyd@gmail.com>
+  +files/giac-1.2.2-test_with_nofltk.patch, +files/pari_2_11.patch:
+  sci-mathematics/giac: Adding more patches to files/
+
+  19 Nov 2018; AstroFloyd <AstroFloyd@gmail.com>
+  +files/giac-1.2.2-test_with_nofltk.patch, +files/pari_2_11.patch:
+  sci-mathematics/giac: Test
+
+  19 Nov 2018; AstroFloyd <AstroFloyd@gmail.com>
+  +files/giac-1.2.2-test_with_nofltk.patch, +files/pari_2_11.patch:
+  sci-mathematics/giac: Test
+
+  19 Nov 2018; AstroFloyd <AstroFloyd@gmail.com>
+  +files/giac-1.2.2-test_with_nofltk.patch, +files/pari_2_11.patch:
+  sci-mathematics/giac: Test
+
+  19 Nov 2018; AstroFloyd <AstroFloyd@gmail.com>
+  +files/giac-1.2.2-test_with_nofltk.patch, +files/pari_2_11.patch:
+  sci-mathematics/giac: Test
+
+  19 Nov 2018; AstroFloyd <AstroFloyd@gmail.com>
+  +files/giac-1.2.2-test_with_nofltk.patch, +files/pari_2_11.patch:
+  sci-mathematics/giac: Test
+
+  19 Nov 2018; AstroFloyd <AstroFloyd@gmail.com>
+  +files/giac-1.2.2-test_with_nofltk.patch, +files/pari_2_11.patch:
+  sci-mathematics/giac: Test
+
+  19 Nov 2018; AstroFloyd <AstroFloyd@gmail.com>
+  +files/giac-1.2.2-test_with_nofltk.patch, +files/pari_2_11.patch:
+  sci-mathematics/giac: Test
+
+  19 Nov 2018; AstroFloyd <AstroFloyd@gmail.com>
+  +files/giac-1.2.2-test_with_nofltk.patch, +files/pari_2_11.patch:
+  cat/pkg:  Signed-off-by: AstroFloyd <AstroFloyd@gmail.com>  # Used commit-
+  message template ../../AstroFloyd/commit_message_template
+
 *giac-1.4.9.71-r1 (19 Nov 2018)
 
   19 Nov 2018; AstroFloyd <AstroFloyd@gmail.com>
