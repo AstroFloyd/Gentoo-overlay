@@ -1,0 +1,5 @@
+*giac-1.4.9.71-r1 (19 Nov 2018)
+
+  19 Nov 2018; AstroFloyd <AstroFloyd@gmail.com>
+  +files/giac-1.2.2-gsl_lapack.patch, +giac-1.4.9.71-r1.ebuild, +metadata.xml:
+  sci-mathematics/giac: Copy v1.4.9.71-r1 from Sage-on-Gentoo overlay
