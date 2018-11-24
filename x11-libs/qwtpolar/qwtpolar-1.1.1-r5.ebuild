@@ -1,6 +1,5 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -17,7 +16,7 @@ IUSE="designer doc examples qt4 qt5"
 REQUIRED_USE="|| ( qt4 qt5 )"
 
 RDEPEND="x11-libs/qwt:6[svg]
-		 qt5? ( >=x11-libs/qwt-6.1.2-r1[svg,qt5] )"
+		 qt5? ( >=x11-libs/qwt-6.1.3-r2[svg] )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
