@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Astro-satpass
-# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2019 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
+
+  12 Jan 2019; AstroFloyd <AstroFloyd@gmail.com> Manifest:
+  dev-perl: html2latex was moved to dev-tex/
 
   10 Feb 2015; AstroFloyd <AstroFloyd@gmail.com> -Astro-satpass-0.047.ebuild,
   -Astro-satpass-0.056.ebuild:
@@ -21,4 +24,3 @@
   27 Jan 2013; AstroFloyd <AstroFloyd@gmail.com> +Astro-satpass-0.047.ebuild,
   +metadata.xml:
   New ebuild
-
