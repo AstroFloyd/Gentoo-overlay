@@ -1,0 +1,24 @@
+# ChangeLog for dev-tex/html2latex
+# Copyright 1999-2019 Gentoo Authors; Distributed under the GPL v2
+# $Header: $
+
+*html2latex-1.1-r2 (12 Jan 2019)
+
+  12 Jan 2019; AstroFloyd <AstroFloyd@gmail.com> +html2latex-1.1-r2.ebuild,
+  +metadata.xml:
+  dev-tex/html2latex: move to proper category, from dev-perl/
+
+*html2latex-1.1-r2 (12 Jan 2019)
+
+  12 Jan 2019; AstroFloyd <AstroFloyd@gmail.com> +html2latex-1.1-r2.ebuild,
+  +metadata.xml:
+  dev-perl/html2latex: revision bump to v1.1-r2  * dev-perl/html2latex: revision
+  bump to v1.1-r2:   + from -r1, taken from Portage   + fixes
+  https://bugs.gentoo.org/484432   + see also
+  https://forums.gentoo.org/viewtopic-p-8299966.html
+
+*html2latex-1.1-r1.ebuild (12 Jan 2019)
+
+  12 Jan 2019; AstroFloyd <AstroFloyd@gmail.com> +html2latex-1.1-r1.ebuild,
+  +metadata.xml:
+  Copied from Portage
