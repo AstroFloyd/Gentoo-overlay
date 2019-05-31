@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/libsufr
-# Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2019 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
+
+*libsufr-0.7.4 (31 May 2019)
+
+  31 May 2019; AstroFloyd <AstroFloyd@gmail.com> +libsufr-0.7.4.ebuild,
+  -libsufr-0.7.2.ebuild, libsufr-0.7.3.ebuild:
+  sci-libs/libsufr: version bump to v0.7.4
 
   01 Apr 2017; AstroFloyd <AstroFloyd@gmail.com> -libsufr-0.6.5.ebuild,
   +libsufr-0.7.3.ebuild:
@@ -96,4 +102,3 @@
   +files/libsufr-0.3.0-multilib.patch, +metadata.xml:
   Initial import, ebuild written by AstroFloyd <AstroFloyd@gmail.com>,
   edited by me
-
