@@ -17,7 +17,7 @@ IUSE="emacs"
 # net-mail/mailutils also installes /usr/bin/mu.  Block it until somebody
 # really wants both installed at the same time.
 DEPEND="
-	dev-libs/gmime:2.6
+	dev-libs/gmime:3.0
 	dev-libs/xapian
 	dev-libs/glib:2
 	emacs? ( >=virtual/emacs-23 )
