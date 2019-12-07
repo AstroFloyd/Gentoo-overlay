@@ -4,7 +4,4 @@
   <upstream>
     <remote-id type="sourceforge">qwtpolar</remote-id>
   </upstream>
-  <use>
-    <flag name='designer'>Build the plugin for <pkg>dev-qt/designer</pkg>/<pkg>dev-qt/qt-creator</pkg></flag>
-  </use>
 </pkgmetadata>
