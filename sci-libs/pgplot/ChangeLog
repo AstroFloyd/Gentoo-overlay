@@ -3,13 +3,16 @@
 # $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.17 2009/02/23 17:30:38 bicatali Exp $
 
   07 Dec 2019; AstroFloyd <AstroFloyd@gmail.com> ChangeLog:
+  sci-libs/pgplot: minor update.
+
+  07 Dec 2019; AstroFloyd <AstroFloyd@gmail.com> ChangeLog:
   sci-libs/pgplot: fix ChangeLog date.
 
   07 Dec 2019; AstroFloyd <AstroFloyd@gmail.com> 000_readme.txt, metadata.xml,
   pgplot-5.2.2-r99.ebuild:
-  sci-libs/pgplot: update v5.2.2-r99 to latest format.  - replace dependency
-  x11-libs/openmotif with x11-libs/motif - fix ebuild header to latest format -
-  update metadata.xml to latest format - manually update ChangeLog
+  sci-libs/pgplot: update v5.2.2-r99 to latest format.  Replace dependency
+  x11-libs/openmotif with x11-libs/motif, fix ebuild header to latest format,
+  update metadata.xml to latest format, manually update ChangeLog.
 
   28 Oct 2017; AstroFloyd <astrofloyd@gmail.com>
   pgplot-5.2.2-r99.ebuild:
