@@ -1,6 +1,22 @@
 # ChangeLog for sci-libs/pgplot
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2019 Gentoo Authors; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.17 2009/02/23 17:30:38 bicatali Exp $
+
+  07 Dec 2019; AstroFloyd <AstroFloyd@gmail.com> 000_readme.txt, metadata.xml,
+  pgplot-5.2.2-r99.ebuild:
+  sci-libs/pgplot: update v5.2.2-r99 to latest format.  - replace dependency
+  x11-libs/openmotif with x11-libs/motif - fix ebuild header to latest format -
+  update metadata.xml to latest format - manually update ChangeLog
+
+*pgplot-5.2.2-r99 (12 Nov 2009)
+
+  28 Oct 2017; AstroFloyd <astrofloyd@gmail.com>
+  pgplot-5.2.2-r99.ebuild:
+  Remove cvs line from header.
+
+  12 Nov 2009; AstroFloyd <astrofloyd@gmail.com>
+  pgplot-5.2.2-r99.ebuild:
+  Created local version.
 
   23 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
   pgplot-5.2.2-r3.ebuild:
@@ -84,4 +100,3 @@
   +files/pgplot-makemake.patch, +metadata.xml, +pgplot-5.2.2.ebuild:
   A Fortran- or C-callable, device-independent graphics package for making
   simple scientific graphs.
-

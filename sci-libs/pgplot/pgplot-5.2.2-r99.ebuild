@@ -1,6 +1,5 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# r99: MvdS, 12/11/2009, 22/03/2011
 
 EAPI=2
 inherit eutils toolchain-funcs #fortran
@@ -16,7 +15,7 @@ IUSE="doc motif tk"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXt
 	media-libs/libpng
-	motif? ( >=x11-libs/openmotif-2.3:0 )
+	motif? ( >=x11-libs/motif-2.3:0 )
 	tk? ( dev-lang/tk )"
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base )"
