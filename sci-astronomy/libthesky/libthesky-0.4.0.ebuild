@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
@@ -16,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
-DEPEND=">=sci-libs/libsufr-0.5.4"
+DEPEND=">=sci-libs/libsufr-0.7.5"
 RDEPEND="${DEPEND}"
 
 src_configure() {
@@ -33,4 +32,4 @@ src_install() {
 	cmake-utils_src_install
 }
 
-DOCS="CHANGELOG README VERSION"
+DOCS="doc/CHANGELOG doc/README doc/VERSION"
