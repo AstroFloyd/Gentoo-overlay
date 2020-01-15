@@ -1,0 +1,6 @@
+*qwt-6.1.4 (15 Jan 2020)
+
+  15 Jan 2020; AstroFloyd <AstroFloyd@gmail.com>
+  +files/qwt-6.0.2-invalid-read.patch, +files/qwt-6.1.1-pc-destdir.patch,
+  +metadata.xml, +qwt-6.1.4.ebuild:
+  x11-libs/qwt: add ebuild for v6.1.4.
