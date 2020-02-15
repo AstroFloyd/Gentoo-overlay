@@ -1,10 +1,9 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=5
 
-inherit eutils cmake-utils fortran-2 git-2
+inherit eutils cmake-utils fortran-2 git-r3
 
 DESCRIPTION="Cross-platform Fortran binding to create GUIs for Fortran programs using GTK+"
 HOMEPAGE="https://github.com/jerryd/gtk-fortran/wiki"
