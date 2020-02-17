@@ -2,6 +2,9 @@
 # Copyright 1999-2020 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+  17 Feb 2020; AstroFloyd <AstroFloyd@gmail.com> Manifest:
+  sci-astronomy/libthesky: update Manifest to new data file size(?)
+
 *libthesky-0.4.0 (11 Jan 2020)
 
   11 Jan 2020; AstroFloyd <AstroFloyd@gmail.com> +libthesky-0.4.0.ebuild,
