@@ -1,0 +1,5 @@
+*skypeforlinux-8.56.0.103-r2 (26 Mar 2020)
+
+  26 Mar 2020; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml,
+  +skypeforlinux-8.56.0.103-r2.ebuild:
+  net-im/skypeforlinux: add v8.56.0.103-r2 to repo for use w/o USER_NS
