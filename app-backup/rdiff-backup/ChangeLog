@@ -1,6 +1,15 @@
 # ChangeLog for app-backup/rdiff-backup
-# Copyright 1999-2018 Gentoo Authors; Distributed under the GPL v2
+# Copyright 1999-2020 Gentoo Authors; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-backup/rdiff-backup/ChangeLog,v 1.62 2012/09/23 04:27:40 mattst88 Exp $
+
+*rdiff-backup-1.3.3-r3 (14 Apr 2020)
+
+  14 Apr 2020; AstroFloyd <AstroFloyd@gmail.com>
+  +files/rdiff-backup-1.3.3-librsync-1.0.0.patch,
+  +files/rdiff-backup-1.3.3-no-docs.patch,
+  +files/rdiff-backup-2.0.0-no-docs.patch, +rdiff-backup-1.3.3-r3.ebuild,
+  -rdiff-backup-1.3.3-r2.ebuild:
+  app-backup/rdiff-backup: copy rdiff-backup-1.3.3-r3.ebuild from portage
 
   07 Oct 2018; AstroFloyd <AstroFloyd@gmail.com> rdiff-backup-1.3.3-r1.ebuild,
   rdiff-backup-1.3.3-r2.ebuild:
