@@ -2,6 +2,13 @@
 # Copyright 1999-2020 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+*libsufr-0.7.4-r1 (05 Oct 2020)
+*libsufr-0.7.5-r1 (05 Oct 2020)
+
+  05 Oct 2020; AstroFloyd <AstroFloyd@gmail.com> +libsufr-0.7.4-r1.ebuild,
+  +libsufr-0.7.5-r1.ebuild, -libsufr-0.7.4.ebuild, -libsufr-0.7.5.ebuild:
+  sci-libs/libsufr: revision bumps to 0.7.4-r1 and 0.7.5-r1.
+
 *libsufr-0.7.5 (11 Jan 2020)
 
   11 Jan 2020; AstroFloyd <AstroFloyd@gmail.com> +libsufr-0.7.5.ebuild,
