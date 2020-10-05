@@ -2,6 +2,12 @@
 # Copyright 1999-2020 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+*libthesky-0.4.1-r1 (05 Oct 2020)
+
+  05 Oct 2020; AstroFloyd <AstroFloyd@gmail.com> +libthesky-0.4.1-r1.ebuild,
+  -libthesky-0.3.3.ebuild, -libthesky-0.4.0.ebuild, -libthesky-0.4.1.ebuild:
+  sci-astronomy/libthesky: revision bump to v0.4.1-r1.
+
 *libthesky-0.4.1 (03 Oct 2020)
 
   03 Oct 2020; AstroFloyd <AstroFloyd@gmail.com> +libthesky-0.4.1.ebuild:
