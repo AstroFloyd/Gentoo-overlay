@@ -2,6 +2,10 @@
 # Copyright 1999-2020 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+  21 Nov 2020; AstroFloyd <AstroFloyd@gmail.com> pg2plplot-5.12.0.ebuild,
+  pg2plplot-5.13.0.ebuild:
+  sci-libs/pg2plplot: quick fix after previous commit
+
 *pg2plplot-5.13.0 (21 Nov 2020)
 
   21 Nov 2020; AstroFloyd <AstroFloyd@gmail.com> +pg2plplot-5.13.0.ebuild,

@@ -2,9 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-CMAKE_VERBOSE=1
 
+CMAKE_BUILD_TYPE=Release
 inherit cmake fortran-2
+CMAKE_MAKEFILE_GENERATOR="emake"
 
 DESCRIPTION="Assist the transition from PGPlot to PLplot in Fortran programs"
 HOMEPAGE="http://pg2plplot.sourceforge.net"
@@ -26,9 +27,9 @@ RDEPEND="${DEPEND}
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use static-libs CREATE_STATICLIB)
+		-DCREATE_STATICLIB="$(usex static-libs)"
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 DOCS="CHANGELOG README VERSION"
