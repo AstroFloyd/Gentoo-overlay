@@ -1,10 +1,10 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 CMAKE_VERBOSE=1
 
-inherit cmake-utils fortran-2
+inherit cmake fortran-2
 
 DESCRIPTION="Assist the transition from PGPlot to PLplot in Fortran programs"
 HOMEPAGE="http://pg2plplot.sourceforge.net"
