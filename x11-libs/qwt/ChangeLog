@@ -1,3 +1,7 @@
+  14 Jan 2021; AstroFloyd <AstroFloyd@gmail.com> -qwt-6.1.4.ebuild,
+  metadata.xml:
+  x11-libs/qwt: remove from repo.
+
 *qwt-6.1.4 (15 Jan 2020)
 
   15 Jan 2020; AstroFloyd <AstroFloyd@gmail.com>
