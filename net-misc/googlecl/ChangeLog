@@ -2,8 +2,7 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/googlecl/ChangeLog,v 1.14 2015/04/21 00:57:56 mrueg Exp $
 
-  05 Feb 2021; AstroFloyd <AstroFloyd@gmail.com>
-  -files/googlecl-0.9.12-calendar_dates.patch, -googlecl-0.9.15-r1.ebuild:
+  05 Feb 2021; AstroFloyd <AstroFloyd@gmail.com> ChangeLog:
   net-misc/googlecl: remove conflicting ebuilds.
 
 *googlecl-0.9.15 (25 Sep 2015)
