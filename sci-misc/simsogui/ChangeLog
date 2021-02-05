@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/simsogui
-# Copyright 1999-2018 Gentoo Authors; Distributed under the GPL v2
+# Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
+
+  05 Feb 2021; AstroFloyd <AstroFloyd@gmail.com> -simsogui-0.8.1.ebuild:
+  sci-misc/simsogui: remove conflicting ebuilds.
 
   07 Oct 2018; AstroFloyd <AstroFloyd@gmail.com> simsogui-0.8.1.ebuild:
   sci-misc/simsogui: Update header, hash
