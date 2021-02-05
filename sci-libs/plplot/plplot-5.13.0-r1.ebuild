@@ -1,14 +1,14 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 WX_GTK_VER=3.0-gtk3
 FORTRAN_NEEDED=fortran
 FORTRAN_STANDARD=95
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_7,3_6,3_7,3_8,3_9} )
 
-inherit cmake-utils flag-o-matic fortran-2 java-pkg-opt-2 python-single-r1 toolchain-funcs virtualx wxwidgets
+inherit cmake flag-o-matic fortran-2 java-pkg-opt-2 python-single-r1 toolchain-funcs virtualx wxwidgets
 
 DESCRIPTION="Multi-language scientific plotting library"
 HOMEPAGE="http://plplot.sourceforge.net/"
@@ -43,9 +43,10 @@ RDEPEND="
 		dev-perl/XML-DOM
 	)
 	python? (
-		${PYTHON_DEPS}
-		dev-python/numpy[${PYTHON_USEDEP}]
-		qt5? ( dev-python/PyQt5[${PYTHON_USEDEP}] )
+		$(python_gen_cond_dep '
+			dev-python/numpy[${PYTHON_USEDEP}]
+			qt5? ( dev-python/PyQt5[${PYTHON_USEDEP}] )
+			')
 	)
 	qhull? ( media-libs/qhull:0= )
 	qt5? (

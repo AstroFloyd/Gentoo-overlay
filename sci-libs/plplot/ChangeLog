@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/plplot
-# Copyright 1999-2019 Gentoo Authors; Distributed under the GPL v2
+# Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.65 2015/07/23 20:20:57 pacho Exp $
+
+*plplot-5.13.0-r1 (05 Feb 2021)
+*plplot-5.14.0-r1 (05 Feb 2021)
+*plplot-5.15.0-r1 (05 Feb 2021)
+
+  05 Feb 2021; AstroFloyd <AstroFloyd@gmail.com> +plplot-5.13.0-r1.ebuild,
+  +plplot-5.14.0-r1.ebuild, +plplot-5.15.0-r1.ebuild, -plplot-5.13.0.ebuild,
+  -plplot-5.14.0.ebuild, -plplot-5.15.0.ebuild:
+  sci-libs/plplot: revision bumps to v5.13/14/15.0-r1.
 
 *plplot-5.15.0 (21 Jul 2019)
 
