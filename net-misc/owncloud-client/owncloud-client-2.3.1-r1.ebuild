@@ -1,9 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-inherit cmake-utils
+inherit cmake
 
 DESCRIPTION="Synchronize files from ownCloud Server with your computer"
 HOMEPAGE="http://owncloud.org/"
@@ -22,7 +22,6 @@ COMMON_DEPEND=">=dev-db/sqlite-3.4:3
 	dev-qt/qtgui:5
 	dev-qt/qtnetwork:5
 	dev-qt/qtsql:5
-	dev-qt/qtwebkit:5
 	sys-fs/inotify-tools
 	virtual/libiconv
 	dolphin? (
@@ -33,6 +32,7 @@ COMMON_DEPEND=">=dev-db/sqlite-3.4:3
 	samba? ( >=net-fs/samba-3.5 )
 	sftp? ( >=net-libs/libssh-0.5 )
 "
+# dev-qt/qtwebkit:5
 RDEPEND="${COMMON_DEPEND}
 	!net-misc/ocsync
 	!net-misc/nextcloud-client

@@ -1,3 +1,9 @@
+*owncloud-client-2.3.1-r1 (05 Feb 2021)
+
+  05 Feb 2021; AstroFloyd <AstroFloyd@gmail.com>
+  +owncloud-client-2.3.1-r1.ebuild, -owncloud-client-2.3.1.ebuild:
+  net-misc/owncloud-client: revision bump to v2.3.1-r1.
+
 *owncloud-client-2.3.1 (24 Nov 2017)
 
   24 Nov 2017; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml,
