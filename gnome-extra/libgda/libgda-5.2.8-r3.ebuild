@@ -1,16 +1,15 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 GNOME2_LA_PUNT="yes"
 GNOME2_EAUTORECONF="yes"
-PYTHON_COMPAT=( python2_7 )
 VALA_USE_DEPEND="vapigen"
 
-inherit db-use eutils flag-o-matic gnome2 java-pkg-opt-2 python-single-r1 vala
+inherit db-use eutils flag-o-matic gnome2 java-pkg-opt-2 vala
 
 DESCRIPTION="GNOME database access library"
-HOMEPAGE="http://www.gnome-db.org/"
+HOMEPAGE="https://www.gnome-db.org/"
 LICENSE="GPL-2+ LGPL-2+"
 
 IUSE="berkdb canvas debug firebird gnome-keyring gtk graphviz http +introspection json ldap mdb mysql oci8 postgres reports sourceview ssl vala"
@@ -24,7 +23,7 @@ REQUIRED_USE="
 # firebird license is not GPL compatible
 
 SLOT="5/4" # subslot = libgda-5.0 soname version
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 
 RDEPEND="
 	app-text/iso-codes
