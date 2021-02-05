@@ -1,12 +1,13 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 GNOME2_LA_PUNT="yes"
 GNOME2_EAUTORECONF="yes"
+PYTHON_COMPAT=( python{2_7,3_6,3_7,3_8,3_9} )
 VALA_USE_DEPEND="vapigen"
 
-inherit db-use eutils flag-o-matic gnome2 java-pkg-opt-2 vala
+inherit db-use eutils flag-o-matic gnome2 java-pkg-opt-2 python-single-r1 vala
 
 DESCRIPTION="GNOME database access library"
 HOMEPAGE="https://www.gnome-db.org/"
