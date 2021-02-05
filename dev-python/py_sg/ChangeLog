@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py_sg
-# Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
+
+  05 Feb 2021; AstroFloyd <AstroFloyd@gmail.com> -py_sg-0.11-r1.ebuild:
+  dev-python/py_sg: remove conflicting ebuilds.
 
   01 Apr 2017; AstroFloyd <AstroFloyd@gmail.com> -py_sg-0.11.ebuild,
   +py_sg-0.11-r1.ebuild, metadata.xml:
@@ -10,4 +13,3 @@
 
   13 Mar 2016; AstroFloyd <AstroFloyd@gmail.com> +py_sg-0.11.ebuild:
   First version (0.11) of py_sg in Gentoo
-
