@@ -1,3 +1,9 @@
+*gpsman-6.4.4.2-r2 (22 Apr 2021)
+
+  22 Apr 2021; AstroFloyd <AstroFloyd@gmail.com> +gpsman-6.4.4.2-r2.ebuild,
+  -gpsman-6.4.4.2-r1.ebuild:
+  sci-geosciences/gpsman: revision bump to v6.4.4.2-r2.
+
   05 Feb 2021; AstroFloyd <AstroFloyd@gmail.com> gpsman-6.4.4.2-r1.ebuild:
   sci-geosciences/gpsman: revision bump to v6.4.4.2-r1.
 

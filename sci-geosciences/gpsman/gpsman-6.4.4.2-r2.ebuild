@@ -20,6 +20,8 @@ RDEPEND=">=dev-lang/tcl-8.4
 GMDIR="/usr/share/gpsman"
 
 src_prepare() {
+	eapply_user
+
 	# Set proper GM path:
 	sed -i -e "s:gmsrc:${GMDIR}/gmsrc:" gpsman.tcl
 }
