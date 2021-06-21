@@ -1,6 +1,20 @@
 # ChangeLog for sci-libs/pgplot
-# Copyright 1999-2020 Gentoo Authors; Distributed under the GPL v2
+# Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.17 2009/02/23 17:30:38 bicatali Exp $
+
+  21 Jun 2021; AstroFloyd <AstroFloyd@gmail.com>
+  +files/pgplot-drivers-popular.patch, +files/pgplot-libpng15.patch,
+  +files/pgplot-tk86.patch, files/pgplot-compile-setup.patch,
+  files/pgplot-drivers.patch, files/pgplot-headers.patch,
+  files/pgplot-makemake.patch, pgplot-5.2.2-r99.ebuild:
+  sci-libs/pgplot-5.2.2-r99: update to EAPI 7.
+
+  21 Jun 2021; AstroFloyd <AstroFloyd@gmail.com>
+  +files/pgplot-drivers-popular.patch, +files/pgplot-libpng15.patch,
+  +files/pgplot-tk86.patch, files/pgplot-compile-setup.patch,
+  files/pgplot-drivers.patch, files/pgplot-headers.patch,
+  files/pgplot-makemake.patch, pgplot-5.2.2-r99.ebuild:
+  <cat/pkg: commit message.>
 
   15 Feb 2020; AstroFloyd <AstroFloyd@gmail.com> 000_readme.txt,
   pgplot-5.2.2-r99.ebuild:
