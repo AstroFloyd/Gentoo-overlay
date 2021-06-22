@@ -1,12 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=4
+EAPI=7
 
-DESCRIPTION="LALapps contains applications for gravitational-wave data analysis written in ANSI C99."
-HOMEPAGE="https://www.lsc-group.phys.uwm.edu/daswg/projects/lalsuite.html"
-SRC_URI="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/lalsuite/${P}.tar.gz
+DESCRIPTION="Applications for gravitational-wave data analysis with LIGO/Virgo"
+HOMEPAGE="https://wiki.ligo.org/Computing/LALSuite"
+SRC_URI="https://software.igwn.org/sources/source/lalsuite/${P}.tar.gz
 http://www.astro.ru.nl/~sluys/Stuff/${PN}_missing-${PV}.tar.gz"
 
 LICENSE="GPL-2"
@@ -14,12 +13,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc +mpi +metaio +frame -xml"
 
-DEPEND="=sci-libs/lal-6.6.1
+DEPEND="=sci-libs/lal-6.6.1-r0
 		sci-libs/libframe
 		sci-libs/metaio
-		=sci-libs/lalframe-1.0.4
-		=sci-libs/lalmetaio-1.0.3
-		=sci-libs/lalxml-1.1.2
+		=sci-libs/lalframe-1.0.4-r0
+		=sci-libs/lalmetaio-1.0.3-r0
+		=sci-libs/lalxml-1.1.2-r0
 		mpi? ( virtual/mpi )
 	   "
 RDEPEND=${DEPEND}
