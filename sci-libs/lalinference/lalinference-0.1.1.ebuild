@@ -1,15 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=4
+EAPI=7
 
 # include functions from eutils
 #inherit eutils
 
 DESCRIPTION="Bayesian inference data-analysis package for LIGO and Virgo"
-HOMEPAGE="https://www.lsc-group.phys.uwm.edu/daswg/projects/lalsuite.html"
-SRC_URI="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/lalsuite/${P}.tar.gz"
+HOMEPAGE="https://wiki.ligo.org/Computing/LALSuite"
+SRC_URI="https://software.igwn.org/sources/source/lalsuite/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
