@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lalmetaio
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
+
+  22 Jun 2021; AstroFloyd <AstroFloyd@gmail.com> lalmetaio-1.0.2.ebuild,
+  lalmetaio-1.0.3.ebuild, lalmetaio-1.0.7.ebuild, metadata.xml:
+  sci-libs/lalmetaio: update ebuilds to EAPI7.
 
   11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> -lalmetaio-1.0.1.ebuild,
   +metadata.xml:
@@ -11,4 +15,3 @@
 
   23 Jan 2012; AstroFloyd <AstroFloyd@gmail.com> +lalmetaio-1.0.1.ebuild:
   Initial ebuild
-
