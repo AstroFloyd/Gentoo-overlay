@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/skychart-bin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
+
+  22 Jun 2021; AstroFloyd <AstroFloyd@gmail.com> metadata.xml,
+  skychart-bin-3.6.2150.ebuild:
+  sci-astronomy/skychart-bin: update ebuilds to EAPI6.
 
 *skychart-bin-3.6.2150 (16 Mar 2012)
 
@@ -16,4 +20,3 @@
   +files/varobs_lpv_bulletin.sh, +metadata.xml:
   Initial import from monoid overlay and version bump to current stable
   version.
-
