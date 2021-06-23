@@ -1,0 +1,4 @@
+  23 Jun 2021; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml,
+  -files/digest-i810switch-0.6.5-r2, -files/i810switch-macbook-support.patch,
+  -i810switch-0.6.5-r03.ebuild:
+  app-misc/i810switch: remove package.
