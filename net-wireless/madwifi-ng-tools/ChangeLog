@@ -1,0 +1,3 @@
+  23 Jun 2021; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml,
+  -madwifi-ng-tools-0.9.4.4176.20111123.ebuild:
+  net-wireless/madwifi-ng-tools: remove package.
