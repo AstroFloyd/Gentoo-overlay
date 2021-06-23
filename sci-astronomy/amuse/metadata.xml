@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>sci</herd>
   <maintainer type="person">
     <email>AstroFloyd@gmail.com</email>
     <name>AstroFloyd</name>
   </maintainer>
-  <use>
-    <flag name='mesa'>Compile the Mesa code in <pkg>sci-astronomy/amuse</pkg></flag>
-    <flag name='mocassin'>Compile the Mocassin code in <pkg>sci-astronomy/amuse</pkg></flag>
-    <flag name='mpiamrvac'>Compile the mpiamrvac code in <pkg>sci-astronomy/amuse</pkg></flag>
-    <flag name='pynbody'>Compile the pyNbody code in <pkg>sci-astronomy/amuse</pkg></flag>
-  </use>
 </pkgmetadata>
