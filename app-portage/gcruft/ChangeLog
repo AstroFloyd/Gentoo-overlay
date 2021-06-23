@@ -1,3 +1,7 @@
+  23 Jun 2021; AstroFloyd <AstroFloyd@gmail.com> -gcruft-0.1-r1.ebuild,
+  -gcruft-0.1.1.ebuild:
+  app-portage/gcruft: remove package.
+
 04 Jan 2011  insecure
 
 	* initial ebuild
@@ -9,4 +13,3 @@
   +gcruft-0.1.1.ebuild, +metadata.xml:
   Added to repo AstroFloyd, from
   https://svn.keksbude.net/repos/keks-overlay/app-portage/gcruft/
-
