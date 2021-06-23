@@ -1,0 +1,3 @@
+  23 Jun 2021; AstroFloyd <AstroFloyd@gmail.com> -osg-ca-certs-1.25.0.ebuild,
+  metadata.xml:
+  net-misc/osg-ca-certs: remove package.
