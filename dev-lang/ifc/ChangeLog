@@ -1,7 +1,3 @@
-*ifc-13.1.5.192 (30 Apr 2018)
-*ifc-14.0.3.174 (30 Apr 2018)
-*ifc-15.0.6.233 (30 Apr 2018)
-
-  30 Apr 2018; AstroFloyd <AstroFloyd@gmail.com> +ifc-13.1.5.192.ebuild,
-  +ifc-14.0.3.174.ebuild, +ifc-15.0.6.233.ebuild, +metadata.xml:
-  dev-lang/ifc: Preserve old versions
+  13 Aug 2021; AstroFloyd <AstroFloyd@gmail.com> -ChangeLog,
+  -ifc-13.1.5.192.ebuild, -ifc-14.0.3.174.ebuild, -ifc-15.0.6.233.ebuild:
+  dev-lang/ifc: remove package.
