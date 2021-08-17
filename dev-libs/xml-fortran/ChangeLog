@@ -1,10 +1,12 @@
 # ChangeLog for dev-libs/xml-fortran
-# Copyright 1999-2016 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
+
+  17 Aug 2021; AstroFloyd <AstroFloyd@gmail.com> xml-fortran-1.00.ebuild:
+  dev-libs/xml-fortran: satisfy repoman.
 
 *xml-fortran-1.00 (20 Mar 2016)
 
   20 Mar 2016; AstroFloyd <AstroFloyd@gmail.com> +xml-fortran-1.00.ebuild,
   +files/makefile, +metadata.xml:
   Initial ebuild
-
