@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/libthesky
-# Copyright 1999-2020 Gentoo Authors; Distributed under the GPL v2
+# Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
+
+*libthesky-0.4.2 (22 Aug 2021)
+
+  22 Aug 2021; AstroFloyd <AstroFloyd@gmail.com> +libthesky-0.4.2.ebuild:
+  sci-astronomy/libthesky: version bump to v0.4.2.
 
 *libthesky-0.4.1-r1 (05 Oct 2020)
 
