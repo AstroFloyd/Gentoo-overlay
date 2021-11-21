@@ -1,28 +1,5 @@
-# ChangeLog for x11-libs/gtk-fortran
-# Copyright 1999-2020 Gentoo Authors; Distributed under the GPL v2
-# $Header: $
-
-  15 Feb 2020; AstroFloyd <AstroFloyd@gmail.com> gtk-fortran-2.9999-r1.ebuild,
-  gtk-fortran-3.9999-r1.ebuild, gtk-fortran-3.9999-r2.ebuild:
-  x11-libs/gtk-fortran: insignificant update.
-
-*gtk-fortran-3.9999-r1 (19 Jun 2015)
-*gtk-fortran-2.9999-r1 (19 Jun 2015)
-
-  19 Jun 2015; AstroFloyd <AstroFloyd@gmail.com> -gtk-fortran-2.9999.ebuild,
-  +gtk-fortran-2.9999-r1.ebuild, -gtk-fortran-3.9999.ebuild,
-  +gtk-fortran-3.9999-r1.ebuild, +files/Doxyfile.patch:
-  Revision bump: added slotting; allow parallel build; added 'doc', 'plplot'
-	and 'static' USE flags; install gtkf-sketcher (3.x)
-
-*gtk-fortran-3.9999 (22 Oct 2014)
-
-  22 Oct 2014; AstroFloyd <AstroFloyd@gmail.com> +gtk-fortran-2.9999.ebuild,
-  +gtk-fortran-3.9999.ebuild:
-  Added git version for GTK+3
-
-*gtk-fortran-2.9999 (22 Oct 2014)
-
-  22 Oct 2014; AstroFloyd <AstroFloyd@gmail.com> +gtk-fortran-2.9999.ebuild,
-  +metadata.xml:
-  Initial ebuild for x11-libs/gtk-fortran: git version for GTK+2
+  21 Nov 2021; AstroFloyd <AstroFloyd@gmail.com> -ChangeLog,
+  -files/Doxyfile.patch, -files/Doxyfile_man.patch,
+  -gtk-fortran-2.9999-r1.ebuild, -gtk-fortran-3.9999-r1.ebuild,
+  -gtk-fortran-3.9999-r2.ebuild, metadata.xml:
+  x11-libs/gtk-fortran: remove package.

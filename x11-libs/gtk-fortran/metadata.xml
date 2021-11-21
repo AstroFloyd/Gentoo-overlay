@@ -5,7 +5,4 @@
     <email>AstroFloyd@gmail.com</email>
     <name>AstroFloyd</name>
   </maintainer>
-  <use>
-    <flag name='plplot'>Adds support for <pkg>sci-libs/plplot</pkg> for scientific plotting</flag>
-  </use>
 </pkgmetadata>
