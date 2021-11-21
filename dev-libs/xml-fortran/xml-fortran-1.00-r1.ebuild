@@ -21,17 +21,19 @@ S="${WORKDIR}/${PN}/"
 
 src_configure() {
 	cp "${FILESDIR}/makefile" src/
+	sed -i "s|^FOPT.*|& ${FCFLAGS}|" src/makefile
+	sed -i "s|^\t\${FC} -shared |& ${LDFLAGS} |" src/makefile
 }
 
 src_compile() {
 	cd src/
-	make -j1 || die
+	emake -j1 || die
 }
 
 src_install() {
 	cd src/
-	#dobin xmlreader
-	#dobin tstparse
+	# dobin xmlreader
+	# dobin tstparse
 
 	dolib.so libxmlparse.so
 	use static-libs && dolib.a libxmlparse.a
@@ -40,8 +42,7 @@ src_install() {
 
 	cd ..
 	dodoc CHANGES TODO
-	use doc && dodoc doc/*.pdf
-	use doc && dohtml doc/*.html
+	use doc && dodoc doc/*.pdf doc/*.html
 	docinto examples/
 	use examples && dodoc examples/*
 }
