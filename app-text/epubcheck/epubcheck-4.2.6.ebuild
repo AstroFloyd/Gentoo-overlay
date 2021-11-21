@@ -1,11 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 DESCRIPTION="Verify .epub eBook format"
-HOMEPAGE="http://code.google.com/p/epubcheck/"
-SRC_URI="http://epubcheck.googlecode.com/files/epubcheck-src-${PV}.zip"
-
+HOMEPAGE="https://www.w3.org/publishing/epubcheck/"
+SRC_URI="https://github.com/w3c/epubcheck/archive/refs/tags/v${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
