@@ -2,6 +2,12 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+*lalmetaio-2.0.3 (08 Dec 2021)
+
+  08 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +lalmetaio-2.0.3.ebuild,
+  -lalmetaio-1.0.2.ebuild, -lalmetaio-1.0.3.ebuild, metadata.xml:
+  sci-libs/lalmetaio: version bump to v2.0.3.
+
   22 Jun 2021; AstroFloyd <AstroFloyd@gmail.com> lalmetaio-1.0.2.ebuild,
   lalmetaio-1.0.3.ebuild, lalmetaio-1.0.7.ebuild, metadata.xml:
   sci-libs/lalmetaio: update ebuilds to EAPI7.
