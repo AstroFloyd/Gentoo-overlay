@@ -6,8 +6,24 @@
     <name>AstroFloyd</name>
   </maintainer>
   <use>
+    <flag name='fast-gsl'>Enable fast/inline GSL code [default=no]</flag>
+    <flag name='fast-install'>Optimize for fast installation [default=yes]</flag>
+    <flag name='fftw3-memalign'>Use aligned memory optimizations with fftw3</flag>
     <flag name='frame'>Adds support for <pkg>sci-libs/libframe</pkg></flag>
+    <flag name='intelfft'>Use Intel FFT libraries insted of FFTW [default=no]</flag>
+    <flag name='macros'>Use LAL macros [default=yes]</flag>
     <flag name='metaio'>Adds support for <pkg>sci-libs/metaio</pkg></flag>
+    <flag name='pthread-lock'>Use pthread mutex lock for threadsafety</flag>
+    <flag name='python'>Build Python programs and modules</flag>
     <flag name='shared-libs'>Build shared libraries</flag>
+    <flag name='swig'>Generate SWIG bindings for all languages</flag>
+    <flag name='swig-iface'>Generate SWIG interface only</flag>
+    <flag name='swig-octave'>Generate SWIG bindings for Octave</flag>
+    <flag name='swig-python'>Generate SWIG bindings for Python</flag>
+    <!--
+        <flag name='libtool-lock'>avoid locking (might break parallel builds)</flag>
+        <flag name='doxygen'>generate Doxygen documentation</flag>
+        <flag name='help2man'>automatically generate man pages with help2man</flag>
+    -->
   </use>
 </pkgmetadata>

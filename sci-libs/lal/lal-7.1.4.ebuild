@@ -5,32 +5,44 @@ EAPI=7
 
 DESCRIPTION="Core routines for gravitational-wave data analysis with LIGO and Virgo"
 HOMEPAGE="https://wiki.ligo.org/Computing/LALSuite"
-SRC_URI="https://software.igwn.org/sources/source/lalsuite/${P}.tar.gz"
+SRC_URI="https://software.igwn.org/sources/source/lalsuite/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +frame +metaio +shared-libs static-libs -xml"
+IUSE="doc +fast-install -fast-gsl -fftw3-memalign -intelfft +macros +pthread-lock python +shared-libs static-libs swig -swig-iface -swig-octave -swig-python"
 
 DEPEND="sci-libs/gsl
 		sci-libs/fftw
+		sci-libs/libframe
+		>=sci-libs/metaio-8.0
 		doc? ( app-text/texlive-core
 			   dev-texlive/texlive-fontsrecommended
 			   dev-texlive/texlive-latexrecommended
 			   dev-texlive/texlive-latexextra )
-		frame? ( sci-libs/libframe )
-		metaio? ( >=sci-libs/metaio-8.0 )
 "
-# 			   dev-texlive/texlive-genericrecommended
+#			   dev-texlive/texlive-genericrecommended
 RDEPEND=${DEPEND}
 
 src_configure() {
 	econf \
-		$(use_enable frame) \
-		$(use_enable metaio) \
-		$(use_enable xml) \
+		$(use_enable fast-gsl) \
+		$(use_enable fast-install) \
+		$(use_enable fftw3-memalign) \
+		$(use_enable intelfft) \
+		$(use_enable macros) \
+		$(use_enable pthread-lock) \
+		$(use_enable python) \
 		$(use_enable shared-libs shared) \
-		$(use_enable static-libs static)
+		$(use_enable static-libs static) \
+		$(use_enable swig) \
+		$(use_enable swig-iface) \
+		$(use_enable swig-octave) \
+		$(use_enable swig-python) \
+		# Not sure:
+		#		$(use_disable libtool-lock) \     avoid locking (might break parallel builds)
+		#		$(use_enable doxygen) \           generate Doxygen documentation
+		#		$(use_enable help2man) \          automatically generate man pages with help2man [default=yes]
 }
 
 src_compile() {
