@@ -1,10 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+
+EAPI=7
 
 DESCRIPTION="A library for parsing LIGO/Virgo LIGO_LW Table files"
 HOMEPAGE="https://www.lsc-group.phys.uwm.edu/daswg/projects/metaio.html"
-SRC_URI="https://www.lsc-group.phys.uwm.edu/daswg/download/software/source/${P}.tar.gz"
+SRC_URI="http://software.ligo.org/lscsoft/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
