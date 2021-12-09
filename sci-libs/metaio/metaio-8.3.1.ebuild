@@ -10,7 +10,14 @@ SRC_URI="http://software.ligo.org/lscsoft/source/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+fast-install static-libs"  # -ligotools
+
+src_configure() {
+	econf \
+		$(use_enable fast-install) \
+		$(use_enable static-libs static)
+}
+#		$(use_enable ligotools) \  # Requires additional dependencies?
 
 src_install() {
 	emake DESTDIR="${D}${DESTDIR}" install
