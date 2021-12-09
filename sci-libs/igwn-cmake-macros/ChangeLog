@@ -1,0 +1,5 @@
+*igwn-cmake-macros-1.3.2 (09 Dec 2021)
+
+  09 Dec 2021; AstroFloyd <AstroFloyd@gmail.com>
+  +igwn-cmake-macros-1.3.2.ebuild, +metadata.xml:
+  sci-libs/igwn-cmake-macros: initial ebuild: v1.3.2.
