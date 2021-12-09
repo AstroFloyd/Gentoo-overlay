@@ -1,0 +1,5 @@
+*ldas-tools-cmake-1.2.3 (09 Dec 2021)
+
+  09 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +ldas-tools-cmake-1.2.3.ebuild,
+  +metadata.xml:
+  sci-libs/ldas-tools-cmake: initial ebuild: v1.2.3.
