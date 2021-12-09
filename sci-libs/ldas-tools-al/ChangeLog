@@ -1,0 +1,5 @@
+*ldas-tools-al-2.6.7 (09 Dec 2021)
+
+  09 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +ldas-tools-al-2.6.7.ebuild,
+  +metadata.xml:
+  sci-libs/ldas-tools-al: initial ebuild: v2.6.7.
