@@ -1,3 +1,6 @@
+  09 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> ldas-tools-cmake-1.2.3.ebuild:
+  sci-libs/ldas-tools-cmake: quick fix to v1.2.3.
+
 *ldas-tools-cmake-1.2.3 (09 Dec 2021)
 
   09 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +ldas-tools-cmake-1.2.3.ebuild,
