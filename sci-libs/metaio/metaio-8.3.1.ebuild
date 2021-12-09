@@ -12,6 +12,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+fast-install static-libs"  # -ligotools
 
+DEPEND="sys-libs/zlib"
+RDEPEND=${DEPEND}
+
 src_configure() {
 	econf \
 		$(use_enable fast-install) \
