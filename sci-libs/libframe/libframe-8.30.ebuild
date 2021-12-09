@@ -10,10 +10,16 @@ SRC_URI="http://wwwlapp.in2p3.fr/virgo/FrameL/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="static-libs"
+IUSE="+fast-install static-libs"
+
+src_configure() {
+	econf \
+		$(use_enable fast-install) \
+		$(use_enable static-libs static) \
+		# $(use_disable libtool-lock) \     avoid locking (might break parallel builds)
+}
 
 src_install() {
 	emake DESTDIR="${D}${DESTDIR}" install
 	mv "$D/usr/share/doc/${PN}" "$D/usr/share/doc/${P}"  # Doc subdir should contain package version
-	use static-libs || rm "$D/usr/lib64/libFrame.a"
 }

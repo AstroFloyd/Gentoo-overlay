@@ -2,6 +2,10 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+  09 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> libframe-8.20.ebuild,
+  libframe-8.30.ebuild, metadata.xml:
+  sci-libs/libframe: quick USE flage fixes.
+
 *libframe-8.20 (08 Dec 2021)
 *libframe-8.30 (08 Dec 2021)
 
