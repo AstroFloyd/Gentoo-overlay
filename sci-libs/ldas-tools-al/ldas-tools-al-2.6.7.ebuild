@@ -16,15 +16,3 @@ IUSE=""
 
 DEPEND="sci-libs/ldas-tools-cmake"
 RDEPEND=""
-
-# src_configure() {
-# 	econf \
-# 		$(use_enable fast-install) \
-# 		$(use_enable static-libs static)
-# }
-# #		$(use_enable ligotools) \  # Requires additional dependencies?
-
-# src_install() {
-# 	emake DESTDIR="${D}${DESTDIR}" install
-# 	dodoc README || die
-# }
