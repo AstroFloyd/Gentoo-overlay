@@ -10,7 +10,7 @@ SRC_URI="https://software.igwn.org/sources/source/lalsuite/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +frame +metaio +shared-libs static-libs -xml"
+IUSE="doc +frame +metaio static-libs -xml"
 
 DEPEND="sci-libs/gsl
 		sci-libs/fftw
@@ -29,7 +29,6 @@ src_configure() {
 		$(use_enable frame) \
 		$(use_enable metaio) \
 		$(use_enable xml) \
-		$(use_enable shared-libs shared) \
 		$(use_enable static-libs static)
 }
 

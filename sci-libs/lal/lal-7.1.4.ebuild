@@ -10,10 +10,11 @@ SRC_URI="https://software.igwn.org/sources/source/lalsuite/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +fast-install -fast-gsl -fftw3-memalign -intelfft +macros +pthread-lock python +shared-libs static-libs +swig +swig-iface -swig-octave -swig-python"
+IUSE="doc +fast-install -fast-gsl -fftw3-memalign -intelfft +pthread-lock python static-libs +swig +swig-iface -swig-octave -swig-python"  # +macros
 
 DEPEND="sci-libs/gsl
 		sci-libs/fftw
+		sci-libs/hdf5
 		sci-libs/libframe
 		>=sci-libs/metaio-8.0
 		doc? ( app-text/texlive-core
@@ -36,10 +37,8 @@ src_configure() {
 		$(use_enable fast-install) \
 		$(use_enable fftw3-memalign) \
 		$(use_enable intelfft) \
-		$(use_enable macros) \
 		$(use_enable pthread-lock) \
 		$(use_enable python) \
-		$(use_enable shared-libs shared) \
 		$(use_enable static-libs static) \
 		$(use_enable swig) \
 		$(use_enable swig-iface) \
@@ -49,6 +48,7 @@ src_configure() {
 		#		$(use_disable libtool-lock) \     avoid locking (might break parallel builds)
 		#		$(use_enable doxygen) \           generate Doxygen documentation
 		#		$(use_enable help2man) \          automatically generate man pages with help2man [default=yes]
+		#       $(use_enable macros) \            Build FAILS with -macros
 }
 
 src_compile() {
