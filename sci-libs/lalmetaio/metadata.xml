@@ -7,7 +7,6 @@
   </maintainer>
   <use>
     <flag name='fast-install'>Optimize for fast installation [default=yes]</flag>
-    <flag name='shared-libs'>Build shared libraries</flag>
     <flag name='swig'>Generate SWIG bindings for all languages</flag>
     <flag name='swig-iface'>Generate SWIG interface only</flag>
     <flag name='swig-octave'>Generate SWIG bindings for Octave</flag>

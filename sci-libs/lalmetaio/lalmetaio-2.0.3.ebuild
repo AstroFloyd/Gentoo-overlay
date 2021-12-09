@@ -10,10 +10,10 @@ SRC_URI="https://software.igwn.org/sources/source/lalsuite/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +fast-install python +shared-libs static-libs +swig +swig-iface -swig-octave -swig-python"
+IUSE="doc +fast-install python static-libs +swig +swig-iface -swig-octave -swig-python"
 
 DEPEND="sci-libs/lal
-	  >=sci-libs/metaio-8.0
+		>=sci-libs/metaio-8.0
 		sci-libs/fftw
 		sci-libs/gsl
 		sys-libs/zlib
@@ -30,7 +30,6 @@ src_configure() {
 	econf \
 		$(use_enable fast-install) \
 		$(use_enable python) \
-		$(use_enable shared-libs shared) \
 		$(use_enable static-libs static) \
 		$(use_enable swig) \
 		$(use_enable swig-iface) \
