@@ -12,10 +12,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="all-lal cfitsio doc -fast-gsl +fast-install +lalframe +openmp python static-libs +swig +swig-iface -swig-octave -swig-python"
 
-RDEPEND="sci-libs/lal
-		 sci-libs/fftw
+RDEPEND="sci-libs/fftw
 		 sci-libs/gsl
-		 sys-libs/zlib
+		 sci-libs/lal
 		 cfitsio? ( sci-libs/cfitsio )
 		 lalframe? ( sci-libs/lalframe )
 		 openmp? ( sys-cluster/openmpi )

@@ -2,6 +2,9 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+  10 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lalpulsar-3.1.0.ebuild:
+  sci-libs/lalpulsar: quick fix to DEPEND for v3.1.0.
+
 *lalpulsar-3.1.0 (10 Dec 2021)
 
   10 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +lalpulsar-3.1.0.ebuild,
