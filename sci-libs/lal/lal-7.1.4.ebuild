@@ -15,12 +15,13 @@ IUSE="doc +fast-install -fast-gsl -fftw3-memalign -intelfft +pthread-lock python
 DEPEND="sci-libs/gsl
 		sci-libs/fftw
 		sci-libs/hdf5
-		sci-libs/libframe
+		sci-libs/ldas-tools-framecpp
 		>=sci-libs/metaio-8.0
 		doc? ( app-text/texlive-core
 			   dev-texlive/texlive-fontsrecommended
 			   dev-texlive/texlive-latexrecommended
 			   dev-texlive/texlive-latexextra )
+		python? ( dev-lang/python:* )
 		swig? ( dev-lang/swig )
 		swig-iface? ( dev-lang/swig )
 		swig-octave? ( dev-lang/swig
@@ -29,6 +30,7 @@ DEPEND="sci-libs/gsl
 					   dev-lang/python:* )
 "
 #			   dev-texlive/texlive-genericrecommended
+#		sci-libs/libframe
 RDEPEND=${DEPEND}
 
 src_configure() {
