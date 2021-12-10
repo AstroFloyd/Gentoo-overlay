@@ -2,6 +2,9 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+  10 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lalmetaio-2.0.3.ebuild:
+  sci-libs/lalmetaio: quick fix to DEPEND/USE flags for v2.0.3.
+
   09 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lalmetaio-2.0.3.ebuild,
   metadata.xml:
   sci-libs/lalmetaio: quick USE flag fixes.
