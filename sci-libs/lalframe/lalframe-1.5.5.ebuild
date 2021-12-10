@@ -5,20 +5,35 @@ EAPI=7
 
 DESCRIPTION="A LAL wrapper for libframe"
 HOMEPAGE="https://wiki.ligo.org/Computing/LALSuite"
-SRC_URI="https://software.igwn.org/sources/source/lalsuite/${P}.tar.gz"
+SRC_URI="https://software.igwn.org/sources/source/lalsuite/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc +fast-install +framel python static-libs +swig +swig-iface -swig-octave -swig-python"
 
 DEPEND="sci-libs/lal
 		sci-libs/libframe
-		sci-libs/fftw
-		sci-libs/gsl
-		sys-libs/zlib
+		sci-libs/ldas-tools-framecpp
 	   "
 RDEPEND=${DEPEND}
+
+src_configure() {
+	econf \
+		$(use_enable doc doxygen) \
+		$(use_enable fast-install) \
+		$(use_enable framel) \
+		$(use_enable python) \
+		$(use_enable static-libs static) \
+		$(use_enable swig) \
+		$(use_enable swig-iface) \
+		$(use_enable swig-octave) \
+		$(use_enable swig-python) \
+		--enable-framec \
+		--enable-help2man    # generate man pages with help2man
+	# Not sure:
+	#		$(use_disable libtool-lock) \     avoid locking (might break parallel builds)
+}
 
 pkg_postinst() {
 	elog "\n    Now you may want to setup your environment:"
