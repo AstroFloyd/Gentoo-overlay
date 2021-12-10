@@ -1,0 +1,5 @@
+*ldas-tools-framecpp-2.6.5 (10 Dec 2021)
+
+  10 Dec 2021; AstroFloyd <AstroFloyd@gmail.com>
+  +ldas-tools-framecpp-2.6.5.ebuild, +metadata.xml:
+  sci-libs/ldas-tools-framecpp: initial ebuild: v2.6.5.
