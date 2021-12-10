@@ -2,6 +2,9 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+  10 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lalframe-1.5.5.ebuild:
+  sci-libs/lalframe: quick fix to USE flags for v1.5.5.
+
 *lalframe-1.5.5 (10 Dec 2021)
 
   10 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +lalframe-1.5.5.ebuild,

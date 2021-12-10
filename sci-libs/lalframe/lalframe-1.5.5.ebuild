@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 DESCRIPTION="A LAL wrapper for libframe"
 HOMEPAGE="https://wiki.ligo.org/Computing/LALSuite"
@@ -13,8 +13,14 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc +fast-install +framel python static-libs +swig +swig-iface -swig-octave -swig-python"
 
 DEPEND="sci-libs/lal
-		sci-libs/libframe
 		sci-libs/ldas-tools-framecpp
+		python? ( dev-lang/python:* )
+		swig? ( dev-lang/swig )
+		swig-iface? ( dev-lang/swig )
+		swig-octave? ( dev-lang/swig
+					   sci-mathematics/octave )
+		swig-python? ( dev-lang/swig
+					   dev-lang/python:* )
 	   "
 RDEPEND=${DEPEND}
 
