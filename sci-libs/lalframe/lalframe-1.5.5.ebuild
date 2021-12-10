@@ -12,18 +12,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc +fast-install +framel python static-libs +swig +swig-iface -swig-octave -swig-python"
 
-DEPEND="sci-libs/lal
-		sci-libs/ldas-tools-framecpp
+RDEPEND="sci-libs/lal
+		 sci-libs/ldas-tools-framecpp
+		 python? ( dev-lang/python:* )
+		 swig-octave? ( sci-mathematics/octave )
+		 swig-python? ( dev-lang/python:* )
+	   "
+DEPEND="
+		${RDEPEND}
 		doc? ( app-doc/doxygen )
-		python? ( dev-lang/python:* )
 		swig? ( dev-lang/swig )
 		swig-iface? ( dev-lang/swig )
-		swig-octave? ( dev-lang/swig
-					   sci-mathematics/octave )
-		swig-python? ( dev-lang/swig
-					   dev-lang/python:* )
-	   "
-RDEPEND=${DEPEND}
+		swig-octave? ( dev-lang/swig )
+		swig-python? ( dev-lang/swig )
+"
 
 src_configure() {
 	econf \

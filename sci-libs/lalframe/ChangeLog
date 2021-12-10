@@ -3,6 +3,9 @@
 # $Header: $
 
   10 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lalframe-1.5.5.ebuild:
+  sci-libs/lalframe: sort out DEPEND and RDEPEND for v1.5.5.
+
+  10 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lalframe-1.5.5.ebuild:
   sci-libs/lalframe: quick fix to DEPEND flags for v1.5.5.
 
   10 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lalframe-1.5.5.ebuild:
