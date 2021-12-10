@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 DESCRIPTION="Core routines for gravitational-wave data analysis with LIGO and Virgo"
 HOMEPAGE="https://wiki.ligo.org/Computing/LALSuite"
@@ -35,6 +35,7 @@ RDEPEND=${DEPEND}
 
 src_configure() {
 	econf \
+		$(use_enable doc doxygen) \
 		$(use_enable fast-gsl) \
 		$(use_enable fast-install) \
 		$(use_enable fftw3-memalign) \
@@ -46,10 +47,9 @@ src_configure() {
 		$(use_enable swig-iface) \
 		$(use_enable swig-octave) \
 		$(use_enable swig-python) \
+		--enable-help2man
 		# Not sure:
 		#		$(use_disable libtool-lock) \     avoid locking (might break parallel builds)
-		#		$(use_enable doxygen) \           generate Doxygen documentation
-		#		$(use_enable help2man) \          automatically generate man pages with help2man [default=yes]
 		#       $(use_enable macros) \            Build FAILS with -macros
 }
 
