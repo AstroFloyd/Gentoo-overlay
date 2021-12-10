@@ -2,6 +2,9 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+  10 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lal-7.1.4.ebuild, metadata.xml:
+  sci-libs/lal: quick fix to USE flags and DEPEND for v7.1.4.
+
   10 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lal-7.1.4.ebuild:
   sci-libs/lal: quick fix to USE flags for v7.1.4.
 

@@ -10,17 +10,14 @@ SRC_URI="https://software.igwn.org/sources/source/lalsuite/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +fast-install -fast-gsl -fftw3-memalign -intelfft +pthread-lock python static-libs +swig +swig-iface -swig-octave -swig-python"  # +macros
+IUSE="doc -fast-gsl +fast-install -fftw3-memalign -intelfft +pthread-lock python static-libs +swig +swig-iface -swig-octave -swig-python"  # +macros
 
 DEPEND="sci-libs/gsl
 		sci-libs/fftw
 		sci-libs/hdf5
 		sci-libs/ldas-tools-framecpp
 		>=sci-libs/metaio-8.0
-		doc? ( app-text/texlive-core
-			   dev-texlive/texlive-fontsrecommended
-			   dev-texlive/texlive-latexrecommended
-			   dev-texlive/texlive-latexextra )
+		doc? ( app-doc/doxygen )
 		python? ( dev-lang/python:* )
 		swig? ( dev-lang/swig )
 		swig-iface? ( dev-lang/swig )
@@ -29,7 +26,6 @@ DEPEND="sci-libs/gsl
 		swig-python? ( dev-lang/swig
 					   dev-lang/python:* )
 "
-#			   dev-texlive/texlive-genericrecommended
 #		sci-libs/libframe
 RDEPEND=${DEPEND}
 

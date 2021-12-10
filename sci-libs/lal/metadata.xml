@@ -20,9 +20,7 @@
     <flag name='swig-python'>Generate SWIG bindings for Python</flag>
     <!--
         <flag name='libtool-lock'>avoid locking (might break parallel builds)</flag>
-        <flag name='doxygen'>generate Doxygen documentation</flag>
-        <flag name='help2man'>automatically generate man pages with help2man</flag>
-	<flag name='macros'>Use LAL macros</flag>  # Build FAILS with
+	<flag name='macros'>Use LAL macros</flag>  # Build FAILS with -macros
     -->
   </use>
 </pkgmetadata>
