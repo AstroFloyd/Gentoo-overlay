@@ -5,4 +5,18 @@
     <email>AstroFloyd@gmail.com</email>
     <name>AstroFloyd</name>
   </maintainer>
+  <use>
+    <flag name='all-lal'>Enable compilation of all LAL libraries</flag>
+    <flag name='fast-gsl'>Enable fast/inline GSL code</flag>
+    <flag name='fast-install'>Optimize for fast installation</flag>
+    <flag name='lalburst'>Compile code that requires <pkg>sci-libs/lalburst</pkg></flag>
+    <flag name='python'>Build Python programs and modules</flag>
+    <flag name='swig'>Generate SWIG bindings for all languages</flag>
+    <flag name='swig-iface'>Generate SWIG interface only</flag>
+    <flag name='swig-octave'>Generate SWIG bindings for Octave</flag>
+    <flag name='swig-python'>Generate SWIG bindings for Python</flag>
+    <!--
+        <flag name='libtool-lock'>avoid locking (might break parallel builds)</flag>
+    -->
+  </use>
 </pkgmetadata>

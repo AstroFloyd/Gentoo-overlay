@@ -2,6 +2,12 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+*lalinspiral-2.0.3 (10 Dec 2021)
+
+  10 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +lalinspiral-2.0.3.ebuild,
+  -lalinspiral-1.1.0.ebuild, -lalinspiral-1.2.2.ebuild, metadata.xml:
+  sci-libs/lalinspiral: version bump to v2.0.3.
+
   22 Jun 2021; AstroFloyd <AstroFloyd@gmail.com> lalinspiral-1.1.0.ebuild,
   lalinspiral-1.2.2.ebuild, lalinspiral-1.4.2.ebuild, metadata.xml:
   sci-libs/lalinspiral: update ebuilds to EAPI7.
