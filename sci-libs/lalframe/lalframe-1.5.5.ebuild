@@ -14,6 +14,7 @@ IUSE="doc +fast-install +framel python static-libs +swig +swig-iface -swig-octav
 
 DEPEND="sci-libs/lal
 		sci-libs/ldas-tools-framecpp
+		doc? ( app-doc/doxygen )
 		python? ( dev-lang/python:* )
 		swig? ( dev-lang/swig )
 		swig-iface? ( dev-lang/swig )
