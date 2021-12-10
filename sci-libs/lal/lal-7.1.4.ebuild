@@ -12,22 +12,23 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc -fast-gsl +fast-install -fftw3-memalign -intelfft +pthread-lock python static-libs +swig +swig-iface -swig-octave -swig-python"  # +macros
 
-DEPEND="sci-libs/gsl
-		sci-libs/fftw
-		sci-libs/hdf5
-		sci-libs/ldas-tools-framecpp
-		>=sci-libs/metaio-8.0
-		doc? ( app-doc/doxygen )
-		python? ( dev-lang/python:* )
-		swig? ( dev-lang/swig )
-		swig-iface? ( dev-lang/swig )
-		swig-octave? ( dev-lang/swig
-					   sci-mathematics/octave )
-		swig-python? ( dev-lang/swig
-					   dev-lang/python:* )
+RDEPEND="sci-libs/gsl
+		 sci-libs/fftw
+		 sci-libs/hdf5
+		 sci-libs/ldas-tools-framecpp
+		 >=sci-libs/metaio-8.0
+		 python? ( dev-lang/python:* )
+		 swig-octave? ( sci-mathematics/octave )
+		 swig-python? ( dev-lang/python:* )
 "
 #		sci-libs/libframe
-RDEPEND=${DEPEND}
+DEPEND="${RDEPEND}
+		doc? ( app-doc/doxygen )
+		swig? ( dev-lang/swig )
+		swig-iface? ( dev-lang/swig )
+		swig-octave? ( dev-lang/swig )
+		swig-python? ( dev-lang/swig )
+		"
 
 src_configure() {
 	econf \
