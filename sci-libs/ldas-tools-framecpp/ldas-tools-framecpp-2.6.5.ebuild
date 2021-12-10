@@ -12,8 +12,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="fast-install -static-libs"  # doc latex
 
-DEPEND="sci-libs/ldas-tools-al"
-RDEPEND=""
+DEPEND="dev-libs/boost dev-libs/openssl sci-libs/ldas-tools-al sys-libs/zlib"
+RDEPEND="${DEPEND}"
 
 src_configure() {
 	econf \
