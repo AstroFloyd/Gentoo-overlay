@@ -2,6 +2,12 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+*lalinference-3.0.0 (11 Dec 2021)
+
+  11 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +lalinference-3.0.0.ebuild,
+  -lalinference-0.1.0.ebuild, -lalinference-0.1.1.ebuild, metadata.xml:
+  sci-libs/lalinference: version bump to v3.0.0.
+
   22 Jun 2021; AstroFloyd <AstroFloyd@gmail.com> lalinference-0.1.0.ebuild,
   lalinference-0.1.1.ebuild, lalinference-1.0.1.ebuild, metadata.xml:
   sci-libs/lalinference: update ebuilds to EAPI7.

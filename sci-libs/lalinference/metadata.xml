@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person">
-		<email>AstroFloyd@gmail.com</email>
-		<name>AstroFloyd</name>
-	</maintainer>
+  <maintainer type="person">
+    <email>AstroFloyd@gmail.com</email>
+    <name>AstroFloyd</name>
+  </maintainer>
+  <use>
+    <flag name='all-lal'>Enable/disable compilation of all LAL libraries</flag>
+    <flag name='doc'>Generate Doxygen documentation</flag>
+    <flag name='fast-gsl'>Enable fast/inline GSL code</flag>
+    <flag name='fast-install'>Optimize for fast installation</flag>
+    <flag name='lalburst'>Compile code that requires lalburst library</flag>
+    <flag name='lalframe'>Compile code that requires lalframe library</flag>
+    <flag name='lalinspiral'>Compile code that requires lalinspiral library</flag>
+    <flag name='lalmetaio'>Compile code that requires lalmetaio library</flag>
+    <flag name='lalpulsar'>Compile code that requires lalpulsar library</flag>
+    <flag name='mpi'>Compile using MPI for supported codes</flag>
+    <flag name='openmp'>Use OpenMP</flag>
+    <flag name='python'>Build Python programs and modules</flag>
+    <flag name='static-libs'>Build static libraries</flag>
+    <flag name='swig'>Generate SWIG bindings for all languages</flag>
+    <flag name='swig-iface'>Generate SWIG interface only</flag>
+    <flag name='swig-octave'>Generate SWIG bindings for Octave</flag>
+    <flag name='swig-python'>Generate SWIG bindings for Python</flag>
+    <!--
+        <flag name='libtool-lock'>Avoid locking (might break parallel builds)</flag>
+    -->
+  </use>
 </pkgmetadata>
