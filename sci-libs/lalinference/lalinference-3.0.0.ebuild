@@ -16,9 +16,9 @@ IUSE="all-lal doc -fast-gsl fast-install lalburst lalframe lalinspiral lalmetaio
 RDEPEND="sci-libs/gsl
 		 sci-libs/lal
 		 sci-libs/lalsimulation
+		 sci-libs/lalinspiral
 		 lalburst? ( sci-libs/lalburst )
 		 lalframe? ( sci-libs/lalframe )
-		 lalinspiral? ( sci-libs/lalinspiral )
 		 lalmetaio? ( sci-libs/lalmetaio )
 		 lalpulsar? ( sci-libs/lalpulsar )
 		 mpi? ( virtual/mpi )

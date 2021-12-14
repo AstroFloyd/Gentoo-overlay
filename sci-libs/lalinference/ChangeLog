@@ -2,6 +2,9 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+  14 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lalinference-3.0.0.ebuild:
+  sci-libs/lalinference: fix deps for v3.0.0.
+
 *lalinference-3.0.0 (11 Dec 2021)
 
   11 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +lalinference-3.0.0.ebuild,
