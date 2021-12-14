@@ -5,4 +5,14 @@
     <email>AstroFloyd@gmail.com</email>
     <name>AstroFloyd</name>
   </maintainer>
+  <use>
+    <flag name='lalburst'>Include the <pkg>sci-libs/lalburst</pkg> package</flag>
+    <flag name='lalframe'>Include the <pkg>sci-libs/lalframe</pkg> package</flag>
+    <flag name='lalinference'>Include the <pkg>sci-libs/lalinference</pkg> package</flag>
+    <flag name='lalinspiral'>Include the <pkg>sci-libs/lalinspiral</pkg> package</flag>
+    <flag name='lalmetaio'>Include the <pkg>sci-libs/lalmetaio</pkg> package</flag>
+    <flag name='lalpulsar'>Include the <pkg>sci-libs/lalpulsar</pkg> package</flag>
+    <flag name='lalsimulation'>Include the <pkg>sci-libs/lalsimulation</pkg> package</flag>
+    <flag name='lalapps'>Include the <pkg>sci-libs/lalapps</pkg> package</flag>
+  </use>
 </pkgmetadata>
