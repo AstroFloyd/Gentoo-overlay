@@ -13,7 +13,7 @@ IUSE="all-lal cfitsio doc fast-gsl fast-install framel mpi openmp python swig sw
 		  +lalmetaio +lalframe +lalpulsar +lalsimulation +lalinspiral +lalburst +lalinference +lalapps"
 
 RDEPEND="
-	=sci-libs/lal-7.1.4-r0
+	=sci-libs/lal-7.1.4-r0[doc?,fast-gsl?,fast-install?,python?,static-libs?,swig?,swig-iface?,swig-octave?,swig-python?]
 	lalmetaio? ( =sci-libs/lalmetaio-2.0.3-r0[doc?,fast-install?,python?,static-libs?,swig?,swig-iface?,swig-python?,swig-octave?] )
 	lalframe? ( =sci-libs/lalframe-1.5.5-r0[doc?,fast-install?,framel?,python?,static-libs?,swig?,swig-iface?,swig-octave?,swig-python?] )
 	lalpulsar? ( =sci-libs/lalpulsar-3.1.0-r0[all-lal?,cfitsio?,doc?,fast-gsl?,fast-install?,lalframe?,openmp?,python?,static-libs?,swig?,swig-iface?,swig-octave?,swig-python?] )
