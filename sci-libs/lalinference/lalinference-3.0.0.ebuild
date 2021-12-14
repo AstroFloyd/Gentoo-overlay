@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="all-lal doc -fast-gsl fast-install lalburst lalframe lalinspiral lalmetaio lalpulsar -mpi
-			  -openmp python static-libs swig swig-iface swig-octave swig-python"
+			  -openmp python static-libs +swig +swig-iface swig-octave swig-python"
 
 RDEPEND="sci-libs/gsl
 		 sci-libs/lal

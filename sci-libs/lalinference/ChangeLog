@@ -5,6 +5,9 @@
   14 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lalinference-3.0.0.ebuild:
   sci-libs/lalinference: fix deps for v3.0.0.
 
+  14 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lalinference-3.0.0.ebuild:
+  sci-libs/lalinference: fix deps for v3.0.0.
+
 *lalinference-3.0.0 (11 Dec 2021)
 
   11 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +lalinference-3.0.0.ebuild,
