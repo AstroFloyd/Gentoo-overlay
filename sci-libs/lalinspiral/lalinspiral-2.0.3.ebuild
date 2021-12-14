@@ -13,12 +13,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="all-lal doc -fast-gsl +fast-install lalburst python static-libs +swig +swig-iface -swig-octave -swig-python"
 
 RDEPEND="sci-libs/gsl
+		 sci-libs/metaio
+		 sci-libs/lal
 		 sci-libs/lalframe
 		 sci-libs/lalmetaio
+		 sci-libs/lalburst
 		 sci-libs/lalsimulation
-		 sci-libs/lal
-		 sci-libs/metaio
-		 lalburst? ( sci-libs/lalburst )
 		 python? ( dev-lang/python:* )
 		 swig-octave? ( sci-mathematics/octave )
 		 swig-python? ( dev-lang/python:* )
