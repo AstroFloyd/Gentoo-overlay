@@ -2,6 +2,12 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+*lalapps-7.3.0 (14 Dec 2021)
+
+  14 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +lalapps-7.3.0.ebuild,
+  -lalapps-6.6.1.ebuild, -lalapps-6.6.2.ebuild, metadata.xml:
+  sci-libs/lalapps: version bump to v7.3.0 w/o gds support.
+
   22 Jun 2021; AstroFloyd <AstroFloyd@gmail.com> lalapps-6.11.2.ebuild,
   lalapps-6.6.1.ebuild, lalapps-6.6.2.ebuild, metadata.xml:
   sci-libs/lalapps: update ebuilds to EAPI7.
