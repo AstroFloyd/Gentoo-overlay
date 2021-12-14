@@ -2,6 +2,9 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+  14 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lalinspiral-2.0.3.ebuild:
+  sci-libs/lalinspiral: fix deps for v2.0.3.
+
 *lalinspiral-2.0.3 (10 Dec 2021)
 
   10 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +lalinspiral-2.0.3.ebuild,
