@@ -2,6 +2,12 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+*lalsuite-7.1 (14 Dec 2021)
+
+  14 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +lalsuite-7.1.ebuild,
+  metadata.xml:
+  sci-libs/lalsuite: version bump to v7.1.
+
   22 Jun 2021; AstroFloyd <AstroFloyd@gmail.com> lalsuite-6.15.ebuild,
   metadata.xml:
   sci-libs/lalsuite: update ebuilds to EAPI7.
