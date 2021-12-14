@@ -6,6 +6,11 @@
     <name>AstroFloyd</name>
   </maintainer>
   <use>
+    <flag name='all-lal'>Enable/disable compilation of all LAL libraries</flag>
+    <flag name='cfitsio'>Compile code that requires cfitsio library</flag>
+    <flag name='fast-gsl'>Enable fast/inline GSL code</flag>
+    <flag name='fast-install'>Optimize for fast installation</flag>
+    <flag name='framel'>Compile code that requires the <pkg>sci-libs/ldas-tools-framecpp</pkg> library</flag>
     <flag name='lalburst'>Include the <pkg>sci-libs/lalburst</pkg> package</flag>
     <flag name='lalframe'>Include the <pkg>sci-libs/lalframe</pkg> package</flag>
     <flag name='lalinference'>Include the <pkg>sci-libs/lalinference</pkg> package</flag>
@@ -14,5 +19,11 @@
     <flag name='lalpulsar'>Include the <pkg>sci-libs/lalpulsar</pkg> package</flag>
     <flag name='lalsimulation'>Include the <pkg>sci-libs/lalsimulation</pkg> package</flag>
     <flag name='lalapps'>Include the <pkg>sci-libs/lalapps</pkg> package</flag>
+    <flag name='mpi'>Compile using MPI for supported codes</flag>
+    <flag name='static-binaries'>Build static binaries</flag>
+    <flag name='swig'>Generate SWIG bindings for all languages</flag>
+    <flag name='swig-iface'>Generate SWIG interface only</flag>
+    <flag name='swig-octave'>Generate SWIG bindings for Octave</flag>
+    <flag name='swig-python'>Generate SWIG bindings for Python</flag>
   </use>
 </pkgmetadata>

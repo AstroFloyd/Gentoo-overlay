@@ -4,6 +4,10 @@
 
   14 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lalsuite-7.1.ebuild,
   metadata.xml:
+  sci-libs/lalsuite: add dependent USE flags to v7.1.
+
+  14 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> lalsuite-7.1.ebuild,
+  metadata.xml:
   sci-libs/lalsuite: add subpackages as USE flags to v7.1.
 
 *lalsuite-7.1 (14 Dec 2021)
