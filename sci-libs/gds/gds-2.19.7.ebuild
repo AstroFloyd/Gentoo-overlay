@@ -3,17 +3,23 @@
 
 EAPI=8
 
-DESCRIPTION="Global Diagnostic System"
+DESCRIPTION="LIGO Global Diagnostic System"
 HOMEPAGE="http://software.ligo.org/lscsoft"
 SRC_URI="http://software.ligo.org/lscsoft/source/${P}.tar.gz"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="~amd64"  #  ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="fast-install -largefile -libtool-lock monitors omega online static-libs"
 # 32bit 64bit dmt-runtime dmtviewer dtt  nogui offline only-dtt rts
 
-RDEPEND=""
+RDEPEND="dev-libs/cyrus-sasl
+		 dev-libs/expat
+		 dev-libs/jsoncpp
+		 net-misc/curl
+		 sci-libs/fftw
+		 sci-libs/metaio
+		 sys-libs/zlib"
 DEPEND=${RDEPEND}
 
 src_prepare() {
@@ -29,9 +35,9 @@ src_configure() {
 		$(use_enable monitors) \
 		$(use_enable omega) \
 		$(use_enable online) \
-		$(use_enable static-libs static) \
-		--enable-64bit
+		$(use_enable static-libs static)
 }
+#		--enable-64bit
 #		$(use_enable 32bit) \
 #		$(use_enable 64bit) \
 #		$(use_enable dmt-runtime) \  # Requires gds-dmt?
