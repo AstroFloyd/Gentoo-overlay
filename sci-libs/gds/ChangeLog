@@ -2,6 +2,10 @@
 # Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+  15 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> gds-2.19.7.ebuild,
+  metadata.xml:
+  sci-libs/gds: adding USE flags to v2.19.7.
+
 *gds-2.19.7 (15 Dec 2021)
 
   15 Dec 2021; AstroFloyd <AstroFloyd@gmail.com>
