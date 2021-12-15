@@ -1,0 +1,8 @@
+--- /var/tmp/portage/portage/sci-libs/gds-2.19.7/work/gds-2.19.7/IO/html/compound.cc	2021-08-13 04:29:58.000000000 +0200
++++ IO/html/compound.cc	2021-12-15 15:09:29.123671426 +0100
+@@ -1,4 +1,5 @@
+ /* -*- mode: c++; c-basic-offset: 4; -*- */
++#include <stdexcept>
+ #include "html/compound.hh"
+ #include "html/genAttr.hh"
+ #include "html/writer.hh"
