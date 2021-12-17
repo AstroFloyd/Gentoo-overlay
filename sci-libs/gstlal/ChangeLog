@@ -1,0 +1,44 @@
+# ChangeLog for sci-libs/gstlal
+# Copyright 1999-2021 Gentoo Authors; Distributed under the GPL v2
+# $Header: $
+
+*gstlal-1.9.0 (17 Dec 2021)
+
+  17 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +gstlal-1.9.0.ebuild,
+  +metadata.xml:
+  sci-libs/gstlal: initial ebuild for v1.9.0.
+
+  09 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> metaio-8.3.1.ebuild,
+  metaio-8.4.0.ebuild:
+  sci-libs/metaio: quick DEPEND fixes.
+
+  09 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> metadata.xml,
+  metaio-8.3.1.ebuild, metaio-8.4.0.ebuild:
+  sci-libs/metaio: quick USE flage fixes.
+
+*metaio-8.3.1 (08 Dec 2021)
+*metaio-8.4.0 (08 Dec 2021)
+
+  08 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +metaio-8.3.1.ebuild,
+  +metaio-8.4.0.ebuild, -metaio-7.2.ebuild, -metaio-8.2.1.ebuild,
+  -metaio-8.2.ebuild, -metaio-8.3.0.ebuild, metadata.xml:
+  sci-libs/metaio: version bump to v8.4.0.
+
+*metaio-8.3.0 (11 Mar 2013)
+
+  11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> +metaio-8.3.0.ebuild:
+  Version bump
+
+*metaio-8.2.1 (11 Mar 2013)
+
+  11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> +metaio-8.2.1.ebuild:
+  Version bump
+
+  11 Mar 2013; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml:
+  Updated existing ebuilds, added metadata.xml
+
+  28 Jun 2009; AstroFloyd <AstroFloyd@gmail.com> +metaio-8.2.ebuild:
+  Version bump
+
+  26 Jun 2009; AstroFloyd <AstroFloyd@gmail.com> +metaio-7.2.ebuild:
+  Added existing ebuild
