@@ -48,6 +48,13 @@ src_configure() {
 #		$(use_enable offline) \--dis/--enable doesn't work
 #		$(use_enable rts) \
 
+pkg_preinst() {
+	# Header files are expected to sit in /usr/include/${PN}:
+	mv -f "${D}/usr/include" "${D}/usr/${PN}" || die
+	mkdir "${D}/usr/include/" || die
+	mv -f "${D}/usr/${PN}" "${D}/usr/include/" || die
+}
+
 src_install() {
 	emake DESTDIR="${D}${DESTDIR}" install
 	dodoc README || die
