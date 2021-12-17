@@ -3,6 +3,9 @@
 # $Header: $
 
   17 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> gds-2.19.7.ebuild:
+  sci-libs/gds: properly fix location header files for v2.19.7.
+
+  17 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> gds-2.19.7.ebuild:
   sci-libs/gds: fix location header files for v2.19.7.
 
   15 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> gds-2.19.7.ebuild:
