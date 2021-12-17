@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM 'http://www.gentoo.org/dtd/metadata.dtd'>
+<pkgmetadata>
+  <maintainer type="person">
+    <email>AstroFloyd@gmail.com</email>
+    <name>AstroFloyd</name>
+  </maintainer>
+  <use>
+    <flag name='fast-install'></flag>
+    <flag name='largefile'>Omit support for large files</flag>
+    <flag name='libtool-lock'>Avoid locking (might break parallel builds)</flag>
+    <flag name='monitors'>Build all monitors</flag>
+    <flag name='omega'>Build Omega_c only</flag>
+    <flag name='online'>Online program version</flag>
+    <!--
+        <flag name='offline'>Offline program version</flag>  Not currently supported (2021-12-15)
+    -->
+  </use>
+</pkgmetadata>

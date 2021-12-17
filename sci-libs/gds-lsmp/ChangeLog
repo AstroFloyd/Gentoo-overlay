@@ -1,0 +1,6 @@
+*gds-lsmp-2.19.7 (17 Dec 2021)
+
+  17 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +gds-lsmp-2.19.7.ebuild,
+  +metadata.xml:
+  sci-libs/gds-lsmp: initial ebuild for v2.19.7.
+
