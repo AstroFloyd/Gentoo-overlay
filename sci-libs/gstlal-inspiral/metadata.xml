@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>AstroFloyd@gmail.com</email>
+    <name>AstroFloyd</name>
+  </maintainer>
+  <use>
+    <flag name='fast-install'>Optimize for fast installation</flag>
+    <flag name='libtool-lock'>Avoid locking (might break parallel builds)</flag>
+    <flag name='openmp'>Use OpenMP</flag>
+    <!--
+        <flag name='massmodel'>Enable/disable installation of hdf5 mass model data</flag>  # Requires lnP_template_signal_BBH_logm_reweighted_mchirp.hdf5
+        <flag name='introspection'></flag>
+    -->
+  </use>
+</pkgmetadata>

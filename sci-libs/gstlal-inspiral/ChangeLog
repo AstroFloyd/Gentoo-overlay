@@ -1,0 +1,6 @@
+*gstlal-inspiral-1.9.2 (17 Dec 2021)
+
+  17 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +gstlal-inspiral-1.9.2.ebuild,
+  +metadata.xml:
+  sci-libs/gstlal-inspiral: initial ebuild for v1.9.2.
+
