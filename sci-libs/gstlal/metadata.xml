@@ -6,7 +6,7 @@
     <name>AstroFloyd</name>
   </maintainer>
   <use>
-    <flag name='fast-install'></flag>
+    <flag name='fast-install'>Optimize for fast installation</flag>
     <flag name='libtool-lock'>Avoid locking (might break parallel builds)</flag>
     <!--
     <flag name='gtk-doc-html'>Build documentation in html format</flag>
