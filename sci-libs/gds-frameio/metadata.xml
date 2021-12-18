@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM 'http://www.gentoo.org/dtd/metadata.dtd'>
+<pkgmetadata>
+  <maintainer type="person">
+    <email>AstroFloyd@gmail.com</email>
+    <name>AstroFloyd</name>
+  </maintainer>
+  <use>
+    <flag name='dtt'>Build support for dtt</flag>
+    <flag name='fast-install'>Optimize for fast installation</flag>
+    <flag name='largefile'>Omit support for large files</flag>
+    <flag name='libtool-lock'>Avoid locking (might break parallel builds)</flag>
+    <flag name='monitors'>Build all monitors</flag>
+    <flag name='omega'>Build Omega_c only</flag>
+    <flag name='online'>Online program version</flag>
+    <flag name='only-dtt'>Build dtt only</flag>
+    <!--
+        <flag name='32bit'>32-bit compilation</flag>
+        <flag name='64bit'>64-bit compilation</flag>
+        <flag name='dmt-runtime'>Build dmt runtime environment</flag>
+        <flag name='dmtviewer'>Add dmtviewer anyway</flag>
+        <flag name='nogui'>Build dtt without gui</flag>
+        <flag name='offline'>Offline program version</flag>  Not currently supported (2021-12-15)
+        <flag name='rts'>Add realtime site</flag>
+    -->
+  </use>
+</pkgmetadata>
