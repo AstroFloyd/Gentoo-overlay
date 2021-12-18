@@ -1,0 +1,6 @@
+*gds-gui-2.19.6 (18 Dec 2021)
+
+  18 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +gds-gui-2.19.6.ebuild,
+  +metadata.xml:
+  sci-libs/gds-gui: initial ebuild for v2.19.6.
+
