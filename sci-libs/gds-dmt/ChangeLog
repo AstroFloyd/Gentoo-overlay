@@ -1,0 +1,6 @@
+*gds-dmt-2.19.0 (18 Dec 2021)
+
+  18 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +gds-dmt-2.19.0.ebuild,
+  +metadata.xml:
+  sci-libs/gds-dmt: initial ebuild for v2.19.0.
+
