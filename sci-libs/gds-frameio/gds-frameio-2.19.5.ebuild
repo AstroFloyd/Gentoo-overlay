@@ -44,8 +44,3 @@ src_configure() {
 #		$(use_enable offline) \
 #		$(use_enable nogui) \
 #		$(use_enable rts) \
-
-src_install() {
-	emake DESTDIR="${D}${DESTDIR}" install
-#	dodoc README || die
-}

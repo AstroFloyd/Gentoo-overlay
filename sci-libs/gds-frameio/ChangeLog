@@ -1,6 +1,8 @@
+  18 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> gds-frameio-2.19.5.ebuild:
+  sci-libs/gds-frameio: minor fix for v2.19.5.
+
 *gds-frameio-2.19.5 (18 Dec 2021)
 
   18 Dec 2021; AstroFloyd <AstroFloyd@gmail.com> +gds-frameio-2.19.5.ebuild,
   +metadata.xml:
   sci-libs/gds-frameio: initial ebuild for v2.19.5.
-
