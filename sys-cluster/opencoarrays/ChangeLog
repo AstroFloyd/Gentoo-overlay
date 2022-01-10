@@ -1,3 +1,9 @@
+*opencoarrays-2.9.2 (10 Jan 2022)
+
+  10 Jan 2022; AstroFloyd <AstroFloyd@gmail.com> +opencoarrays-2.9.2.ebuild,
+  -opencoarrays-1.9.3.ebuild:
+  sys-cluster/opencoarrays: version bump to v2.9.2.
+
 *opencoarrays-1.9.3 (30 Dec 2017)
 
   30 Dec 2017; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml,

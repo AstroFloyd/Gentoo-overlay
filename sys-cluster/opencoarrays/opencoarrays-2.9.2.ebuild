@@ -1,9 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
-inherit cmake-utils fortran-2
+inherit cmake fortran-2
 DESCRIPTION="Implementation of coarrays for gfortran"
 HOMEPAGE="http://www.opencoarrays.org/"
 SRC_URI="https://github.com/sourceryinstitute/${PN}/releases/download/${PV}/${P}.tar.gz"
