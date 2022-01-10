@@ -1,3 +1,10 @@
+*labjack-ljm-64bit-20171221-r3 (10 Jan 2022)
+
+  10 Jan 2022; AstroFloyd <AstroFloyd@gmail.com>
+  +labjack-ljm-64bit-20171221-r3.ebuild, -labjack-ljm-64bit-20171221-r1.ebuild,
+  -labjack-ljm-64bit-20171221-r2.ebuild, -labjack-ljm-64bit-20171221.ebuild:
+  sci-electronics/labjack-ljm-64bit: revision bump to v20171221-r3.
+
 *labjack-ljm-64bit-20171221-r2 (09 Dec 2020)
 
   09 Dec 2020; AstroFloyd <AstroFloyd@gmail.com>
