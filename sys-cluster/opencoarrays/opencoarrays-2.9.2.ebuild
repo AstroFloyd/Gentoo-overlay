@@ -1,8 +1,8 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-
+EAPI=8
+CMAKE_MAKEFILE_GENERATOR=emake
 inherit cmake fortran-2
 DESCRIPTION="Implementation of coarrays for gfortran"
 HOMEPAGE="http://www.opencoarrays.org/"
