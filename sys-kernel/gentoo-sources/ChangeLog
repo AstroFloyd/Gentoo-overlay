@@ -2,6 +2,11 @@
 # Copyright 1999-2022 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+*gentoo-sources-5.15.23 (13 Feb 2022)
+
+  13 Feb 2022; AstroFloyd <AstroFloyd@gmail.com> +gentoo-sources-5.15.23.ebuild:
+  sys-kernel/gentoo-sources: version bump to v5.15.23.
+
 *gentoo-sources-5.10.76-r1 (18 Jan 2022)
 
   18 Jan 2022; AstroFloyd <AstroFloyd@gmail.com>
