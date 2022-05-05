@@ -2,6 +2,10 @@
 # Copyright 1999-2022 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
 
+  05 May 2022; AstroFloyd <AstroFloyd@gmail.com>
+  gentoo-sources-4.9.76-r1.ebuild, gentoo-sources-5.4.38.ebuild:
+  sys-kernel/gentoo-sources: upgrade v4.9.76-r1 and v5.4.38 to EAPI 8.
+
 *gentoo-sources-5.15.23 (13 Feb 2022)
 
   13 Feb 2022; AstroFloyd <AstroFloyd@gmail.com> +gentoo-sources-5.15.23.ebuild:
