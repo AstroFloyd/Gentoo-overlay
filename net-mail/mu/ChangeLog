@@ -1,3 +1,10 @@
+*mu-1.7.13 (27 May 2022)
+
+  27 May 2022; AstroFloyd <AstroFloyd@gmail.com> +files/mu-1.7.12-gcc12.patch,
+  +files/mu-1.7.12-optional-mu4e.patch, +mu-1.7.13.ebuild, -mu-1.2.ebuild,
+  -mu-1.3.1.ebuild:
+  net-mail/mu: version bump to v1.7.13.
+
   19 Jul 2019; AstroFloyd <AstroFloyd@gmail.com> mu-1.3.1.ebuild:
   net-mail/mu: fix typo
 
