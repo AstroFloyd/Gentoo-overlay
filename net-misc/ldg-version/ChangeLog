@@ -1,0 +1,5 @@
+*ldg-version-1.0.3-r1 (13 Jul 2022)
+
+  13 Jul 2022; AstroFloyd <AstroFloyd@gmail.com> +ldg-version-1.0.3-r1.ebuild,
+  -ldg-version-1.0.3.ebuild, metadata.xml:
+  net-misc/ldg-version: revision bump to v1.0.3-r1.
