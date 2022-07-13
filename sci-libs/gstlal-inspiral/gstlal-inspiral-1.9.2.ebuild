@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -26,7 +26,7 @@ RDEPEND=">=dev-lang/python-3:*
 		 sci-libs/lalinspiral
 		 sci-libs/lalmetaio
 		 sci-libs/lalsimulation
-		 sci-libs/lal
+		 sci-libs/lal[swig-python]
 		 sci-libs/ldas-tools-al
 		 sci-libs/ldas-tools-framecpp
 		 sci-libs/metaio
@@ -41,7 +41,7 @@ src_configure() {
 		$(use_enable libtool-lock) \
 		$(use_enable openmp) \
 		$(use_enable static-libs static) \
-		--disable-gtk-doc-html \
+		--disable-gtk-doc \
 		--disable-gtk-doc-pdf \
 		--disable-massmodel
 		# $(use_enable massmodel) \  # Requires lnP_template_signal_BBH_logm_reweighted_mchirp.hdf5
