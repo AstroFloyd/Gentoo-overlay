@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -27,7 +27,7 @@ RDEPEND="
 		sci-libs/lalinspiral
 		sci-libs/lalmetaio
 		sci-libs/lalsimulation
-		sci-libs/lal
+		sci-libs/lal[swig-python]
 		sci-libs/ldas-tools-al
 		sci-libs/ldas-tools-framecpp
 		sci-libs/metaio
