@@ -1,0 +1,5 @@
+*ldg-cert-util-2.7-r1 (13 Jul 2022)
+
+  13 Jul 2022; AstroFloyd <AstroFloyd@gmail.com> +ldg-cert-util-2.7-r1.ebuild,
+  -ldg-cert-util-2.7.ebuild, metadata.xml:
+  net-misc/ldg-cert-util: revision bump to v2.7-r1.

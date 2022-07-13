@@ -1,12 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=4
+EAPI=8
 
 DESCRIPTION="Util to manage certificates for the LIGO/Virgo LSC DataGrid (LDG)."
-HOMEPAGE="https://www.lsc-group.phys.uwm.edu/lscdatagrid/doc/installclient.html"
-SRC_URI="http://www.lsc-group.phys.uwm.edu/daswg/download/software/source/${P}.tar.gz"
+HOMEPAGE="https://git.ligo.org/explore/projects/starred"
+SRC_URI="http://software.igwn.org/lscsoft/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
