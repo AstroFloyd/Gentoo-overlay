@@ -1,13 +1,13 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=8
 
 inherit fortran-2
 
 DESCRIPTION="A Fortran interface to the GNU Scientific Library"
-HOMEPAGE="http://www.lrz.de/services/software/mathematik/gsl/fortran/"
-SRC_URI="http://www.lrz.de/services/software/mathematik/gsl/fortran/download/${P}.tar.gz"
+HOMEPAGE="https://doku.lrz.de/display/PUBLIC/FGSL+-+A+Fortran+interface+to+the+GNU+Scientific+Library"
+SRC_URI="https://doku.lrz.de/download/attachments/43321199/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,7 +28,7 @@ src_configure() {
 
 src_install() {
 	dolib.so .libs/*.so .libs/*.so.*
-	dolib libfgsl.la
+	use static-libs && dolib.a libfgsl.la
 	use static-libs && dolib.a .libs/*.a
 
 	insinto /usr/include/fgsl
