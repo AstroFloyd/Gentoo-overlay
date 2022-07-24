@@ -1,9 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=5
-inherit cmake-utils fortran-2
+EAPI=8
+inherit cmake fortran-2
 
 DESCRIPTION="Plot the key stages in the evolution of a binary star"
 HOMEPAGE="http://rocheplot.sourceforge.net/"

@@ -1,10 +1,15 @@
 # ChangeLog for sci-astronomy/rocheplot
-# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2022 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
+
+*rocheplot-0.1.0-r1 (24 Jul 2022)
+
+  24 Jul 2022; AstroFloyd <AstroFloyd@gmail.com> +rocheplot-0.1.0-r1.ebuild,
+  -rocheplot-0.1.0.ebuild, metadata.xml:
+  sci-astronomy/rocheplot: revision bump to v0.1.0-r1.
 
 *rocheplot-0.1.0 (09 May 2015)
 
   09 May 2015; AstroFloyd <AstroFloyd@gmail.com> +rocheplot-0.1.0.ebuild,
   +metadata.xml:
   Initial ebuild
-
