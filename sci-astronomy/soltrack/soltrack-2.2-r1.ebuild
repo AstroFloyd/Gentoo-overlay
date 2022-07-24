@@ -1,10 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
-
-inherit cmake-utils
+EAPI=8
+CMAKE_MAKEFILE_GENERATOR=emake
+inherit cmake
 
 DESCRIPTION="A simple, free, fast and accurate routine to compute the position of the Sun"
 HOMEPAGE="http://soltrack.sourceforge.net"
@@ -20,7 +19,7 @@ RDEPEND="${DEPEND}"
 
 src_configure() {
 	mycmakeargs=(
-		$(cmake-utils_use static-libs CREATE_STATICLIB)
+		-DCREATE_STATICLIB="$(usex static-libs)"
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }

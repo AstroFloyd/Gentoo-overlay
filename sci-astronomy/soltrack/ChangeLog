@@ -1,6 +1,12 @@
 # ChangeLog for sci-astronomy/soltrack
-# Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2022 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
+
+*soltrack-2.2-r1 (24 Jul 2022)
+
+  24 Jul 2022; AstroFloyd <AstroFloyd@gmail.com> +soltrack-2.2-r1.ebuild,
+  -soltrack-2.1.ebuild, -soltrack-2.2.ebuild:
+  sci-astronomy/soltrack: revision bump to v2.2-r1.
 
 *soltrack-2.2 (09 Sep 2017)
 
@@ -12,4 +18,3 @@
   17 Apr 2017; AstroFloyd <AstroFloyd@gmail.com> +soltrack-2.1.ebuild,
   +metadata.xml:
   Initial ebuild
-
