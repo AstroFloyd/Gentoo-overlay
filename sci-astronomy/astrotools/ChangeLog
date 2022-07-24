@@ -1,10 +1,15 @@
 # ChangeLog for sci-astronomy/astrotools
-# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2022 Gentoo Authors; Distributed under the GPL v2
 # $Header: $
+
+*astrotools-0.0.3-r1 (24 Jul 2022)
+
+  24 Jul 2022; AstroFloyd <AstroFloyd@gmail.com> +astrotools-0.0.3-r1.ebuild,
+  -astrotools-0.0.1.ebuild, -astrotools-0.0.3.ebuild:
+  sci-astronomy/astrotools: revision bump to v0.0.3-r1.
 
 *astrotools-0.0.1 (25 Apr 2015)
 
   25 Apr 2015; AstroFloyd <AstroFloyd@gmail.com> +astrotools-0.0.1.ebuild,
   +metadata.xml:
   New package: sci-astronomy/astrotools
-

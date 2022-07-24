@@ -1,9 +1,8 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
-inherit cmake-utils fortran-2
+EAPI=8
+inherit cmake fortran-2
 
 DESCRIPTION="Command-line tools for astronomy and astrophysics"
 HOMEPAGE="http://${PN}.sourceforge.net/"
