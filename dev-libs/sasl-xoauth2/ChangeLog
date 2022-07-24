@@ -1,0 +1,5 @@
+*sasl-xoauth2-9999 (24 Jul 2022)
+
+  24 Jul 2022; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml,
+  +sasl-xoauth2-9999.ebuild:
+  dev-libs/sasl-xoauth2: initial ebuild for v9999.
