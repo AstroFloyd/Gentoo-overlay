@@ -1,9 +1,9 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-
-inherit cmake-utils fortran-2
+EAPI=8
+CMAKE_MAKEFILE_GENERATOR=emake
+inherit cmake fortran-2
 
 DESCRIPTION="Analyse output from the gravitational-wave data-analysis code SPINspiral"
 HOMEPAGE="http://${PN}.sourceforge.net/"
@@ -24,3 +24,5 @@ RDEPEND="${DEPEND}
 	"
 
 DOCS="CHANGELOG README VERSION analysemcmc.dat compPDFs.dat"
+
+MAKEOPTS="-j1"  # Module cannot be built and used at the same time
