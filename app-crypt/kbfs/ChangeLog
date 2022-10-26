@@ -1,0 +1,6 @@
+*kbfs-2.11.0-r1 (26 Oct 2022)
+*kbfs-9999 (26 Oct 2022)
+
+  26 Oct 2022; AstroFloyd <AstroFloyd@gmail.com> +kbfs-2.11.0-r1.ebuild,
+  +kbfs-9999.ebuild, +metadata.xml:
+  app-crypt/kbfs: initial ebuild for v9999.
