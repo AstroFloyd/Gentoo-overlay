@@ -1,0 +1,5 @@
+*keybase-5.8.1 (26 Oct 2022)
+
+  26 Oct 2022; AstroFloyd <AstroFloyd@gmail.com> +keybase-5.8.1.ebuild,
+  +metadata.xml:
+  app-crypt/keybase: initial ebuild for v5.8.1.
