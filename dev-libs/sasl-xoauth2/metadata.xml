@@ -5,4 +5,7 @@
     <email>AstroFloyd@gmail.com</email>
     <name>AstroFloyd</name>
   </maintainer>
+  <upstream>
+    <remote-id type="github">tarickb/sasl-xoauth2</remote-id>
+  </upstream>
 </pkgmetadata>
