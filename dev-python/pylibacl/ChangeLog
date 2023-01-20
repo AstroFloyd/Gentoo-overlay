@@ -1,5 +1,0 @@
-*pylibacl-0.5.3-r1 (05 May 2020)
-
-  05 May 2020; AstroFloyd <AstroFloyd@gmail.com> +metadata.xml,
-  +pylibacl-0.5.3-r1.ebuild:
-  dev-python/pylibacl: copy from portare and readd Python-2 support.
