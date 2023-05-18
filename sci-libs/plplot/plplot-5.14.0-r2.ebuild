@@ -1,55 +1,61 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 WX_GTK_VER=3.0-gtk3
 FORTRAN_NEEDED=fortran
-FORTRAN_STANDARD=95
-PYTHON_COMPAT=( python{2_7,3_6,3_7,3_8,3_9} )
+LUA_COMPAT=( lua5-1 )
+PYTHON_COMPAT=( python3_{9..11} )
+# fails with ninja, due to USE=java missing swig output dependencies
+CMAKE_MAKEFILE_GENERATOR=emake
 
-inherit cmake flag-o-matic fortran-2 java-pkg-opt-2 python-single-r1 toolchain-funcs virtualx wxwidgets
+inherit cmake flag-o-matic fortran-2 java-pkg-opt-2 lua-single python-single-r1 virtualx wxwidgets
 
 DESCRIPTION="Multi-language scientific plotting library"
-HOMEPAGE="http://plplot.sourceforge.net/"
+HOMEPAGE="https://plplot.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0/14" # SONAME of libplplot.so
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+
 IUSE="cairo cxx doc +dynamic examples fortran gd java jpeg latex lua ocaml octave pdf
-	pdl png python qhull qt5 shapefile svg tcl test	threads tk truetype wxwidgets X"
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} ) qt5? ( dynamic ) test? ( latex ) tk? ( tcl )"
-RESTRICT="octave? ( test )"
+	png python qhull qt5 shapefile svg tcl test threads tk truetype wxwidgets X"
+REQUIRED_USE="
+	lua? ( ${LUA_REQUIRED_USE} )
+	python? ( ${PYTHON_REQUIRED_USE} )
+	qt5? ( dynamic )
+	test? ( latex )
+	tk? ( tcl )
+"
+
+RESTRICT="
+	!test? ( test )
+	octave? ( test )
+"
 
 RDEPEND="
-	cairo? (
-		   x11-libs/cairo:0=[svg?,X]
-		   x11-libs/pango:0=[X]
-	)
+	cairo? ( x11-libs/cairo:0=[svg(+)?,X] )
 	gd? ( media-libs/gd:2=[jpeg?,png?] )
-	java? ( >=virtual/jre-1.5:* )
+	java? ( >=virtual/jre-1.8:* )
 	latex? (
 		app-text/ghostscript-gpl
 		virtual/latex-base
 	)
-	lua? ( dev-lang/lua:0= )
+	lua? ( ${LUA_DEPS} )
 	ocaml? (
-		dev-lang/ocaml
-		dev-ml/camlidl
-		cairo? ( dev-ml/cairo-ocaml[gtk] )
+		dev-lang/ocaml:=
+		dev-ml/camlidl:=
 	)
 	octave? ( sci-mathematics/octave:0= )
 	pdf? ( media-libs/libharu:0= )
-	pdl? (
-		dev-perl/PDL
-		dev-perl/XML-DOM
-	)
 	python? (
+		${PYTHON_DEPS}
 		$(python_gen_cond_dep '
 			dev-python/numpy[${PYTHON_USEDEP}]
 			qt5? ( dev-python/PyQt5[${PYTHON_USEDEP}] )
-			')
+		')
 	)
 	qhull? ( media-libs/qhull:0= )
 	qt5? (
@@ -84,58 +90,64 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	java? (
-		>=virtual/jdk-1.5
+		>=virtual/jdk-1.8:*
 		dev-lang/swig
 	)
+	lua? ( dev-lang/swig )
 	ocaml? ( dev-ml/findlib )
 	octave? ( >=dev-lang/swig-3.0.12 )
 	python? ( dev-lang/swig )
 	test? (
 		media-fonts/font-misc-misc
 		media-fonts/font-cursor-misc
-	)"
+	)
+"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-5.9.6-python.patch
-	"${FILESDIR}"/${PN}-5.11.0-octave.patch
-	"${FILESDIR}"/${PN}-5.12.0-multiarch.patch
-	"${FILESDIR}"/${PN}-5.12.0-java-install-path.patch
-	"${FILESDIR}"/${PN}-5.12.0-ocaml-remove-rpath.patch
+
+	# Fedora patches
+	"${FILESDIR}"/${PN}-5.15.0-ieee.patch
+	"${FILESDIR}"/${PN}-5.15.0-ocaml.patch
+	"${FILESDIR}"/${PN}-5.12.0-safe-string.patch
+	"${FILESDIR}"/${PN}-5.15.0-QPainterPath-include.patch
+	"${FILESDIR}"/${PN}-5.15.0-configure-clang16.patch
 )
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
+	use lua && lua-single_pkg_setup
 	use java && java-pkg-opt-2_pkg_setup
 	use fortran && fortran-2_pkg_setup
 }
 
-#src_prepare() {
-#	use wxwidgets && need-wxwidgets unicode
-#	cmake-utils_src_prepare
-#
-#	# avoid installing license
-#	sed -i -e '/COPYING.LIB/d' CMakeLists.txt || die
-#
-#	# prexify hard-coded /usr/include in cmake modules
-#	sed -i \
-#		-e "s:/usr/include:${EPREFIX}/usr/include:g" \
-#		-e "s:/usr/lib:${EPREFIX}/usr/$(get_libdir):g" \
-#		-e "s:/usr/share:${EPREFIX}/usr/share:g" \
-#		cmake/modules/*.cmake || die
-#
-#	# change default install directories for doc and examples
-#	local f
-#	while IFS="" read -d $'\0' -r f; do
-#		sed -i -e 's:${DATA_DIR}/examples:${DOC_DIR}/examples:g' "${f}" || die
-#	done < <(find "${S}" -name CMakeLists.txt -print0)
-#
-#	sed -i \
-#		-e 's:${VERSION}::g' \
-#		-e "s:doc/\${PACKAGE}:doc/${PF}:" \
-#		cmake/modules/instdirs.cmake || die
-#
-#	java-utils-2_src_prepare
-#}
+src_prepare() {
+	use wxwidgets && setup-wxwidgets
+	cmake_src_prepare
+
+	# avoid installing license
+	sed -i -e '/COPYING.LIB/d' CMakeLists.txt || die
+
+	# prexify hard-coded /usr/include in cmake modules
+	sed -i \
+		-e "s:/usr/include:${EPREFIX}/usr/include:g" \
+		-e "s:/usr/lib:${EPREFIX}/usr/$(get_libdir):g" \
+		-e "s:/usr/share:${EPREFIX}/usr/share:g" \
+		cmake/modules/*.cmake || die
+
+	# change default install directories for doc and examples
+	local f
+	while IFS="" read -d $'\0' -r f; do
+		sed -i -e 's:${DATA_DIR}/examples:${DOC_DIR}/examples:g' "${f}" || die
+	done < <(find "${S}" -name CMakeLists.txt -print0)
+
+	sed -i \
+		-e 's:${VERSION}::g' \
+		-e "s:doc/\${PACKAGE}:doc/${PF}:" \
+		cmake/modules/instdirs.cmake || die
+
+	java-utils-2_src_prepare
+}
 
 src_configure() {
 	# - don't build doc, it pulls in a whole stack of horrible dependencies
@@ -157,7 +169,7 @@ src_configure() {
 		## Features
 		-DBUILD_DOC=OFF
 		-DBUILD_DOX_DOC=OFF
-		-DCMAKE_SKIP_RPATH=ON
+		-DUSE_RPATH=OFF
 		-DPREBUILT_DOC=$(usex doc)
 		-DHAVE_SHAPELIB=$(usex shapefile)
 		-DWITH_FREETYPE=$(usex truetype)
@@ -166,7 +178,6 @@ src_configure() {
 		-DPLPLOT_USE_QT5=$(usex qt5)
 
 		## Tests
-		-DTEST_DYNDRIVERS=OFF
 		-DBUILD_TEST=$(usex test)
 
 		## Bindings
@@ -179,9 +190,7 @@ src_configure() {
 		-DENABLE_fortran=$(usex fortran)
 		-DENABLE_java=$(usex java)
 		-DENABLE_lua=$(usex lua)
-		-DTRY_OCTAVE4=$(usex octave)
 		-DENABLE_octave=$(usex octave)
-		-DENABLE_pdl=$(usex pdl)
 		-DENABLE_python=$(usex python)
 		-DENABLE_qt=$(usex qt5)
 		-DENABLE_tcl=$(usex tcl)
@@ -249,6 +258,9 @@ src_configure() {
 	use shapefile && mycmakeargs+=(
 		-DSHAPELIB_INCLUDE_DIR="${EPREFIX}"/usr/include/libshp
 	)
+	use lua && mycmakeargs+=(
+		-DREQUIRED_LUA_VERSION=$(lua_get_version)
+	)
 	use ocaml && mycmakeargs+=(
 		-DOCAML_INSTALL_DIR="$(ocamlc -where)"
 	)
@@ -256,7 +268,7 @@ src_configure() {
 		-DENABLE_pyqt5=$(usex qt5)
 	)
 
-	cmake-utils_src_configure
+	cmake_src_configure
 
 	# clean up bloated pkg-config files (help linking properly on prefix)
 	sed -i \
@@ -267,20 +279,22 @@ src_configure() {
 }
 
 src_test() {
-	virtx cmake-utils_src_test
+	virtx cmake_src_test
 }
 
 src_install() {
-	cmake-utils_src_install
+	cmake_src_install
 
 	if use examples; then
 		docompress -x /usr/share/doc/${PF}/examples
 	else
-		rm -r "${ED%/}"/usr/share/doc/${PF}/examples || die
+		rm -r "${ED}"/usr/share/doc/${PF}/examples || die
 	fi
+
+	use python && python_optimize
 
 	if use java; then
 		java-pkg_dojar "${BUILD_DIR}"/examples/java/${PN}.jar
-		java-pkg_regso "${EPREFIX}"/usr/$(get_libdir)/jni/plplotjavac_wrap.so
+		java-pkg_regso "${EPREFIX}"/usr/$(get_libdir)/jni/libplplotjavac_wrap.so
 	fi
 }
