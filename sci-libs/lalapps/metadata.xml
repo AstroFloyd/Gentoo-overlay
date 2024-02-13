@@ -11,9 +11,10 @@
     <flag name='all-lal'>Enable/disable compilation of all LAL libraries</flag>
     <flag name='cfitsio'>Compile code that requires cfitsio library</flag>
     <flag name='fast-gsl'>Enable fast/inline GSL code</flag>
-    <flag name='fast-install'></flag>
+    <flag name='fast-install'>Optimize for fast installation</flag>
     <flag name='fftw'>Compile code that requires the <pkg>sci-libs/fftw3</pkg> library</flag>
     <flag name='framel'>Compile code that requires the <pkg>sci-libs/ldas-tools-framecpp</pkg> library</flag>
+    <flag name='gds'>Compile code that requires the <pkg>sci-libs/gds</pkg> library</flag>
     <flag name='lalburst'>Compile code that requires the <pkg>sci-libs/lalburst</pkg> library</flag>
     <flag name='lalframe'>Compile code that requires the <pkg>sci-libs/lalframe</pkg> library</flag>
     <flag name='lalinference'>Compile code that requires the <pkg>sci-libs/lalinference</pkg> library</flag>
@@ -24,7 +25,6 @@
     <flag name='python'>Build Python programs and modules</flag>
     <flag name='static-binaries'>Build static binaries</flag>
     <!--
-        <flag name='gds'>Compile code that requires GSD library</flag>
         <flag name='condor'>Compile for use with condor</flag>
         <flag name='libtool-lock'>Avoid locking (might break parallel builds)</flag>
         <flag name='nightly'>Nightly build</flag>

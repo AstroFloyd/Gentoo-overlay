@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="all-lal cfitsio doc -fast-gsl +fast-install fftw
-	  framel lalframe lalmetaio lalsimulation lalburst lalinspiral lalpulsar lalinference
+	  framel gds lalframe lalmetaio lalsimulation lalburst lalinspiral lalpulsar lalinference
 	  python static-binaries static-libs"
 
 RDEPEND="sci-libs/gsl
@@ -29,7 +29,7 @@ RDEPEND="sci-libs/gsl
 		 python? ( dev-lang/python:* )
 		"
 DEPEND="${RDEPEND}
-		doc? ( app-doc/doxygen )
+		doc? ( app-text/doxygen )
 		"
 
 src_configure() {
@@ -41,6 +41,7 @@ src_configure() {
 		$(use_enable fast-install) \
 		$(use_enable fftw) \
 		$(use_enable framel) \
+		$(use_enable gds) \
 		$(use_enable lalburst) \
 		$(use_enable lalframe) \
 		$(use_enable lalinference) \
@@ -53,8 +54,6 @@ src_configure() {
 		$(use_enable static-libs static) \
 		--enable-help2man \
 		--disable-pss \
-		--disable-gds \
-	# $(use_enable -gds) \  - http://software.igwn.org/lscsoft/source/gds-2.19.7.tar.gz (and subpackages?)
 	# $(use_enable -pss) \  ???
 	# Not sure:
 	#		$(use_disable libtool-lock) \     avoid locking (might break parallel builds)
