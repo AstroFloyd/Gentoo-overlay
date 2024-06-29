@@ -1,21 +1,20 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="79"
+K_GENPATCHES_VER="227"
 
 inherit kernel-2
 detect_version
 detect_arch
 
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-HOMEPAGE="https://dev.gentoo.org/~mpagano/genpatches"
-IUSE="experimental"
-
 DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
+HOMEPAGE="https://dev.gentoo.org/~mpagano/genpatches"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+IUSE="experimental"
 
 pkg_postinst() {
 	kernel-2_pkg_postinst
