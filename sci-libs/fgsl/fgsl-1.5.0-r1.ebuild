@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -7,19 +7,18 @@ inherit fortran-2
 
 DESCRIPTION="A Fortran interface to the GNU Scientific Library"
 HOMEPAGE="https://doku.lrz.de/display/PUBLIC/FGSL+-+A+Fortran+interface+to+the+GNU+Scientific+Library"
-SRC_URI="https://doku.lrz.de/download/attachments/43321199/${P}.tar.gz"
+SRC_URI="https://doku.lrz.de/files/10746505/10746508/6/1715160191273/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~amd64-linux"
 IUSE="doc-html doc-pdf examples static-libs"
 
-RDEPEND=">=sci-libs/gsl-2.3"
+RDEPEND=">=sci-libs/gsl-2.6"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 FORTRAN_STANDARD=2003
-
 MAKEOPTS="-j1"  # fgsl.mod cannot be built in parallel
 
 src_configure() {
@@ -35,7 +34,7 @@ src_install() {
 	doins fgsl.mod
 
 	dodoc NEWS README
-	use doc-html && dodoc -r doc/html/          # ~13Mb
-	use doc-pdf  && dodoc doc/latex/refman.pdf  # ~4.6Mb
-	use examples && dodoc -r doc/examples/      # ~300kb (zipped)
+	use doc-html && dodoc -r doc/html/      # ~9Mb
+	use doc-pdf  && dodoc doc/refman.pdf    # ~2Mb
+	use examples && dodoc -r doc/examples/  # ~0.3Mb (zipped)
 }
