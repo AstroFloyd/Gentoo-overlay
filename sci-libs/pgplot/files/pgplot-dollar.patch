@@ -1,0 +1,11 @@
+--- /var/tmp/portage/sci-libs/pgplot-5.2.2-r99/work/pgplot/sys/grgcom-orig.f    1994-11-08 05:12:38.000000000 +0100
++++ /var/tmp/portage/sci-libs/pgplot-5.2.2-r99/work/pgplot/sys/grgcom.f 2025-07-18 10:13:38.931983979 +0200
+@@ -24,7 +24,7 @@
+       GRGCOM = 0
+       L = 0
+       IER = 0
+-      WRITE (*, '(1X,A,$)', IOSTAT=IER) PROMPT
++      WRITE (*, '(1X,A)', IOSTAT=IER, ADVANCE='NO') PROMPT
+       IF (IER.EQ.0) READ (*, '(A)', IOSTAT=IER) STRING
+       IF (IER.EQ.0) GRGCOM = 1
+       L = LEN(STRING)
