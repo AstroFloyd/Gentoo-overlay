@@ -1,12 +1,12 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-WX_GTK_VER=3.0-gtk3
+WX_GTK_VER=3.2-gtk3
 FORTRAN_NEEDED=fortran
 LUA_COMPAT=( lua5-1 )
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{10..13} )
 # fails with ninja, due to USE=java missing swig output dependencies
 CMAKE_MAKEFILE_GENERATOR=emake
 
@@ -14,7 +14,7 @@ inherit cmake flag-o-matic fortran-2 java-pkg-opt-2 lua-single python-single-r1 
 
 DESCRIPTION="Multi-language scientific plotting library"
 HOMEPAGE="https://plplot.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="https://downloads.sourceforge.net/${PN}/${P/_p*}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0/14" # SONAME of libplplot.so
@@ -54,7 +54,7 @@ RDEPEND="
 		${PYTHON_DEPS}
 		$(python_gen_cond_dep '
 			dev-python/numpy[${PYTHON_USEDEP}]
-			qt5? ( dev-python/PyQt5[${PYTHON_USEDEP}] )
+			qt5? ( dev-python/pyqt5[${PYTHON_USEDEP}] )
 		')
 	)
 	qhull? ( media-libs/qhull:0= )
