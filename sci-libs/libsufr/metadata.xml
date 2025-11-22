@@ -9,4 +9,7 @@
     <email>xarthisius@gentoo.org</email>
     <name>Kacper Kowalik</name>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">libsufr</remote-id>
+  </upstream>
 </pkgmetadata>

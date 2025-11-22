@@ -1,15 +1,15 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
+CMAKE_MAKEFILE_GENERATOR="emake"
 CMAKE_BUILD_TYPE=Release
 inherit cmake fortran-2
-CMAKE_MAKEFILE_GENERATOR="emake"
 
 DESCRIPTION="LIBrary of Some Useful Fortran Routines"
 HOMEPAGE="http://libsufr.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="https://downloads.sourceforge.net/${PN}/${P/_p*}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
