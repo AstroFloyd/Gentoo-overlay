@@ -1,9 +1,9 @@
 # Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit git-r3
+inherit git-r3 udev
 
 DESCRIPTION="This program allows you read and control device brightness."
 HOMEPAGE="https://github.com/Hummer12007/brightnessctl"
@@ -26,16 +26,20 @@ udev? ( virtual/udev )
 "
 RDEPEND="${DEPEND}"
 
-src_install() {
-	local myconf
-	if use systemd && use udev ; then
-		myconf="${myconf} ENABLE_SYSTEMD=1 INSTALL_UDEV_RULES=0"
-		einfo "Both systemd and udev are specified, defaulting to systemd only"
-	elif use udev && ! use systemd; then
-		myconf="${myconf} ENABLE_SYSTEMD=0 INSTALL_UDEV_RULES=1"
-	elif ! use udev ; then
-		myconf="${myconf} INSTALL_UDEV_RULES=0"
+src_configure() {
+	# Cannot use econf, as it produces default options like --build=, which are not supported by configure:
+	if use systemd; then
+		./configure --enable-logind --disable-udev --prefix=/usr
+	elif use udev; then
+		./configure --disable-logind --enable-udev --prefix=/usr
+	else
+		./configure --disable-logind --enable-udev --prefix=/usr
 	fi
+}
 
-	emake install ${myconf} DESTDIR="${D}"
+pkg_postinst() {
+	udev_reload
+}
+pkg_postrm() {
+	udev_reload
 }
